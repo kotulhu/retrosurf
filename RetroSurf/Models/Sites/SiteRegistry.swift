@@ -18,6 +18,10 @@ final class SiteRegistry {
         return site(forHost: host)
     }
 
+    func site(withID id: String) -> (any InteractiveSite)? {
+        sites[id]
+    }
+
     var allSites: [any InteractiveSite] {
         Array(sites.values)
     }

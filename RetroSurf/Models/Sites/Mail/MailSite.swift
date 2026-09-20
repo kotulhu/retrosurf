@@ -11,7 +11,7 @@ struct MailDraft: Sendable {
 }
 
 @MainActor
-final class MailSite: BaseInteractiveSite<MailState> {
+final class MailSite: BaseInteractiveSite<MailState>, QuestLetterReceiver {
     static let host = "pochta.su"
 
     init() {
@@ -49,6 +49,22 @@ final class MailSite: BaseInteractiveSite<MailState> {
             )
         )
         return id
+    }
+
+    /// Deliver a resolved quest letter into the inbox. The visible "from" is
+    /// the sender's address; everything else maps 1:1.
+    @discardableResult
+    func deliver(_ message: QuestMessage) -> Int {
+        deliver(
+            MailDraft(
+                from: message.sender.address,
+                subject: message.subject,
+                bodyHTML: message.bodyHTML,
+                tag: message.tag,
+                timestamp: message.timestamp,
+                folder: .inbox
+            )
+        )
     }
 
     private var isLoggedIn: Bool { state.session != nil }

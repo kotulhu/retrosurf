@@ -10,6 +10,7 @@ struct RetroSurfApp: App {
     @StateObject private var mailbox: MailboxManager
     @StateObject private var quests: QuestManager
     @StateObject private var sites: SiteSession
+    @StateObject private var questGenerator: QuestGenerator
 
     init() {
         let connection = ConnectionManager()
@@ -19,6 +20,12 @@ struct RetroSurfApp: App {
         let mailSite = MailSite()
         registry.register(mailSite)
         let session = SiteSession(registry: registry)
+        let senders = SenderCatalog.loadFromBundle()
+        let generator = QuestGenerator(
+            quests: QuestGenerator.loadQuestsFromBundle(),
+            senders: senders,
+            registry: registry
+        )
         if let raw = UserDefaults.standard.dictionary(forKey: SiteSession.snapshotsDefaultsKey) as? [String: Data] {
             try? session.restoreAll(from: raw)
         }
@@ -30,6 +37,7 @@ struct RetroSurfApp: App {
         _mailbox = StateObject(wrappedValue: mailbox)
         _quests = StateObject(wrappedValue: QuestManager(mailbox: mailbox))
         _sites = StateObject(wrappedValue: session)
+        _questGenerator = StateObject(wrappedValue: generator)
     }
 
     var body: some Scene {
@@ -43,6 +51,7 @@ struct RetroSurfApp: App {
                 .environmentObject(mailbox)
                 .environmentObject(quests)
                 .environmentObject(sites)
+                .environmentObject(questGenerator)
                 .navigationTitle("RetroSurf")
                 .frame(minWidth: 800, minHeight: 600)
         }

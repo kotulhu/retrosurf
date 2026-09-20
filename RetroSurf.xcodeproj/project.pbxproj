@@ -21,6 +21,12 @@
 		AA000000000000000000001C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000C /* Assets.xcassets */; };
 		AA000000000000000000001D /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000D /* ConnectionManager.swift */; };
 		AA000000000000000000005F /* ConnectionSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000005E /* ConnectionSpeed.swift */; };
+		AA0000000000000000000061 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000060 /* Sender.swift */; };
+		AA0000000000000000000063 /* SenderCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000062 /* SenderCatalog.swift */; };
+		AA0000000000000000000065 /* QuestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000064 /* QuestModels.swift */; };
+		AA0000000000000000000067 /* QuestGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000066 /* QuestGenerator.swift */; };
+		AA0000000000000000000069 /* quests.json in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000068 /* quests.json */; };
+		AA000000000000000000006D /* senders.json in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000006C /* senders.json */; };
 		AA000000000000000000001E /* ModemAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000E /* ModemAudio.swift */; };
 		AA000000000000000000001F /* ThrottledSchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000F /* ThrottledSchemeHandler.swift */; };
 		AA0000000000000000000020 /* DialUpStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000010 /* DialUpStatusView.swift */; };
@@ -68,6 +74,12 @@
 		AA000000000000000000000C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA000000000000000000000D /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		AA000000000000000000005E /* ConnectionSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSpeed.swift; sourceTree = "<group>"; };
+		AA0000000000000000000060 /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Senders/Sender.swift; sourceTree = "<group>"; };
+		AA0000000000000000000062 /* SenderCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Senders/SenderCatalog.swift; sourceTree = "<group>"; };
+		AA0000000000000000000064 /* QuestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests/QuestModels.swift; sourceTree = "<group>"; };
+		AA0000000000000000000066 /* QuestGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests/QuestGenerator.swift; sourceTree = "<group>"; };
+		AA0000000000000000000068 /* quests.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quests/quests.json; sourceTree = "<group>"; };
+		AA000000000000000000006C /* senders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Senders/senders.json; sourceTree = "<group>"; };
 		AA000000000000000000000E /* ModemAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModemAudio.swift; sourceTree = "<group>"; };
 		AA000000000000000000000F /* ThrottledSchemeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrottledSchemeHandler.swift; sourceTree = "<group>"; };
 		AA0000000000000000000010 /* DialUpStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialUpStatusView.swift; sourceTree = "<group>"; };
@@ -135,6 +147,8 @@
 			children = (
 				AA0000000000000000000023 /* modem-connect.mp3 */,
 				AA0000000000000000000034 /* sites */,
+				AA0000000000000000000068 /* quests.json */,
+				AA000000000000000000006C /* senders.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -146,6 +160,10 @@
 				AA0000000000000000000003 /* BrowserSimulator.swift */,
 				AA000000000000000000000D /* ConnectionManager.swift */,
 				AA000000000000000000005E /* ConnectionSpeed.swift */,
+				AA0000000000000000000060 /* Sender.swift */,
+				AA0000000000000000000062 /* SenderCatalog.swift */,
+				AA0000000000000000000064 /* QuestModels.swift */,
+				AA0000000000000000000066 /* QuestGenerator.swift */,
 				AA000000000000000000000E /* ModemAudio.swift */,
 				AA000000000000000000000F /* ThrottledSchemeHandler.swift */,
 				AA0000000000000000000027 /* SiteCatalog.swift */,
@@ -277,6 +295,8 @@
 				AA000000000000000000001C /* Assets.xcassets in Resources */,
 				AA0000000000000000000024 /* modem-connect.mp3 in Resources */,
 				AA0000000000000000000036 /* sites in Resources */,
+				AA0000000000000000000069 /* quests.json in Resources */,
+				AA000000000000000000006D /* senders.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +320,10 @@
 				AA000000000000000000001B /* WebView.swift in Sources */,
 				AA000000000000000000001D /* ConnectionManager.swift in Sources */,
 				AA000000000000000000005F /* ConnectionSpeed.swift in Sources */,
+				AA0000000000000000000061 /* Sender.swift in Sources */,
+				AA0000000000000000000063 /* SenderCatalog.swift in Sources */,
+				AA0000000000000000000065 /* QuestModels.swift in Sources */,
+				AA0000000000000000000067 /* QuestGenerator.swift in Sources */,
 				AA000000000000000000001E /* ModemAudio.swift in Sources */,
 				AA000000000000000000001F /* ThrottledSchemeHandler.swift in Sources */,
 				AA0000000000000000000020 /* DialUpStatusView.swift in Sources */,
