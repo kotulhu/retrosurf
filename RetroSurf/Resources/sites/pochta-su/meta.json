@@ -1,0 +1,9 @@
+{
+  "displayDomain": "pochta.su",
+  "title": "Почта.SU — Ваш личный электронный ящик",
+  "shortDescription": "Регистрация бесплатного почтового ящика",
+  "category": "other",
+  "keywords": ["почта", "email", "регистрация", "ящик"],
+  "requiredTier": "v14_4",
+  "interactiveExperienceID": "pochta-registration"
+}

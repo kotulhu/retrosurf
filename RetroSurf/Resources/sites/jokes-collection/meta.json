@@ -1,0 +1,8 @@
+{
+  "displayDomain": "anekdotnik.su",
+  "title": "Анекдотник",
+  "shortDescription": "Личная подборка анекдотов — про Штирлица, Вовочку, программистов",
+  "category": "other",
+  "keywords": ["анекдоты", "юмор", "смешно", "штирлиц", "вовочка"],
+  "requiredTier": "v14_4"
+}

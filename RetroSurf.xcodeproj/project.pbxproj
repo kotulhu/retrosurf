@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0000000000000000000011 /* RetroSurfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000001 /* RetroSurfApp.swift */; };
+		AA0000000000000000000012 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000002 /* AppSettings.swift */; };
+		AA0000000000000000000013 /* BrowserSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* BrowserSimulator.swift */; };
+		AA0000000000000000000014 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000004 /* ContentView.swift */; };
+		AA0000000000000000000015 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000005 /* WelcomePage.swift */; };
+		AA0000000000000000000016 /* SkinTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000006 /* SkinTheme.swift */; };
+		AA0000000000000000000017 /* BrandLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000007 /* BrandLogo.swift */; };
+		AA0000000000000000000018 /* BrowserToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000008 /* BrowserToolbar.swift */; };
+		AA0000000000000000000019 /* AddressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000009 /* AddressBar.swift */; };
+		AA000000000000000000001A /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000A /* StatusBar.swift */; };
+		AA000000000000000000001B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000B /* WebView.swift */; };
+		AA000000000000000000001C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000C /* Assets.xcassets */; };
+		AA000000000000000000001D /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000D /* ConnectionManager.swift */; };
+		AA000000000000000000001E /* ModemAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000E /* ModemAudio.swift */; };
+		AA000000000000000000001F /* ThrottledSchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000F /* ThrottledSchemeHandler.swift */; };
+		AA0000000000000000000020 /* DialUpStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000010 /* DialUpStatusView.swift */; };
+		AA0000000000000000000022 /* DialUpPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000021 /* DialUpPanelController.swift */; };
+		AA0000000000000000000024 /* modem-connect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000023 /* modem-connect.mp3 */; };
+		AA0000000000000000000036 /* sites in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000034 /* sites */; };
+		AA0000000000000000000028 /* SiteCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000027 /* SiteCatalog.swift */; };
+		AA000000000000000000002A /* GameProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000029 /* GameProgress.swift */; };
+		AA000000000000000000002C /* AggregatorPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000002B /* AggregatorPageBuilder.swift */; };
+		AA000000000000000000002E /* CuratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000002D /* CuratorView.swift */; };
+		AA0000000000000000000030 /* CurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000002F /* CurationManager.swift */; };
+		AA0000000000000000000032 /* CuratedLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000031 /* CuratedLibraryView.swift */; };
+		AA000000000000000000003D /* QuestExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003C /* QuestExperienceView.swift */; };
+		AA000000000000000000003B /* QuestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003A /* QuestManager.swift */; };
+		AA000000000000000000003F /* BrowserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003E /* BrowserHistory.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA00000000000000000000B1 /* RetroSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000001 /* RetroSurfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroSurfApp.swift; sourceTree = "<group>"; };
+		AA0000000000000000000002 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		AA0000000000000000000003 /* BrowserSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserSimulator.swift; sourceTree = "<group>"; };
+		AA0000000000000000000004 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000005 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		AA0000000000000000000006 /* SkinTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinTheme.swift; sourceTree = "<group>"; };
+		AA0000000000000000000007 /* BrandLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandLogo.swift; sourceTree = "<group>"; };
+		AA0000000000000000000008 /* BrowserToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserToolbar.swift; sourceTree = "<group>"; };
+		AA0000000000000000000009 /* AddressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBar.swift; sourceTree = "<group>"; };
+		AA000000000000000000000A /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
+		AA000000000000000000000B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		AA000000000000000000000C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA000000000000000000000D /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		AA000000000000000000000E /* ModemAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModemAudio.swift; sourceTree = "<group>"; };
+		AA000000000000000000000F /* ThrottledSchemeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrottledSchemeHandler.swift; sourceTree = "<group>"; };
+		AA0000000000000000000010 /* DialUpStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialUpStatusView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000021 /* DialUpPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialUpPanelController.swift; sourceTree = "<group>"; };
+		AA0000000000000000000023 /* modem-connect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sounds/modem-connect.mp3; sourceTree = "<group>"; };
+		AA0000000000000000000034 /* sites */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sites; sourceTree = "<group>"; };
+		AA0000000000000000000027 /* SiteCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCatalog.swift; sourceTree = "<group>"; };
+		AA0000000000000000000029 /* GameProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProgress.swift; sourceTree = "<group>"; };
+		AA000000000000000000002B /* AggregatorPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregatorPageBuilder.swift; sourceTree = "<group>"; };
+		AA000000000000000000002D /* CuratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuratorView.swift; sourceTree = "<group>"; };
+		AA000000000000000000002F /* CurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurationManager.swift; sourceTree = "<group>"; };
+		AA0000000000000000000031 /* CuratedLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuratedLibraryView.swift; sourceTree = "<group>"; };
+		AA000000000000000000003A /* QuestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestManager.swift; sourceTree = "<group>"; };
+		AA000000000000000000003C /* QuestExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestExperienceView.swift; sourceTree = "<group>"; };
+		AA000000000000000000003E /* BrowserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserHistory.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA00000000000000000000B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA00000000000000000000A1 = {
+			isa = PBXGroup;
+			children = (
+				AA00000000000000000000A3 /* RetroSurf */,
+				AA00000000000000000000A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA00000000000000000000A3 /* RetroSurf */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000000000000000000A4 /* Models */,
+				AA00000000000000000000A5 /* Views */,
+				AA00000000000000000000A6 /* Resources */,
+				AA0000000000000000000001 /* RetroSurfApp.swift */,
+				AA000000000000000000000C /* Assets.xcassets */,
+			);
+			path = RetroSurf;
+			sourceTree = "<group>";
+		};
+		AA00000000000000000000A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000023 /* modem-connect.mp3 */,
+				AA0000000000000000000034 /* sites */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA00000000000000000000A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000002 /* AppSettings.swift */,
+				AA0000000000000000000003 /* BrowserSimulator.swift */,
+				AA000000000000000000000D /* ConnectionManager.swift */,
+				AA000000000000000000000E /* ModemAudio.swift */,
+				AA000000000000000000000F /* ThrottledSchemeHandler.swift */,
+				AA0000000000000000000027 /* SiteCatalog.swift */,
+				AA0000000000000000000029 /* GameProgress.swift */,
+				AA000000000000000000002B /* AggregatorPageBuilder.swift */,
+				AA000000000000000000002F /* CurationManager.swift */,
+				AA000000000000000000003A /* QuestManager.swift */,
+				AA000000000000000000003E /* BrowserHistory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA00000000000000000000A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000004 /* ContentView.swift */,
+				AA0000000000000000000005 /* WelcomePage.swift */,
+				AA0000000000000000000006 /* SkinTheme.swift */,
+				AA0000000000000000000007 /* BrandLogo.swift */,
+				AA0000000000000000000008 /* BrowserToolbar.swift */,
+				AA0000000000000000000009 /* AddressBar.swift */,
+				AA000000000000000000000A /* StatusBar.swift */,
+				AA000000000000000000000B /* WebView.swift */,
+				AA0000000000000000000010 /* DialUpStatusView.swift */,
+				AA0000000000000000000021 /* DialUpPanelController.swift */,
+				AA000000000000000000002D /* CuratorView.swift */,
+				AA0000000000000000000031 /* CuratedLibraryView.swift */,
+				AA000000000000000000003C /* QuestExperienceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA00000000000000000000A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000000000000000000B1 /* RetroSurf.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA00000000000000000000B0 /* RetroSurf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA00000000000000000000B5 /* Build configuration list for PBXNativeTarget "RetroSurf" */;
+			buildPhases = (
+				AA00000000000000000000B2 /* Sources */,
+				AA00000000000000000000B3 /* Frameworks */,
+				AA00000000000000000000B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RetroSurf;
+			productName = RetroSurf;
+			productReference = AA00000000000000000000B1 /* RetroSurf.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA00000000000000000000A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					AA00000000000000000000B0 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = AA00000000000000000000B6 /* Build configuration list for PBXProject "RetroSurf" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA00000000000000000000A1;
+			productRefGroup = AA00000000000000000000A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA00000000000000000000B0 /* RetroSurf */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA00000000000000000000B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000000000000000000001C /* Assets.xcassets in Resources */,
+				AA0000000000000000000024 /* modem-connect.mp3 in Resources */,
+				AA0000000000000000000036 /* sites in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA00000000000000000000B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000011 /* RetroSurfApp.swift in Sources */,
+				AA0000000000000000000012 /* AppSettings.swift in Sources */,
+				AA0000000000000000000013 /* BrowserSimulator.swift in Sources */,
+				AA0000000000000000000014 /* ContentView.swift in Sources */,
+				AA0000000000000000000015 /* WelcomePage.swift in Sources */,
+				AA0000000000000000000016 /* SkinTheme.swift in Sources */,
+				AA0000000000000000000017 /* BrandLogo.swift in Sources */,
+				AA0000000000000000000018 /* BrowserToolbar.swift in Sources */,
+				AA0000000000000000000019 /* AddressBar.swift in Sources */,
+				AA000000000000000000001A /* StatusBar.swift in Sources */,
+				AA000000000000000000001B /* WebView.swift in Sources */,
+				AA000000000000000000001D /* ConnectionManager.swift in Sources */,
+				AA000000000000000000001E /* ModemAudio.swift in Sources */,
+				AA000000000000000000001F /* ThrottledSchemeHandler.swift in Sources */,
+				AA0000000000000000000020 /* DialUpStatusView.swift in Sources */,
+				AA0000000000000000000022 /* DialUpPanelController.swift in Sources */,
+				AA0000000000000000000028 /* SiteCatalog.swift in Sources */,
+				AA000000000000000000002A /* GameProgress.swift in Sources */,
+				AA000000000000000000002C /* AggregatorPageBuilder.swift in Sources */,
+				AA000000000000000000002E /* CuratorView.swift in Sources */,
+				AA0000000000000000000030 /* CurationManager.swift in Sources */,
+				AA0000000000000000000032 /* CuratedLibraryView.swift in Sources */,
+				AA000000000000000000003D /* QuestExperienceView.swift in Sources */,
+				AA000000000000000000003B /* QuestManager.swift in Sources */,
+				AA000000000000000000003F /* BrowserHistory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA00000000000000000000C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA00000000000000000000C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AA00000000000000000000C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.retrosurf.RetroSurf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA00000000000000000000C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.retrosurf.RetroSurf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA00000000000000000000B5 /* Build configuration list for PBXNativeTarget "RetroSurf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA00000000000000000000C2 /* Debug */,
+				AA00000000000000000000C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA00000000000000000000B6 /* Build configuration list for PBXProject "RetroSurf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA00000000000000000000C0 /* Debug */,
+				AA00000000000000000000C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA00000000000000000000A0 /* Project object */;
+}
