@@ -20,6 +20,7 @@
 		AA000000000000000000001B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000B /* WebView.swift */; };
 		AA000000000000000000001C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000C /* Assets.xcassets */; };
 		AA000000000000000000001D /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000D /* ConnectionManager.swift */; };
+		AA000000000000000000005F /* ConnectionSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000005E /* ConnectionSpeed.swift */; };
 		AA000000000000000000001E /* ModemAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000E /* ModemAudio.swift */; };
 		AA000000000000000000001F /* ThrottledSchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000F /* ThrottledSchemeHandler.swift */; };
 		AA0000000000000000000020 /* DialUpStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000010 /* DialUpStatusView.swift */; };
@@ -66,6 +67,7 @@
 		AA000000000000000000000B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		AA000000000000000000000C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA000000000000000000000D /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		AA000000000000000000005E /* ConnectionSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSpeed.swift; sourceTree = "<group>"; };
 		AA000000000000000000000E /* ModemAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModemAudio.swift; sourceTree = "<group>"; };
 		AA000000000000000000000F /* ThrottledSchemeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrottledSchemeHandler.swift; sourceTree = "<group>"; };
 		AA0000000000000000000010 /* DialUpStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialUpStatusView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				AA0000000000000000000002 /* AppSettings.swift */,
 				AA0000000000000000000003 /* BrowserSimulator.swift */,
 				AA000000000000000000000D /* ConnectionManager.swift */,
+				AA000000000000000000005E /* ConnectionSpeed.swift */,
 				AA000000000000000000000E /* ModemAudio.swift */,
 				AA000000000000000000000F /* ThrottledSchemeHandler.swift */,
 				AA0000000000000000000027 /* SiteCatalog.swift */,
@@ -296,6 +299,7 @@
 				AA000000000000000000001A /* StatusBar.swift in Sources */,
 				AA000000000000000000001B /* WebView.swift in Sources */,
 				AA000000000000000000001D /* ConnectionManager.swift in Sources */,
+				AA000000000000000000005F /* ConnectionSpeed.swift in Sources */,
 				AA000000000000000000001E /* ModemAudio.swift in Sources */,
 				AA000000000000000000001F /* ThrottledSchemeHandler.swift in Sources */,
 				AA0000000000000000000020 /* DialUpStatusView.swift in Sources */,

@@ -1,5 +1,12 @@
 import SwiftUI
 
+/// Thrown by ConnectionManager.simulateLoad when the line dies mid-transfer.
+/// The browser layer must abort the load, show a reconnect page, and never
+/// partially render the page. The player may then retry the same request.
+enum LoadInterruption: Error {
+    case disconnected
+}
+
 enum FakeConnectionError: CaseIterable {
     case lineIsBusy
     case noDialTone
@@ -59,6 +66,119 @@ final class ConnectionManager: ObservableObject {
     var maximumSpeed: Int = 56_000
     private(set) var isSessionActive = false
 
+    /// Base latency every page load pays regardless of size (seconds).
+    /// Applied once at the start of each transfer by `simulateLoad`.
+    var baseLatency: Double = 0.3
+
+    /// Throughput profile the drifting line models around (bytes per second).
+    var speedProfile: SpeedProfile = .dialUp
+
+    /// Live line speed in bytes/second. Drifts every 3...7 seconds while the
+    /// session is up; never outside `speedProfile.minBytesPerSec...maxBytesPerSec`.
+    @Published private(set) var currentSpeed: Double = SpeedProfile.dialUp.minBytesPerSec
+
+    /// The session's target speed, re-rolled by `reconnect()`. `currentSpeed`
+    /// drifts slowly toward it; most connections land between min and avg.
+    @Published private(set) var targetSpeed: Double = SpeedProfile.dialUp.minBytesPerSec
+
+    /// Highest live speed reached during this session.
+    @Published private(set) var sessionPeak: Double = SpeedProfile.dialUp.minBytesPerSec
+
+    /// Lowest live speed reached during this session.
+    @Published private(set) var sessionLow: Double = SpeedProfile.dialUp.minBytesPerSec
+
+    @available(*, deprecated, message: "Line speed is no longer constant. Use currentSpeed (live) or targetSpeed (session).")
+    var speedBytesPerSecond: Double { currentSpeed }
+
+    /// Estimated wall time to transfer `bytes` at the current live speed:
+    /// baseLatency + bytes / currentSpeed.
+    func estimatedLoadTime(bytes: Int) -> TimeInterval {
+        baseLatency + Double(max(bytes, 0)) / max(currentSpeed, 1)
+    }
+
+    /// Re-rolls the session target speed (mostly low-to-mid, rarely near max),
+    /// resets the session peak/low to the current speed, then nudges
+    /// `currentSpeed` toward the new target once. Normally called on connect
+    /// and reconnect.
+    func reconnect() {
+        targetSpeed = Self.clamp(
+            sampleTargetSpeed(),
+            min: speedProfile.minBytesPerSec,
+            max: speedProfile.maxBytesPerSec
+        )
+        sessionPeak = currentSpeed
+        sessionLow = currentSpeed
+        let baseDrift = (targetSpeed - currentSpeed) * 0.1
+        currentSpeed = Self.clamp(currentSpeed + baseDrift,
+                                  min: speedProfile.minBytesPerSec,
+                                  max: speedProfile.maxBytesPerSec)
+    }
+
+    /// Samples a session target with a real-world distribution: most lines
+    /// never get near 56k. [min, avg) 55%, ~avg±15% 30%, (avg, max] 10%, ~max 5%.
+    private func sampleTargetSpeed() -> Double {
+        let r = Double.random(in: 0..<1)
+        let profile = speedProfile
+        let value: Double
+        if r < 0.55 {
+            value = Double.random(in: profile.minBytesPerSec...profile.avgBytesPerSec)
+        } else if r < 0.85 {
+            value = profile.avgBytesPerSec * Double.random(in: 0.85...1.15)
+        } else if r < 0.95 {
+            value = Double.random(in: profile.avgBytesPerSec...profile.maxBytesPerSec)
+        } else {
+            value = profile.maxBytesPerSec * Double.random(in: 0.95...1.0)
+        }
+        return Self.clamp(value, min: profile.minBytesPerSec, max: profile.maxBytesPerSec)
+    }
+
+    /// Simulates the transfer of `bytes` bytes at line speed.
+    ///
+    /// Contract for the browser layer (the only caller):
+    ///  - Must only be invoked while `isConnected`; otherwise it throws
+    ///    `LoadInterruption.disconnected` immediately.
+    ///  - `bytes == 0` returns immediately with no side effects.
+    ///  - May throw `LoadInterruption.disconnected` at ANY point mid-transfer
+    ///    (line noise, hang-up, random drop). The caller must then abort the
+    ///    load, show a reconnect page, and never partially render the page.
+    ///    The player is allowed to retry the same request.
+    ///  - Throws `CancellationError` when the surrounding task is cancelled.
+    ///  - `progress` reports 0...1 as the transfer advances (optional).
+    ///  - The transfer slices into ~500 ms chunks and re-reads `currentSpeed`
+    ///    every slice, so loads visibly slow down and speed up as the line
+    ///    drifts. Elapsed time approximates sum(sliceBytes / currentSpeed),
+    ///    plus `baseLatency` once at the start.
+    ///  - Sites themselves never sleep: this helper lives exclusively in the
+    ///    browser layer, never inside a site's handle(_:).
+    func simulateLoad(bytes: Int, progress: ((Double) -> Void)? = nil) async throws {
+        guard isConnected else { throw LoadInterruption.disconnected }
+        let totalBytes = max(bytes, 0)
+        if totalBytes == 0 { return }
+
+        if baseLatency > 0 {
+            try? await Task.sleep(nanoseconds: UInt64(baseLatency * 1_000_000_000))
+        }
+        guard isConnected, !Task.isCancelled else { throw LoadInterruption.disconnected }
+
+        signalReceive(bytes: totalBytes)
+        let sliceSeconds: TimeInterval = 0.5
+        let dropAt: Double? = (Double.random(in: 0..<100) < 8 && totalBytes >= 256)
+            ? Double.random(in: 0.3...0.9)
+            : nil
+        var transferred = 0.0
+        while transferred < Double(totalBytes) {
+            if Task.isCancelled { throw CancellationError() }
+            guard isConnected else { throw LoadInterruption.disconnected }
+            if let dropAt, transferred >= Double(totalBytes) * dropAt {
+                throw LoadInterruption.disconnected
+            }
+            let sliceBytes = currentSpeed * sliceSeconds
+            transferred += sliceBytes
+            try await Task.sleep(nanoseconds: UInt64(sliceSeconds * 1_000_000_000))
+            progress?(max(0, min(1, transferred / Double(totalBytes))))
+        }
+    }
+
     private var lastFakeError: FakeConnectionError?
 
 #if DEBUG
@@ -72,6 +192,7 @@ final class ConnectionManager: ObservableObject {
     private var packetTask: Task<Void, Never>?
     private var trafficPulseTask: Task<Void, Never>?
     private var errorRecoveryTask: Task<Void, Never>?
+    private var driftTask: Task<Void, Never>?
 
     var isConnected: Bool {
         if case .connected = state { return true }
@@ -92,6 +213,7 @@ final class ConnectionManager: ObservableObject {
     func disconnect() {
         errorRecoveryTask?.cancel()
         audio.stop()
+        stopDrift()
         guard isSessionActive else { return }
         transition(to: .disconnecting, source: "разрыв по кнопке")
         disconnectTask?.cancel()
@@ -174,6 +296,7 @@ final class ConnectionManager: ObservableObject {
             self.transition(to: .connected(speed: self.negotiatedSpeed()), source: "дозвон")
             self.startIdleMonitor()
             self.startPacketSimulation()
+            self.startDrift()
         }
     }
 
@@ -260,6 +383,7 @@ final class ConnectionManager: ObservableObject {
 
     private func dropConnection() {
         audio.stop()
+        stopDrift()
         idleMonitorTask?.cancel()
         idleMonitorTask = nil
         packetTask?.cancel()
@@ -277,6 +401,7 @@ final class ConnectionManager: ObservableObject {
 
     private func endSession() {
         audio.stop()
+        stopDrift()
         cancelSessionTasks()
         isSessionActive = false
         isTransmitting = false
@@ -295,11 +420,65 @@ final class ConnectionManager: ObservableObject {
         packetTask?.cancel()
         trafficPulseTask?.cancel()
         errorRecoveryTask?.cancel()
+        stopDrift()
         connectTask = nil
         disconnectTask = nil
         idleMonitorTask = nil
         packetTask = nil
         trafficPulseTask = nil
         errorRecoveryTask = nil
+    }
+
+    // MARK: - Live speed drift
+
+    /// Starts (once) the session-long speed drift. The loop ticks at random
+    /// 3...7 second intervals and keeps publishing new `currentSpeed` values
+    /// even while nothing is loading. Cancelled cleanly by `stopDrift()`.
+    private func startDrift() {
+        guard driftTask == nil else { return }
+        driftTask = Task { [weak self] in
+            guard let self else { return }
+            while !Task.isCancelled {
+                let interval = Double.random(in: 3...7)
+                try? await Task.sleep(nanoseconds: UInt64(interval * 1_000_000_000))
+                guard !Task.isCancelled, self.isConnected else { return }
+                self.tickDrift()
+            }
+        }
+    }
+
+    private func stopDrift() {
+        driftTask?.cancel()
+        driftTask = nil
+    }
+
+    /// One drift tick: pull `currentSpeed` 10% toward the session target, add
+    /// ±8% jitter, and with 1-in-20 odds apply a line spike. Guards: the value
+    /// never moves more than ~35% in a single tick and always stays inside the
+    /// profile bounds. Peak/low are updated every tick.
+    private func tickDrift() {
+        let profile = speedProfile
+        let baseDrift = (targetSpeed - currentSpeed) * 0.1
+        let jitter = currentSpeed * Double.random(in: -0.08...0.08)
+        var next = currentSpeed + baseDrift + jitter
+        if Int.random(in: 0..<20) == 0 {
+            next *= Double.random(in: 0.75...1.25)
+        }
+        let maxJump = max(currentSpeed * 0.35, 1)
+        next = min(next, currentSpeed + maxJump)
+        next = max(next, currentSpeed - maxJump)
+        currentSpeed = Self.clamp(next, min: profile.minBytesPerSec, max: profile.maxBytesPerSec)
+        sessionPeak = max(sessionPeak, currentSpeed)
+        sessionLow = min(sessionLow, currentSpeed)
+    }
+
+    deinit {
+        driftTask?.cancel()
+    }
+}
+
+private extension ConnectionManager {
+    static func clamp(_ value: Double, min low: Double, max high: Double) -> Double {
+        Swift.max(low, Swift.min(high, value))
     }
 }

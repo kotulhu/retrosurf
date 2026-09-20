@@ -1,7 +1,11 @@
+import Combine
 import Foundation
 
 @MainActor
-final class SiteSession {
+final class SiteSession: ObservableObject {
+    /// UserDefaults key holding [String: Data] snapshots of every registered site.
+    static let snapshotsDefaultsKey = "InteractiveSites.snapshots"
+
     let registry: SiteRegistry
 
     init(registry: SiteRegistry) {

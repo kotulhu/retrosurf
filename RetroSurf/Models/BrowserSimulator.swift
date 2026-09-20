@@ -11,6 +11,7 @@ final class BrowserSimulator: ObservableObject {
 
     private var timer: Timer?
     private var loadCompletion: (() -> Void)?
+    private var loadGeneration = 0
     private static let simulatedPageSize = 7_000
 
     @discardableResult
@@ -38,16 +39,80 @@ final class BrowserSimulator: ObservableObject {
     }
 
     func stop() {
+        loadGeneration += 1
         loadCompletion = nil
         finishLoading()
         statusText = "Остановлено."
     }
 
     func cancelLoad() {
+        loadGeneration += 1
         loadCompletion = nil
         timer?.invalidate()
         timer = nil
         isLoading = false
+    }
+
+    // MARK: - Byte-based page loading (universal rule)
+
+    /// Loads a page of `bytes` bytes through ConnectionManager at line speed.
+    /// delay = baseLatency + bytes / speedBytesPerSecond, enforced entirely by
+    /// connection.simulateLoad. Throws LoadInterruption.disconnected when the
+    /// line dies mid-transfer (never partially applied by the caller).
+    /// Throws CancellationError if Stop/Home superseded this load.
+    func loadBytes(_ bytes: Int) async throws {
+        guard connection?.isConnected == true else {
+            connectionBlocked = true
+            statusText = "Нет соединения."
+            throw LoadInterruption.disconnected
+        }
+        cancelLoad()
+        let generation = loadGeneration
+        isLoading = true
+        progress = 0
+        statusText = "Получение данных…"
+        do {
+            try await connection?.simulateLoad(bytes: bytes) { [weak self] p in
+                self?.progress = p
+            }
+        } catch {
+            restoreLoadingFlags()
+            statusText = "Соединение прервано."
+            throw error
+        }
+        guard generation == loadGeneration else {
+            restoreLoadingFlags()
+            throw CancellationError()
+        }
+        guard connection?.isConnected == true else {
+            restoreLoadingFlags()
+            statusText = "Соединение прервано."
+            throw LoadInterruption.disconnected
+        }
+        restoreLoadingFlags()
+        statusText = "Готово."
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) { [weak self] in
+            MainActor.assumeIsolated {
+                guard let self, !self.isLoading else { return }
+                self.progress = 0
+            }
+        }
+    }
+
+    /// Small fixed delay for .redirect responses (baseLatency only, no bytes).
+    func redirectDelay() async throws {
+        guard connection?.isConnected == true else {
+            connectionBlocked = true
+            statusText = "Нет соединения."
+            throw LoadInterruption.disconnected
+        }
+        try? await Task.sleep(nanoseconds: UInt64((connection?.baseLatency ?? 0.3) * 1_000_000_000))
+        guard connection?.isConnected == true else { throw LoadInterruption.disconnected }
+    }
+
+    private func restoreLoadingFlags() {
+        isLoading = false
+        progress = 0
     }
 
     func notifyUnavailable(_ action: String) {

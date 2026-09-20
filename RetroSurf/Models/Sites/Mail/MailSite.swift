@@ -126,9 +126,8 @@ final class MailSite: BaseInteractiveSite<MailState> {
     // MARK: - GET
 
     private func getHome() -> SiteResponse {
-        if state.account == nil { return redirect(to: "/register") }
-        if state.session == nil { return redirect(to: "/login") }
-        return redirect(to: "/inbox")
+        if state.session != nil { return redirect(to: "/inbox") }
+        return redirect(to: "/login")
     }
 
     private func getRegister() -> SiteResponse {
@@ -137,7 +136,7 @@ final class MailSite: BaseInteractiveSite<MailState> {
     }
 
     private func getLogin() -> SiteResponse {
-        if state.account == nil { return redirect(to: "/register") }
+        if state.session != nil { return redirect(to: "/inbox") }
         return page(path: "/login", title: "Вход", html: MailTemplates.loginPage(error: nil))
     }
 
@@ -217,7 +216,10 @@ final class MailSite: BaseInteractiveSite<MailState> {
     }
 
     private func postLogin(_ form: [String: String]) -> SiteResponse {
-        guard let account = state.account else { return redirect(to: "/register") }
+        guard let account = state.account else {
+            let errorPage = SitePage(url: resolve("/login"), title: "Вход", html: MailTemplates.loginPage(error: "Такого ящика нет. Зарегистрируйте новый по ссылке ниже."))
+            return .compound([.page(errorPage), .alert("Такого ящика нет")])
+        }
         let username = form["username"] ?? ""
         let password = form["password"] ?? ""
         guard username == account.username, password == account.password else {

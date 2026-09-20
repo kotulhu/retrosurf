@@ -207,6 +207,64 @@ enum AggregatorPageBuilder {
         """
     }
 
+    /// Shown when the line dies while a page is loading. Notably NOT shown
+    /// otherwise: the page must never render partially. Retry re-issues the
+    /// same request, back goes home.
+    static func disconnectedHTML(retryTarget: String) -> String {
+        let retry = escape(retryTarget)
+        return """
+        <!DOCTYPE HTML>
+        <html lang="ru">
+        <head>
+        <meta charset="utf-8">
+        <title>Соединение прервано</title>
+        <style>
+        body { background-color:#e8e4d4; font-family:"Times New Roman",Georgia,serif; -webkit-font-smoothing:none; }
+        a { color:#003399; }
+        </style>
+        </head>
+        <body>
+        <center>
+        <h1 style="color:#8b1a1a;">🔌 Соединение прервано</h1>
+        <p>Загрузка страницы оборвалась: помехи на линии, занятый номер или слишком активный трафик.</p>
+        <p>Страница не была получена целиком и поэтому не будет показана.</p>
+        <p><b><a href="retrosurf://\(retry)">🔁 Повторить загрузку</a></b> &nbsp;&nbsp; <a href="retrosurf://\(portalDomain)">← На главную</a></p>
+        <hr width="400" color="#8b1a1a">
+        <small>(c) 1999 \(portalName)</small>
+        </center>
+        </body>
+        </html>
+        """
+    }
+
+    /// Generic site error page for .failure responses (instant, no delay).
+    static func siteErrorHTML(message: String, retryTarget: String) -> String {
+        let messageText = escape(message)
+        let retry = escape(retryTarget)
+        return """
+        <!DOCTYPE HTML>
+        <html lang="ru">
+        <head>
+        <meta charset="utf-8">
+        <title>Ошибка сайта</title>
+        <style>
+        body { background-color:#e8e4d4; font-family:"Times New Roman",Georgia,serif; -webkit-font-smoothing:none; }
+        a { color:#003399; }
+        </style>
+        </head>
+        <body>
+        <center>
+        <h1 style="color:#660000;">Ошибка</h1>
+        <p style="color:#880000; font-weight:bold;">\(messageText)</p>
+        <p><a href="retrosurf://\(retry)">Повторить</a> &nbsp;&nbsp; <a href="retrosurf://\(portalDomain)">← На главную</a></p>
+        <hr width="400" color="#660000">
+        <small>(c) 1999 \(portalName)</small>
+        </center>
+        </body>
+        </html>
+        """
+    }
+
     private static func escape(_ text: String) -> String {
         var s = text
         for (from, to) in [

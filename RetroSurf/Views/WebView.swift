@@ -6,9 +6,10 @@ struct WebView: NSViewRepresentable {
     let baseURL: URL?
     let reloadToken: Int
     let onNavigate: (String) -> Void
+    var isInteractiveHost: (String) -> Bool = { _ in false }
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(reloadToken: reloadToken, onNavigate: onNavigate)
+        Coordinator(reloadToken: reloadToken, onNavigate: onNavigate, isInteractiveHost: isInteractiveHost)
     }
 
     func makeNSView(context: Context) -> WKWebView {
@@ -22,6 +23,7 @@ struct WebView: NSViewRepresentable {
 
     func updateNSView(_ nsView: WKWebView, context: Context) {
         context.coordinator.onNavigate = onNavigate
+        context.coordinator.isInteractiveHost = isInteractiveHost
         guard context.coordinator.lastToken != reloadToken else { return }
         context.coordinator.lastToken = reloadToken
         nsView.loadHTMLString(html, baseURL: baseURL)
@@ -30,10 +32,12 @@ struct WebView: NSViewRepresentable {
     final class Coordinator: NSObject, WKNavigationDelegate {
         var lastToken: Int
         var onNavigate: (String) -> Void
+        var isInteractiveHost: (String) -> Bool
 
-        init(reloadToken: Int, onNavigate: @escaping (String) -> Void) {
+        init(reloadToken: Int, onNavigate: @escaping (String) -> Void, isInteractiveHost: @escaping (String) -> Bool) {
             self.lastToken = reloadToken
             self.onNavigate = onNavigate
+            self.isInteractiveHost = isInteractiveHost
         }
 
         func webView(
@@ -45,15 +49,30 @@ struct WebView: NSViewRepresentable {
                 decisionHandler(.cancel)
                 return
             }
+            // Interactive sites speak the retrosurf:// dialect inside their pages.
             if url.scheme == "retrosurf" {
-                onNavigate(url.host ?? url.absoluteString)
+                onNavigate(url.absoluteString)
                 decisionHandler(.cancel)
                 return
+            }
+            // http:// links/forms that lead to a registered interactive host
+            // (pochta.su...) are routed back into the browser layer. GET form
+            // submissions carry the fields in the query string, which is how
+            // the browser parses them into [String: String].
+            if url.scheme == "http" || url.scheme == "https" {
+                if navigationAction.navigationType != .other,
+                   let host = url.host,
+                   isInteractiveHost(host) {
+                    onNavigate(url.absoluteString)
+                    decisionHandler(.cancel)
+                    return
+                }
             }
             if navigationAction.navigationType == .other {
                 decisionHandler(.allow)
                 return
             }
+            // Everything else (external http, file://, ...) is blocked.
             decisionHandler(.cancel)
         }
     }

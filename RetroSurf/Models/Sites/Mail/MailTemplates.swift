@@ -70,7 +70,7 @@ enum MailTemplates {
             body += "<p class=\"error\">\(escapeHTML(error))</p>\n"
         }
         body += """
-        <form method="post" action="\(baseURL)/register">
+        <form method="get" action="\(baseURL)/register">
         <table class="form" border="0" cellspacing="0" cellpadding="4">
         <tr><td>Логин:</td><td><input type="text" name="username" size="24"></td></tr>
         <tr><td>Пароль:</td><td><input type="password" name="password" size="24"></td></tr>
@@ -88,13 +88,14 @@ enum MailTemplates {
             body += "<p class=\"error\">\(escapeHTML(error))</p>\n"
         }
         body += """
-        <form method="post" action="\(baseURL)/login">
+        <form method="get" action="\(baseURL)/login">
         <table class="form" border="0" cellspacing="0" cellpadding="4">
         <tr><td>Логин:</td><td><input type="text" name="username" size="24"></td></tr>
         <tr><td>Пароль:</td><td><input type="password" name="password" size="24"></td></tr>
         <tr><td></td><td><input type="submit" value="Войти"></td></tr>
         </table>
         </form>
+        <p>Нет ящика? <a href="\(baseURL)/register">Зарегистрировать новый</a></p>
         """
         return shell(title: "Pochta.su — вход", loggedIn: false, body: body)
     }
@@ -163,7 +164,7 @@ enum MailTemplates {
     static func composePage(account: MailAccount) -> String {
         let body = """
         <h2>Новое письмо</h2>
-        <form method="post" action="\(baseURL)/compose">
+        <form method="get" action="\(baseURL)/compose">
         <table class="form" border="0" cellspacing="0" cellpadding="3">
         <tr><td>Кому:</td><td><input type="text" name="to" size="40"></td></tr>
         <tr><td>Тема:</td><td><input type="text" name="subject" size="40"></td></tr>

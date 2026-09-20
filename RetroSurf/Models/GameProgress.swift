@@ -5,6 +5,7 @@ import SwiftUI
 final class GameProgress: ObservableObject {
     @Published var visitedSiteIDs: Set<String> = []
     @Published var currentTier: ModemTier = .v14_4
+    @Published var flags: Set<String> = []
 
     private let catalog: SiteCatalog
     private let tierUpgradeThreshold = 2
@@ -13,6 +14,7 @@ final class GameProgress: ObservableObject {
     private enum Keys {
         static let currentTier = "GameProgress.currentTier"
         static let visitedSites = "GameProgress.visitedSites"
+        static let flags = "GameProgress.flags"
     }
 
     init(catalog: SiteCatalog) {
@@ -26,6 +28,11 @@ final class GameProgress: ObservableObject {
             visitedSiteIDs = Set(decoded)
         } else {
             visitedSiteIDs = []
+        }
+
+        if let data = defaults.data(forKey: Keys.flags),
+           let decoded = try? JSONDecoder().decode([String].self, from: data) {
+            flags = Set(decoded)
         }
 
         recomputeTier()
@@ -48,6 +55,14 @@ final class GameProgress: ObservableObject {
         if isNew {
             checkTierUpgrade()
         }
+    }
+
+    func setFlag(_ name: String) {
+        guard flags.insert(name).inserted else { return }
+        if let data = try? JSONEncoder().encode(Array(flags).sorted()) {
+            defaults.set(data, forKey: Keys.flags)
+        }
+        defaults.synchronize()
     }
 
     private func checkTierUpgrade() {
