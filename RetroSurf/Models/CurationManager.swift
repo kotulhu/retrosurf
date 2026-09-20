@@ -187,7 +187,8 @@ final class CurationManager: ObservableObject {
                 category: nil,
                 keywords: nil,
                 requiredTier: nil,
-                interactiveExperienceID: nil
+                interactiveExperienceID: nil,
+                requiredQuestID: nil
             )
             try writeMeta(meta, to: directory)
             pending.catalog.loadAll()

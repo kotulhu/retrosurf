@@ -53,6 +53,8 @@ enum AggregatorPageBuilder {
         <br><br>
         <marquee scrollamount="5" width="720" style="font-size:12px; color:#8b1a1a;">оптимизировано для 800×600 · работает в Netscape 3.0 и MSIE 4.0 · файл грузится 3 минуты на скорости 14.4 kbps · вебмастерам: бесплатная раскрутка</marquee>
         <br>
+        <table width="720" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#ffffff" style="border:2px solid #0000cc; padding:8px;"><a href="http://pochta.su/"><b style="font-size:16px; color:#0000cc;">📧 Pochta.su — бесплатная электронная почта</b></a><br><small style="color:#444444;">зарегистрируйте ваш первый бесплатный ящик в Рунете</small></td></tr></table>
+        <br>
         """)
 
         h.append("<table class=\"navbar\" width=\"720\" cellspacing=\"4\" cellpadding=\"2\"><tr>")
@@ -80,11 +82,12 @@ enum AggregatorPageBuilder {
                 let titleText = questDone
                     ? "\(escape(entry.title)) <small style=\"color:#1a6600;\">(пройдено)</small>"
                     : escape(entry.title)
-                if progress.isUnlocked(entry) {
+                if SiteAccess.status(for: entry, progress: progress, quests: quests).locked == false {
                     let fresh = progress.isVisited(entry.id) ? "&nbsp;" : "<span class=\"fresh\">🆕</span>"
                     h.append("<tr class=\"entry\"><td width=\"30\" align=\"center\">\(fresh)</td><td><a href=\"retrosurf://\(entry.displayDomain)\"><b>\(titleText)</b></a><span class=\"domain\"> — \(escape(entry.displayDomain))</span><br><small>\(escape(entry.shortDescription))</small></td></tr>")
                 } else {
-                    h.append("<tr class=\"locked\"><td width=\"30\" align=\"center\" class=\"lockicon\">🔒</td><td><b>\(titleText)</b><span class=\"domain\"> — \(escape(entry.displayDomain))</span><br><small>\(escape(entry.shortDescription))</small><br><span class=\"locknote\">Доступно на скорости \(escape(entry.requiredTier.fullLabel))</span></td></tr>")
+                    let lock = SiteAccess.status(for: entry, progress: progress, quests: quests)
+                    h.append("<tr class=\"locked\"><td width=\"30\" align=\"center\" class=\"lockicon\">🔒</td><td><b>\(titleText)</b><span class=\"domain\"> — \(escape(entry.displayDomain))</span><br><small>\(escape(entry.shortDescription))</small><br><span class=\"locknote\">\(escape(lock.reason ?? "Доступ ограничен"))</span></td></tr>")
                 }
             }
             h.append("</table><br>")
@@ -148,6 +151,31 @@ enum AggregatorPageBuilder {
         <tr><td align="center"><a href="\(portalURL)">← Вернуться на Ориентир.ру</a></td></tr>
         </table>
         <small>(пока без содержимого — идёт загрузка по модему…)</small>
+        </center>
+        </body>
+        </html>
+        """
+    }
+
+    static func lockedHTML(for entry: SiteEntry, reason: String) -> String {
+        """
+        <!DOCTYPE HTML>
+        <html lang="ru">
+        <head>
+        <meta charset="utf-8">
+        <title>Доступ ограничен — \(escape(entry.title))</title>
+        <style>
+        body { background-color:#e8e4d4; font-family:"Times New Roman",Georgia,serif; -webkit-font-smoothing:none; }
+        </style>
+        </head>
+        <body>
+        <center>
+        <h1 style="color:#8b1a1a;">🔒 Доступ ограничен</h1>
+        <p>Сайт <b>\(escape(entry.title))</b> (\(escape(entry.displayDomain))) пока недоступен.</p>
+        <p style="color:#b05000; font-weight:bold;">\(escape(reason))</p>
+        <p><a href="\(portalURL)">← Вернуться на Ориентир.ру</a></p>
+        <hr width="400" color="#8b1a1a">
+        <small>(c) 1999 Ориентир.ру</small>
         </center>
         </body>
         </html>

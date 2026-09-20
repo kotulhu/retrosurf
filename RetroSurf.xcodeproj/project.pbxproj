@@ -35,6 +35,20 @@
 		AA000000000000000000003D /* QuestExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003C /* QuestExperienceView.swift */; };
 		AA000000000000000000003B /* QuestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003A /* QuestManager.swift */; };
 		AA000000000000000000003F /* BrowserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003E /* BrowserHistory.swift */; };
+		AA0000000000000000000041 /* MailboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000040 /* MailboxManager.swift */; };
+		AA0000000000000000000043 /* PochtaInboxExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000042 /* PochtaInboxExperience.swift */; };
+		AA0000000000000000000045 /* InteractiveExperienceRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000044 /* InteractiveExperienceRegistry.swift */; };
+		AA0000000000000000000047 /* SiteDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000046 /* SiteDescriptor.swift */; };
+		AA0000000000000000000049 /* SiteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000048 /* SiteRequest.swift */; };
+		AA000000000000000000004B /* SiteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000004A /* SiteResponse.swift */; };
+		AA000000000000000000004D /* SitePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000004C /* SitePage.swift */; };
+		AA000000000000000000004F /* InteractiveSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000004E /* InteractiveSite.swift */; };
+		AA0000000000000000000051 /* SiteRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000050 /* SiteRegistry.swift */; };
+		AA0000000000000000000053 /* SiteSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000052 /* SiteSession.swift */; };
+		AA0000000000000000000057 /* MailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000056 /* MailState.swift */; };
+		AA0000000000000000000059 /* MailMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000058 /* SiteMailMessage.swift */; };
+		AA000000000000000000005B /* MailSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000005A /* MailSite.swift */; };
+		AA000000000000000000005D /* MailTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000005C /* MailTemplates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +81,20 @@
 		AA000000000000000000003A /* QuestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestManager.swift; sourceTree = "<group>"; };
 		AA000000000000000000003C /* QuestExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestExperienceView.swift; sourceTree = "<group>"; };
 		AA000000000000000000003E /* BrowserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserHistory.swift; sourceTree = "<group>"; };
+		AA0000000000000000000040 /* MailboxManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxManager.swift; sourceTree = "<group>"; };
+		AA0000000000000000000042 /* PochtaInboxExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PochtaInboxExperience.swift; sourceTree = "<group>"; };
+		AA0000000000000000000044 /* InteractiveExperienceRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveExperienceRegistry.swift; sourceTree = "<group>"; };
+		AA0000000000000000000046 /* SiteDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDescriptor.swift; sourceTree = "<group>"; };
+		AA0000000000000000000048 /* SiteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteRequest.swift; sourceTree = "<group>"; };
+		AA000000000000000000004A /* SiteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteResponse.swift; sourceTree = "<group>"; };
+		AA000000000000000000004C /* SitePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitePage.swift; sourceTree = "<group>"; };
+		AA000000000000000000004E /* InteractiveSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveSite.swift; sourceTree = "<group>"; };
+		AA0000000000000000000050 /* SiteRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteRegistry.swift; sourceTree = "<group>"; };
+		AA0000000000000000000052 /* SiteSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteSession.swift; sourceTree = "<group>"; };
+		AA0000000000000000000056 /* MailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailState.swift; sourceTree = "<group>"; };
+		AA0000000000000000000058 /* SiteMailMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteMailMessage.swift; sourceTree = "<group>"; };
+		AA000000000000000000005A /* MailSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSite.swift; sourceTree = "<group>"; };
+		AA000000000000000000005C /* MailTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailTemplates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +151,36 @@
 				AA000000000000000000002F /* CurationManager.swift */,
 				AA000000000000000000003A /* QuestManager.swift */,
 				AA000000000000000000003E /* BrowserHistory.swift */,
+				AA0000000000000000000040 /* MailboxManager.swift */,
+				AA0000000000000000000054 /* Sites */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000054 /* Sites */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000046 /* SiteDescriptor.swift */,
+				AA0000000000000000000048 /* SiteRequest.swift */,
+				AA000000000000000000004A /* SiteResponse.swift */,
+				AA000000000000000000004C /* SitePage.swift */,
+				AA000000000000000000004E /* InteractiveSite.swift */,
+				AA0000000000000000000050 /* SiteRegistry.swift */,
+				AA0000000000000000000052 /* SiteSession.swift */,
+				AA0000000000000000000055 /* Mail */,
+			);
+			path = Sites;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000055 /* Mail */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000056 /* MailState.swift */,
+				AA0000000000000000000058 /* SiteMailMessage.swift */,
+				AA000000000000000000005A /* MailSite.swift */,
+				AA000000000000000000005C /* MailTemplates.swift */,
+			);
+			path = Mail;
 			sourceTree = "<group>";
 		};
 		AA00000000000000000000A5 /* Views */ = {
@@ -143,6 +199,8 @@
 				AA000000000000000000002D /* CuratorView.swift */,
 				AA0000000000000000000031 /* CuratedLibraryView.swift */,
 				AA000000000000000000003C /* QuestExperienceView.swift */,
+				AA0000000000000000000042 /* PochtaInboxExperience.swift */,
+				AA0000000000000000000044 /* InteractiveExperienceRegistry.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +309,20 @@
 				AA000000000000000000003D /* QuestExperienceView.swift in Sources */,
 				AA000000000000000000003B /* QuestManager.swift in Sources */,
 				AA000000000000000000003F /* BrowserHistory.swift in Sources */,
+				AA0000000000000000000041 /* MailboxManager.swift in Sources */,
+				AA0000000000000000000043 /* PochtaInboxExperience.swift in Sources */,
+				AA0000000000000000000045 /* InteractiveExperienceRegistry.swift in Sources */,
+				AA0000000000000000000047 /* SiteDescriptor.swift in Sources */,
+				AA0000000000000000000049 /* SiteRequest.swift in Sources */,
+				AA000000000000000000004B /* SiteResponse.swift in Sources */,
+				AA000000000000000000004D /* SitePage.swift in Sources */,
+				AA000000000000000000004F /* InteractiveSite.swift in Sources */,
+				AA0000000000000000000051 /* SiteRegistry.swift in Sources */,
+				AA0000000000000000000053 /* SiteSession.swift in Sources */,
+				AA0000000000000000000057 /* MailState.swift in Sources */,
+				AA0000000000000000000059 /* MailMessage.swift in Sources */,
+				AA000000000000000000005B /* MailSite.swift in Sources */,
+				AA000000000000000000005D /* MailTemplates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

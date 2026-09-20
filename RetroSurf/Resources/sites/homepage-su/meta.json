@@ -1,0 +1,9 @@
+{
+  "displayDomain": "homepage.su",
+  "title": "Домашняя страничка",
+  "shortDescription": "Бесплатный хостинг для твоей личной страницы",
+  "category": "personal_page",
+  "keywords": ["хостинг", "страничка", "сайт", "личная страница"],
+  "requiredTier": "v14_4",
+  "requiredQuestID": "quest_pochta"
+}

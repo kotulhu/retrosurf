@@ -26,6 +26,12 @@ enum WelcomePage {
     <hr width="560" color="#886644">
     <table border="2" cellspacing="0" cellpadding="8" width="560">
     <tr>
+    <td align="center" bgcolor="#e8e8ff"><b><a href="http://pochta.su/"><font size="4">📧 Pochta.su — бесплатная электронная почта</font></a></b><br><small>зарегистрируйте ваш первый в России бесплатный ящик</small></td>
+    </tr>
+    </table>
+    <br>
+    <table border="2" cellspacing="0" cellpadding="8" width="560">
+    <tr>
     <th colspan="2" bgcolor="#ddd6c6">Страница-приветствие</th>
     </tr>
     <tr>

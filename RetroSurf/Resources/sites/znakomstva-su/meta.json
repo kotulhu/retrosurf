@@ -1,0 +1,9 @@
+{
+  "displayDomain": "znakomstva.su",
+  "title": "Знакомства",
+  "shortDescription": "Сайт знакомств: найди свою вторую половинку",
+  "category": "chat",
+  "keywords": ["знакомства", "любовь", "встречи"],
+  "requiredTier": "v14_4",
+  "requiredQuestID": "quest_pochta"
+}

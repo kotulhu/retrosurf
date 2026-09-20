@@ -6,6 +6,7 @@ struct ContentView: View {
     @EnvironmentObject private var catalog: SiteCatalog
     @EnvironmentObject private var game: GameProgress
     @EnvironmentObject private var quests: QuestManager
+    @EnvironmentObject private var mailbox: MailboxManager
     @StateObject private var engine = BrowserSimulator()
     @StateObject private var history = BrowserHistory()
     @State private var address = AggregatorPageBuilder.portalDomain
@@ -35,10 +36,16 @@ struct ContentView: View {
 
             Group {
                 if let activeQuest {
-                    QuestExperienceView(info: activeQuest, onBack: {
-                        self.activeQuest = nil
-                        presentAggregator()
-                    })
+                    InteractiveExperienceRegistry.view(
+                        for: activeQuest,
+                        quests: quests,
+                        mailbox: mailbox,
+                        onBack: {
+                            self.activeQuest = nil
+                            presentAggregator()
+                        },
+                        onOpenSite: { target in openTarget(target) }
+                    )
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     WebView(html: currentHTML, baseURL: currentBaseURL, reloadToken: reloadToken, onNavigate: handleNavigate)
@@ -121,6 +128,11 @@ struct ContentView: View {
     }
 
     private func openSite(_ entry: SiteEntry, recordHistory: Bool = true) {
+        let lock = SiteAccess.status(for: entry, progress: game, quests: quests)
+        guard !lock.locked else {
+            showLocked(entry, reason: lock.reason ?? "Доступ ограничен")
+            return
+        }
         if recordHistory {
             history.navigate(to: HistoryEntry(siteID: entry.id, displayDomain: entry.displayDomain))
         }
@@ -167,6 +179,19 @@ struct ContentView: View {
         engine.go(to: address, completion: completion)
     }
 
+    private func openTarget(_ target: String) {
+        guard requireConnection() else { return }
+        if let entry = catalog.entry(id: target) {
+            openSite(entry)
+            return
+        }
+        if let entry = catalog.entry(forDomain: target) {
+            openSite(entry)
+            return
+        }
+        showMissing(target)
+    }
+
     private func reloadCurrent() {
         guard requireConnection() else { return }
         if let id = lastOpenID, let entry = catalog.entry(id: id) {
@@ -184,6 +209,16 @@ struct ContentView: View {
             address = target
         }
         currentHTML = AggregatorPageBuilder.notFoundHTML(domain: target)
+        currentBaseURL = nil
+        reloadToken += 1
+    }
+
+    private func showLocked(_ entry: SiteEntry, reason: String) {
+        engine.cancelLoad()
+        activeQuest = nil
+        lastOpenID = nil
+        address = entry.displayDomain
+        currentHTML = AggregatorPageBuilder.lockedHTML(for: entry, reason: reason)
         currentBaseURL = nil
         reloadToken += 1
     }

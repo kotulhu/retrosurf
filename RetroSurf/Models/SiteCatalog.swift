@@ -92,6 +92,7 @@ struct SiteMeta: Codable {
     let keywords: [String]?
     let requiredTier: ModemTier?
     let interactiveExperienceID: String?
+    let requiredQuestID: String?
 }
 
 enum SiteSource: Codable, Equatable {
@@ -110,7 +111,34 @@ struct SiteEntry: Codable, Identifiable {
     let category: SiteCategory
     let source: SiteSource
     let requiredTier: ModemTier
+    let requiredQuestID: String?
     let isUserAdded: Bool
+}
+
+@MainActor
+enum SiteAccess {
+    static func status(
+        for entry: SiteEntry,
+        progress: GameProgress,
+        quests: QuestManager
+    ) -> (locked: Bool, reason: String?) {
+        if let requiredQuestID = entry.requiredQuestID,
+           !quests.isCompleted(requiredQuestID) {
+            let reason: String
+            if requiredQuestID == QuestManager.registrationQuestID {
+                reason = "Требуется зарегистрированная почта"
+            } else {
+                reason = quests.quest(id: requiredQuestID)
+                    .map { "Требуется выполнить квест: \($0.title)" }
+                    ?? "Требуется выполнить квест"
+            }
+            return (true, reason)
+        }
+        if entry.requiredTier.rawValue > progress.currentTier.rawValue {
+            return (true, "Доступно на скорости \(entry.requiredTier.fullLabel)")
+        }
+        return (false, nil)
+    }
 }
 
 @MainActor
@@ -211,7 +239,8 @@ final class SiteCatalog: ObservableObject {
             category: current?.category,
             keywords: current?.keywords,
             requiredTier: current?.requiredTier,
-            interactiveExperienceID: current?.interactiveExperienceID
+            interactiveExperienceID: current?.interactiveExperienceID,
+            requiredQuestID: current?.requiredQuestID
         )
         try writeMeta(meta, at: directory)
         loadAll()
@@ -256,6 +285,7 @@ final class SiteCatalog: ObservableObject {
                     category: meta?.category ?? .other,
                     source: source,
                     requiredTier: meta?.requiredTier ?? .v14_4,
+                    requiredQuestID: meta?.requiredQuestID,
                     isUserAdded: isUserAdded
                 )
             )
