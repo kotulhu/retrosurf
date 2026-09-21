@@ -205,14 +205,22 @@ final class MailSite: BaseInteractiveSite<MailState>, QuestLetterReceiver {
         let username = form["username"]?.trimmingCharacters(in: .whitespaces) ?? ""
         let password = form["password"] ?? ""
         let displayName = form["displayName"]?.trimmingCharacters(in: .whitespaces) ?? ""
-        guard !username.isEmpty, !password.isEmpty else {
+        let secretQuestion = form["secretQuestion"] ?? ""
+        let secretAnswer = form["secretAnswer"]?.trimmingCharacters(in: .whitespaces) ?? ""
+        guard !username.isEmpty, !password.isEmpty, !secretQuestion.isEmpty, !secretAnswer.isEmpty else {
             let errorPage = SitePage(url: resolve("/register"), title: "Регистрация", html: MailTemplates.registerPage(error: "Заполните все поля"))
             return .compound([.page(errorPage), .alert("Заполните все поля")])
+        }
+        guard MailTemplates.secretQuestions.contains(secretQuestion) else {
+            let errorPage = SitePage(url: resolve("/register"), title: "Регистрация", html: MailTemplates.registerPage(error: "Выберите секретный вопрос из списка"))
+            return .compound([.page(errorPage), .alert("Выберите секретный вопрос из списка")])
         }
         let account = MailAccount(
             username: username,
             password: password,
             displayName: displayName.isEmpty ? username : displayName,
+            secretQuestion: secretQuestion,
+            secretAnswer: secretAnswer,
             createdAt: Date()
         )
         state.account = account

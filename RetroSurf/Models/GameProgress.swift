@@ -7,6 +7,16 @@ final class GameProgress: ObservableObject {
     @Published var currentTier: ModemTier = .v14_4
     @Published var flags: Set<String> = []
 
+    /// The hidden achievement score (0…60). Persisted in the same
+    /// UserDefaults store as the rest of the flag state — this is the
+    /// numeric flag backing the achievements dashboard. It may ONLY change
+    /// through `addScore(_:)`, never through `setFlag(_:)`.
+    @Published private(set) var score = 0
+
+    /// Fires the achievement event. `AchievementBroadcaster` posts to its
+    /// observers from `addScore(_:)` exclusively.
+    let achievements: AchievementBroadcaster = AchievementBroadcaster()
+
     private let catalog: SiteCatalog
     private let tierUpgradeThreshold = 2
     private let defaults = UserDefaults.standard
@@ -15,6 +25,7 @@ final class GameProgress: ObservableObject {
         static let currentTier = "GameProgress.currentTier"
         static let visitedSites = "GameProgress.visitedSites"
         static let flags = "GameProgress.flags"
+        static let score = "GameProgress.score"
     }
 
     init(catalog: SiteCatalog) {
@@ -34,6 +45,8 @@ final class GameProgress: ObservableObject {
            let decoded = try? JSONDecoder().decode([String].self, from: data) {
             flags = Set(decoded)
         }
+
+        score = max(0, defaults.integer(forKey: Keys.score))
 
         recomputeTier()
     }
@@ -98,5 +111,35 @@ final class GameProgress: ObservableObject {
             defaults.set(data, forKey: Keys.visitedSites)
         }
         defaults.synchronize()
+    }
+}
+
+// MARK: - Part 2 · Achievement event layer
+
+/// Announces achievement score events. `AchievementBroadcaster` posts to its
+/// observers from `addScore(_:)` exclusively — never from flag changes.
+@MainActor
+final class AchievementBroadcaster {
+    typealias ScoreHandler = (_ total: Int, _ delta: Int) -> Void
+    private var handlers: [ScoreHandler] = []
+
+    func observe(_ handler: @escaping ScoreHandler) {
+        handlers.append(handler)
+    }
+
+    func broadcast(total: Int, delta: Int) {
+        handlers.forEach { $0(total, delta) }
+    }
+}
+
+/// The achievement score may change ONLY here (same-file extension — append-only,
+/// no target surgery). Persists the total and announces the event to observers.
+extension GameProgress {
+    func addScore(_ points: Int) {
+        guard points > 0 else { return }
+        score += points
+        defaults.set(score, forKey: Keys.score)
+        defaults.synchronize()
+        achievements.broadcast(total: score, delta: points)
     }
 }

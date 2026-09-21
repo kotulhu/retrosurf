@@ -11,6 +11,8 @@ struct MailAccount: Codable, Sendable {
     let username: String
     let password: String
     let displayName: String
+    let secretQuestion: String
+    let secretAnswer: String
     let createdAt: Date
 }
 

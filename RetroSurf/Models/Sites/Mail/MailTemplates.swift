@@ -3,6 +3,16 @@ import Foundation
 enum MailTemplates {
     static let baseURL = "http://pochta.su"
 
+    /// The five supported secret questions. Server-side validation must match
+    /// this list exactly — registration is rejected for anything else.
+    static let secretQuestions: [String] = [
+        "Девичья фамилия матери?",
+        "Имя первого домашнего животного?",
+        "Город, где вы родились?",
+        "Название вашей первой школы?",
+        "Ваш любимый фильм?"
+    ]
+
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ru_RU")
@@ -75,6 +85,10 @@ enum MailTemplates {
         <tr><td>Логин:</td><td><input type="text" name="username" size="24"></td></tr>
         <tr><td>Пароль:</td><td><input type="password" name="password" size="24"></td></tr>
         <tr><td>Ваше имя:</td><td><input type="text" name="displayName" size="24"></td></tr>
+        <tr><td>Секретный вопрос:</td><td><select name="secretQuestion" style="width:180px">
+        \(secretQuestions.map { "<option>\(escapeHTML($0))</option>" }.joined(separator: "\n        "))
+        </select></td></tr>
+        <tr><td>Ответ на вопрос:</td><td><input type="text" name="secretAnswer" size="24"></td></tr>
         <tr><td></td><td><input type="submit" value="Создать ящик"></td></tr>
         </table>
         </form>

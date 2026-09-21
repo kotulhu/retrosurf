@@ -16,6 +16,8 @@ struct ContentView: View {
     @State private var reloadToken = 0
     @State private var showCurator = false
     @State private var showLibrary = false
+    @State private var showDashboard = false
+    @State private var achievementVisible = false
     @State private var lastOpenID: String?
     @State private var activeQuest: QuestExperienceInfo?
     @State private var siteAlert: String?
@@ -82,6 +84,15 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showLibrary) {
             CuratedLibraryView()
+        }
+        .sheet(isPresented: $showDashboard) {
+            AchievementDashboardView(game: game)
+        }
+        .overlay(alignment: .bottomTrailing) {
+            if achievementVisible {
+                FloatingAchievementIcon { showDashboard = true }
+                    .padding(20)
+            }
         }
     }
 
@@ -252,6 +263,8 @@ struct ContentView: View {
                     game.recordVisit(lastOpenID)
                 }
             }
+        case .addScore(let points):
+            game.addScore(points)
         case .addItem, .advanceQuest, .endGame:
             break
         }
@@ -404,5 +417,123 @@ struct ContentView: View {
         let snapshots = sites.snapshotAll()
         UserDefaults.standard.set(snapshots, forKey: SiteSession.snapshotsDefaultsKey)
         UserDefaults.standard.synchronize()
+    }
+}
+
+// MARK: - Part 3 · Floating achievement icon
+
+/// Pulsing, window-level achievement bubble. Appears on a scored achievement
+/// and auto-hides after 600…900 s. Tapping it opens the terminal dashboard.
+struct FloatingAchievementIcon: View {
+    var onTap: () -> Void
+
+    @State private var pulse = false
+    @State private var gone = false
+    private let hideAfter = Double(Int.random(in: 600...900))
+
+    var body: some View {
+        Button(action: onTap) {
+            ZStack {
+                Circle()
+                    .fill(Color.black.opacity(0.88))
+                    .frame(width: 52, height: 52)
+                Circle()
+                    .stroke(Color(red: 157 / 255, green: 194 / 255, blue: 91 / 255), lineWidth: 3)
+                    .frame(width: 52, height: 52)
+                    .scaleEffect(pulse ? 1.18 : 0.92)
+                Image(systemName: "terminal")
+                    .font(.system(size: 22, weight: .bold))
+                    .foregroundColor(Color(red: 157 / 255, green: 194 / 255, blue: 91 / 255))
+            }
+        }
+        .buttonStyle(.plain)
+        .shadow(color: Color(red: 157 / 255, green: 194 / 255, blue: 91 / 255).opacity(0.7), radius: 8)
+        .opacity(gone ? 0 : 1)
+        .scaleEffect(gone ? 0.4 : 1)
+        .onAppear {
+            withAnimation(.easeInOut(duration: 0.9).repeatForever(autoreverses: true)) {
+                pulse = true
+            }
+            Task {
+                try? await Task.sleep(nanoseconds: UInt64(hideAfter * 1_000_000_000))
+                if !Task.isCancelled {
+                    withAnimation(.easeIn(duration: 0.5)) { gone = true }
+                }
+            }
+        }
+    }
+}
+
+
+// MARK: - Part 4 · Terminal achievement dashboard
+
+/// Full-screen terminal-style dashboard. Not a registered site — an overlay.
+/// Metrics mirror the trusted score (0…60) plus persistence flags.
+struct AchievementDashboardView: View {
+    let game: GameProgress
+
+    @State private var cursor = true
+    private let green = Color(red: 51 / 255, green: 255 / 255, blue: 51 / 255)
+
+    private var trustLevel: Int { Int((Double(min(game.score, 60)) / 60.0 * 100.0).rounded()) }
+    private var backdoorsFound: Int { game.flags.contains("backdoor.planted") ? 1 : 0 }
+    private var firewallIntegrity: Int { 100 - backdoorsFound * 34 }
+    private var activeSessions: Int { game.visitedSiteIDs.count }
+
+    var body: some View {
+        ZStack {
+            Color.black.ignoresSafeArea()
+            VStack(alignment: .leading, spacing: 6) {
+                HStack(spacing: 8) {
+                    Text("root@retrosurf").foregroundColor(green)
+                    Text("~").foregroundColor(.gray)
+                    Text("#").foregroundColor(green)
+                    Spacer()
+                    Text("chmod -R 755 /cyber").foregroundColor(.gray).font(.system(size: 13))
+                }
+                .font(.system(size: 15, weight: .bold, design: .monospaced))
+                .padding(.bottom, 18)
+
+                dashLine(metric: "SYSTEM.CONFIDENCE", value: "\(trustLevel)%")
+                dashLine(metric: "BACKDOORS.DETECTED", value: backdoorsFound == 1 ? "1" : "0")
+                dashLine(metric: "FIREWALL.INTEGRITY", value: "\(firewallIntegrity)%")
+                dashLine(metric: "ACTIVE.SESSIONS", value: "\(activeSessions)")
+                dashLine(metric: "ACHIEVEMENT.SCORE", value: "\(game.score)/60")
+                dashLine(metric: "ROOT.ACCESS", value: game.flags.contains("root.acquired") ? "GRANTED" : "DENIED")
+                if game.flags.contains("mail.registered") {
+                    dashLine(metric: "MAIL.REGISTERED", value: "YES")
+                }
+
+                Spacer()
+
+                HStack(spacing: 0) {
+                    Text("retrosurf# ")
+                        .foregroundColor(green)
+                        .font(.system(size: 20, weight: .bold, design: .monospaced))
+                    Text(cursor ? "█" : " ")
+                        .foregroundColor(green)
+                        .font(.system(size: 20, weight: .bold, design: .monospaced))
+                }
+            }
+            .padding(36)
+        }
+        .onAppear {
+            withAnimation(.linear(duration: 0.55).repeatForever(autoreverses: false)) {
+                cursor.toggle()
+            }
+        }
+    }
+
+    private func dashLine(metric: String, value: String) -> some View {
+        HStack(spacing: 0) {
+            Text(metric)
+                .foregroundColor(green)
+                .font(.system(size: 16, weight: .semibold, design: .monospaced))
+            Text(String(repeating: " ", count: max(1, 26 - metric.count)))
+                .foregroundColor(green)
+            Text(value)
+                .foregroundColor(.white)
+                .font(.system(size: 16, weight: .bold, design: .monospaced))
+        }
     }
 }
