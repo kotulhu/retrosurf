@@ -55,7 +55,14 @@ final class MailSite: BaseInteractiveSite<MailState>, QuestLetterReceiver {
     /// the sender's address; everything else maps 1:1.
     @discardableResult
     func deliver(_ message: QuestMessage) -> Int {
-        deliver(
+        if message.messageCategory == "feedback" && message.relatedSiteId == "homepage-su" {
+            let ud = UserDefaults.standard
+            let next = ud.integer(forKey: "homepageFeedbackCount") + 1
+            ud.set(next, forKey: "homepageFeedbackCount")
+            ud.set(next, forKey: "homepage.feedback.\(next)")
+            print("[MailSite] отзыв #\(next)/3 про страничку — инкремент homepageFeedbackCount")
+        }
+        return deliver(
             MailDraft(
                 from: message.sender.address,
                 subject: message.subject,
@@ -201,12 +208,17 @@ final class MailSite: BaseInteractiveSite<MailState>, QuestLetterReceiver {
     // MARK: - POST
 
     private func postRegister(_ form: [String: String]) -> SiteResponse {
+        func g(_ key: String) -> String? {
+            form[key] ?? form[key.lowercased()]
+                ?? form.first(where: { $0.key.caseInsensitiveCompare(key) == .orderedSame })?.value
+        }
         if state.account != nil { return redirect(to: "/login") }
-        let username = form["username"]?.trimmingCharacters(in: .whitespaces) ?? ""
-        let password = form["password"] ?? ""
-        let displayName = form["displayName"]?.trimmingCharacters(in: .whitespaces) ?? ""
-        let secretQuestion = form["secretQuestion"] ?? ""
-        let secretAnswer = form["secretAnswer"]?.trimmingCharacters(in: .whitespaces) ?? ""
+        let username = g("username")?.trimmingCharacters(in: .whitespaces) ?? ""
+        let password = g("password") ?? ""
+        let displayName = g("displayName")?.trimmingCharacters(in: .whitespaces) ?? ""
+        let secretQuestion = g("secretQuestion") ?? ""
+        let secretAnswer = g("secretAnswer")?.trimmingCharacters(in: .whitespaces) ?? ""
+        print("[Debug-MailSite/postRegister] form приехала: username=", (username.isEmpty ? "<ПУСТО>" : username), " password=", (password.isEmpty ? "<ПУСТО>" : "***"), " displayName=", (displayName.isEmpty ? "<ПУСТО>" : displayName), " secretQuestion=", (secretQuestion.isEmpty ? "<ПУСТО>" : secretQuestion), " secretAnswer=", (secretAnswer.isEmpty ? "<ПУСТО>" : secretAnswer))
         guard !username.isEmpty, !password.isEmpty, !secretQuestion.isEmpty, !secretAnswer.isEmpty else {
             let errorPage = SitePage(url: resolve("/register"), title: "Регистрация", html: MailTemplates.registerPage(error: "Заполните все поля"))
             return .compound([.page(errorPage), .alert("Заполните все поля")])

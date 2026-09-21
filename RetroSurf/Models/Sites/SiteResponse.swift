@@ -9,6 +9,13 @@ enum SiteEffect: Sendable, Codable, Equatable {
     /// The ONLY effect that moves the numeric "score" — achievement events
     /// are fired from this path, never from plain flag changes.
     case addScore(Int)
+    /// Registers a statically-served page (host + persisted HTML) into the
+    /// live SiteSession registry immediately — no app restart. The homepage
+    /// site (Part 1) fires this the moment the player publishes homepage.su.
+    /// Persists the HTML into SiteCatalog's user-added dir and registers a
+    /// StaticSite so the page is served by the SAME render path as curated
+    /// sites from this very second.
+    case registerStaticSite(SiteDescriptor, String)
 }
 
 enum SiteResponse: Sendable {

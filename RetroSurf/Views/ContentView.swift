@@ -210,8 +210,9 @@ struct ContentView: View {
         }
         var form: [String: String] = [:]
         for item in items {
-            form[item.name] = item.value ?? ""
+            form[item.name] = (item.value ?? "").replacingOccurrences(of: "+", with: " ")
         }
+        print("[Debug-ContentView/splitForm] движок достал из URL query: ", form.isEmpty ? "<аргументов НЕТ — поля НЕ доехали>" : form)
         var clean = components
         clean.query = nil
         return (clean.url ?? url, form)
@@ -244,6 +245,13 @@ struct ContentView: View {
         }
     }
 
+    private func persistStaticPage(_ html: String, host: String) {
+        let dir = SiteCatalog.curatedSitesURL.appendingPathComponent(host, isDirectory: true)
+        try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        try? html.write(to: dir.appendingPathComponent("index.html"), atomically: true, encoding: .utf8)
+        print("[ContentView] опубликована статическая страничка \(host)")
+    }
+
     private func renderPage(_ page: SitePage) async throws {
         try await engine.loadBytes(max(page.html.utf8.count, 1))
         currentHTML = page.html
@@ -265,6 +273,11 @@ struct ContentView: View {
             }
         case .addScore(let points):
             game.addScore(points)
+        case .registerStaticSite(let descriptor, let html):
+            persistStaticPage(html, host: descriptor.host)
+            if sites.registry.site(forHost: descriptor.host) == nil {
+                sites.registry.register(StaticSite(host: descriptor.host, displayName: descriptor.displayName, html: html))
+            }
         case .addItem, .advanceQuest, .endGame:
             break
         }

@@ -24,6 +24,8 @@ struct QuestDelivery: Codable, Sendable {
     let bodyHTML: String
     /// Opaque tag; read-once emits "mail.read.<tag>".
     let tag: String?
+    let messageCategory: String?
+    let relatedSiteId: String?
     let metadata: [String: String]
 }
 
@@ -34,6 +36,8 @@ struct QuestMessage: Codable, Sendable {
     let subject: String
     let bodyHTML: String
     let tag: String?
+    let messageCategory: String?
+    let relatedSiteId: String?
     let timestamp: Date
 }
 

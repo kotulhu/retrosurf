@@ -122,6 +122,8 @@ final class QuestGenerator: ObservableObject {
             subject: applyTemplates(quest.delivery.subject, sender: sender, quest: quest),
             bodyHTML: applyTemplates(quest.delivery.bodyHTML, sender: sender, quest: quest),
             tag: quest.delivery.tag,
+            messageCategory: quest.delivery.messageCategory,
+            relatedSiteId: quest.delivery.relatedSiteId,
             timestamp: Date()
         )
     }
