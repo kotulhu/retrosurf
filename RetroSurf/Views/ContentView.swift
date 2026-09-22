@@ -331,6 +331,20 @@ struct ContentView: View {
             return
         }
 
+        // A registered interactive site takes precedence over the Ориентир.ру
+        // placeholder, even when the catalog marks the entry as not interactive
+        // yet. This is what makes an unmarked "personal page" open as a real
+        // living site instead of the "скоро появится содержимое" stub.
+        if sites.registry.site(forHost: entry.displayDomain) != nil {
+            game.recordVisit(entry.id)
+            guard let url = URL(string: "http://" + entry.displayDomain + "/") else { return }
+            Task {
+                await dispatch(url)
+                persistSites()
+            }
+            return
+        }
+
         // Static site: its HTML is a page too — same byte-based load rule.
         let page = catalog.page(for: entry)
         let pendingHTML = page?.html ?? AggregatorPageBuilder.placeholderHTML(for: entry)

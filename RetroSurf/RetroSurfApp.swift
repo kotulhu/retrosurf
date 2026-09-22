@@ -19,6 +19,7 @@ struct RetroSurfApp: App {
         let registry = SiteRegistry()
         let mailSite = MailSite()
         registry.register(mailSite)
+        registry.register(HomepageSite(mailSite: mailSite))
         let session = SiteSession(registry: registry)
         let senders = SenderCatalog.loadFromBundle()
         let generator = QuestGenerator(

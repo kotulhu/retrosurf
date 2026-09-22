@@ -39,7 +39,7 @@ struct QuestExperienceView: View {
     private var formView: some View {
         ScrollView {
             VStack(spacing: 14) {
-                Text("Почта.SU")
+                Text("Люди.su")
                     .font(.custom("Times New Roman", size: 40).weight(.bold))
                     .foregroundColor(Color(red: 0.55, green: 0.1, blue: 0.1))
                 Text("Регистрация бесплатного электронного ящика")
