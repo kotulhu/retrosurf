@@ -1,6 +1,100 @@
 import Combine
 import Foundation
 
+enum MessageChannel: String, Codable, Sendable {
+    case mail
+    case chat
+}
+
+enum ChannelTiming {
+    static func defaultDelayRange(for channel: MessageChannel) -> ClosedRange<TimeInterval> {
+        switch channel {
+        case .mail: 180...900
+        case .chat: 5...30
+        }
+    }
+}
+
+struct PendingDelivery: Codable, Identifiable, Sendable {
+    let id: String
+    let channel: MessageChannel
+    let deliverAt: Date
+    let targetSiteId: String
+    let message: QuestMessage
+}
+
+/// Persists planned delivery timestamps rather than a running timer, so a
+/// message remains scheduled while the app is closed and is handled next tick.
+@MainActor
+final class MessageScheduler: ObservableObject {
+    private enum Keys {
+        static let pendingDeliveries = "MessageScheduler.pendingDeliveries"
+    }
+
+    private let defaults: UserDefaults
+    @Published private(set) var pendingDeliveries: [PendingDelivery]
+
+    init(defaults: UserDefaults = .standard) {
+        self.defaults = defaults
+        if let data = defaults.data(forKey: Keys.pendingDeliveries),
+           let deliveries = try? JSONDecoder().decode([PendingDelivery].self, from: data) {
+            pendingDeliveries = deliveries
+        } else {
+            pendingDeliveries = []
+        }
+    }
+
+    func schedule(
+        channel: MessageChannel,
+        targetSiteId: String,
+        message: QuestMessage,
+        overrideDelayRange: ClosedRange<TimeInterval>? = nil
+    ) {
+        let range = overrideDelayRange ?? ChannelTiming.defaultDelayRange(for: channel)
+        let delivery = PendingDelivery(
+            id: UUID().uuidString,
+            channel: channel,
+            deliverAt: Date().addingTimeInterval(TimeInterval.random(in: range)),
+            targetSiteId: targetSiteId,
+            message: message
+        )
+        pendingDeliveries.append(delivery)
+        persist()
+#if DEBUG
+        let category = delivery.channel == .mail ? "Mail" : "Chat"
+        let seconds = Int(delivery.deliverAt.timeIntervalSinceNow)
+        DebugLogger.shared.log(category, "scheduled '\(delivery.id)' → '\(delivery.targetSiteId)' (delay \(seconds) s)")
+#endif
+    }
+
+    func processDueDeliveries(deliverHandler: (PendingDelivery) -> Void) {
+        let due = pendingDeliveries.filter { $0.deliverAt <= Date() }
+        for delivery in due {
+            deliverHandler(delivery)
+#if DEBUG
+            let category = delivery.channel == .mail ? "Mail" : "Chat"
+            DebugLogger.shared.log(category, "delivered '\(delivery.id)' → '\(delivery.targetSiteId)'")
+#endif
+        }
+        guard !due.isEmpty else { return }
+        let deliveredIDs = Set(due.map(\.id))
+        pendingDeliveries.removeAll { deliveredIDs.contains($0.id) }
+        persist()
+    }
+
+    /// Removes all scheduled deliveries (used by the debug progress reset).
+    func clearAll() {
+        pendingDeliveries.removeAll()
+        persist()
+    }
+
+    private func persist() {
+        guard let data = try? JSONEncoder().encode(pendingDeliveries) else { return }
+        defaults.set(data, forKey: Keys.pendingDeliveries)
+        defaults.synchronize()
+    }
+}
+
 /// Converts QuestDefinitions into concrete letters and pushes them into
 /// registered interactive sites (pochta.su). Senders are resolved once per
 /// archetypeId, so all quests from "friend" come from the same person.
@@ -8,15 +102,22 @@ import Foundation
 final class QuestGenerator: ObservableObject {
     private let quests: [QuestDefinition]
     private let senders: SenderCatalog
+    let messageScheduler: MessageScheduler
     private weak var registry: SiteRegistry?
 
     /// archetypeId -> concrete Sender. Cached per archetype, not per quest.
     private var senderCache: [String: Sender] = [:]
 
-    init(quests: [QuestDefinition], senders: SenderCatalog, registry: SiteRegistry) {
+    init(
+        quests: [QuestDefinition],
+        senders: SenderCatalog,
+        registry: SiteRegistry,
+        messageScheduler: MessageScheduler
+    ) {
         self.quests = quests
         self.senders = senders
         self.registry = registry
+        self.messageScheduler = messageScheduler
     }
 
     /// Loads quests.json from the app bundle. Logs and yields [] on failure.
@@ -71,6 +172,23 @@ final class QuestGenerator: ObservableObject {
         _ = target.deliver(message)
         print("[QuestGenerator] forceIssued '\(quest.id)' at '\(siteID)' from \(sender.address)")
         return true
+    }
+
+    func clearSenderCache() {
+        senderCache.removeAll()
+    }
+
+    /// Runs from the application's shared heartbeat. Due messages are removed
+    /// only after their persisted timestamps have been reached.
+    func processDueDeliveries() {
+        messageScheduler.processDueDeliveries { [weak self] delivery in
+            guard let target = self?.registry?.site(withID: delivery.targetSiteId) as? MessageCapable else {
+                print("[QuestGenerator] scheduled delivery '\(delivery.id)' has no target '\(delivery.targetSiteId)'")
+                return
+            }
+            _ = target.deliver(delivery.message)
+            print("[QuestGenerator] delivered scheduled '\(delivery.id)' to '\(delivery.targetSiteId)'")
+        }
     }
 
     // MARK: - Sender resolution

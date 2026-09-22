@@ -35,7 +35,11 @@
 		AA000000000000000000003B /* QuestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003A /* QuestManager.swift */; };
 		AA000000000000000000003D /* QuestExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003C /* QuestExperienceView.swift */; };
 		AA000000000000000000003F /* BrowserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003E /* BrowserHistory.swift */; };
-		AA0000000000000000000041 /* MailboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000040 /* MailboxManager.swift */; };
+		AA00000000000000000000F2 /* GameProgressReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F1 /* GameProgressReset.swift */; };
+		AA00000000000000000000F4 /* StaticSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F3 /* StaticSite.swift */; };
+		AA00000000000000000000F6 /* Homepage/HomepageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F5 /* Homepage/HomepageState.swift */; };
+		AA00000000000000000000F8 /* Homepage/HomepageSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F7 /* Homepage/HomepageSite.swift */; };
+		AA00000000000000000000FA /* Homepage/HomepageTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F9 /* Homepage/HomepageTemplates.swift */; };
 		AA0000000000000000000043 /* PochtaInboxExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000042 /* PochtaInboxExperience.swift */; };
 		AA0000000000000000000045 /* InteractiveExperienceRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000044 /* InteractiveExperienceRegistry.swift */; };
 		AA0000000000000000000047 /* SiteDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000046 /* SiteDescriptor.swift */; };
@@ -55,6 +59,9 @@
 		AA0000000000000000000065 /* Quests/QuestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000064 /* Quests/QuestModels.swift */; };
 		AA0000000000000000000067 /* Quests/QuestGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000066 /* Quests/QuestGenerator.swift */; };
 		AA0000000000000000000069 /* Quests/quests.json in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000068 /* Quests/quests.json */; };
+		AA00000000000000000000E1 /* DebugLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E0 /* DebugLogger.swift */; };
+		AA00000000000000000000E3 /* GameClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E2 /* GameClock.swift */; };
+		AA00000000000000000000E5 /* DebugPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E4 /* DebugPanelView.swift */; };
 		AA000000000000000000006D /* Senders/senders.json in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000006C /* Senders/senders.json */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +94,11 @@
 		AA000000000000000000003A /* QuestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestManager.swift; sourceTree = "<group>"; };
 		AA000000000000000000003C /* QuestExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestExperienceView.swift; sourceTree = "<group>"; };
 		AA000000000000000000003E /* BrowserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserHistory.swift; sourceTree = "<group>"; };
-		AA0000000000000000000040 /* MailboxManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxManager.swift; sourceTree = "<group>"; };
+		AA00000000000000000000F1 /* GameProgressReset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProgressReset.swift; sourceTree = "<group>"; };
+		AA00000000000000000000F3 /* StaticSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticSite.swift; sourceTree = "<group>"; };
+		AA00000000000000000000F5 /* HomepageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageState.swift; sourceTree = "<group>"; };
+		AA00000000000000000000F7 /* HomepageSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageSite.swift; sourceTree = "<group>"; };
+		AA00000000000000000000F9 /* HomepageTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageTemplates.swift; sourceTree = "<group>"; };
 		AA0000000000000000000042 /* PochtaInboxExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PochtaInboxExperience.swift; sourceTree = "<group>"; };
 		AA0000000000000000000044 /* InteractiveExperienceRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveExperienceRegistry.swift; sourceTree = "<group>"; };
 		AA0000000000000000000046 /* SiteDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDescriptor.swift; sourceTree = "<group>"; };
@@ -108,6 +119,9 @@
 		AA0000000000000000000066 /* Quests/QuestGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests/QuestGenerator.swift; sourceTree = "<group>"; };
 		AA0000000000000000000068 /* Quests/quests.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quests/quests.json; sourceTree = "<group>"; };
 		AA000000000000000000006C /* Senders/senders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Senders/senders.json; sourceTree = "<group>"; };
+		AA00000000000000000000E0 /* DebugLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogger.swift; sourceTree = "<group>"; };
+		AA00000000000000000000E2 /* GameClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameClock.swift; sourceTree = "<group>"; };
+		AA00000000000000000000E4 /* DebugPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanelView.swift; sourceTree = "<group>"; };
 		AA00000000000000000000B1 /* RetroSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,6 +136,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA00000000000000000000FB /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000000000000000000F5 /* HomepageState.swift */,
+				AA00000000000000000000F7 /* HomepageSite.swift */,
+				AA00000000000000000000F9 /* HomepageTemplates.swift */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
 		AA0000000000000000000054 /* Sites */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +155,9 @@
 				AA000000000000000000004C /* SitePage.swift */,
 				AA000000000000000000004E /* InteractiveSite.swift */,
 				AA0000000000000000000050 /* SiteRegistry.swift */,
+				AA00000000000000000000F3 /* StaticSite.swift */,
 				AA0000000000000000000052 /* SiteSession.swift */,
+				AA00000000000000000000FB /* Homepage */,
 				AA0000000000000000000055 /* Mail */,
 			);
 			path = Sites;
@@ -146,6 +172,15 @@
 				AA000000000000000000005C /* MailTemplates.swift */,
 			);
 			path = Mail;
+			sourceTree = "<group>";
+		};
+		AA00000000000000000000E6 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000000000000000000E0 /* DebugLogger.swift */,
+				AA00000000000000000000E4 /* DebugPanelView.swift */,
+			);
+			path = Debug;
 			sourceTree = "<group>";
 		};
 		AA00000000000000000000A1 = {
@@ -172,6 +207,7 @@
 				AA00000000000000000000A6 /* Resources */,
 				AA0000000000000000000001 /* RetroSurfApp.swift */,
 				AA000000000000000000000C /* Assets.xcassets */,
+				AA00000000000000000000E6 /* Debug */,
 			);
 			path = RetroSurf;
 			sourceTree = "<group>";
@@ -191,11 +227,12 @@
 				AA000000000000000000000F /* ThrottledSchemeHandler.swift */,
 				AA0000000000000000000027 /* SiteCatalog.swift */,
 				AA0000000000000000000029 /* GameProgress.swift */,
+				AA00000000000000000000F1 /* GameProgressReset.swift */,
+				AA00000000000000000000E2 /* GameClock.swift */,
 				AA000000000000000000002B /* AggregatorPageBuilder.swift */,
 				AA000000000000000000002F /* CurationManager.swift */,
 				AA000000000000000000003A /* QuestManager.swift */,
 				AA000000000000000000003E /* BrowserHistory.swift */,
-				AA0000000000000000000040 /* MailboxManager.swift */,
 				AA0000000000000000000054 /* Sites */,
 			);
 			path = Models;
@@ -337,7 +374,11 @@
 				AA000000000000000000003D /* QuestExperienceView.swift in Sources */,
 				AA000000000000000000003B /* QuestManager.swift in Sources */,
 				AA000000000000000000003F /* BrowserHistory.swift in Sources */,
-				AA0000000000000000000041 /* MailboxManager.swift in Sources */,
+				AA00000000000000000000F2 /* GameProgressReset.swift in Sources */,
+				AA00000000000000000000F4 /* StaticSite.swift in Sources */,
+				AA00000000000000000000F6 /* Homepage/HomepageState.swift in Sources */,
+				AA00000000000000000000F8 /* Homepage/HomepageSite.swift in Sources */,
+				AA00000000000000000000FA /* Homepage/HomepageTemplates.swift in Sources */,
 				AA0000000000000000000043 /* PochtaInboxExperience.swift in Sources */,
 				AA0000000000000000000045 /* InteractiveExperienceRegistry.swift in Sources */,
 				AA0000000000000000000047 /* SiteDescriptor.swift in Sources */,
@@ -351,6 +392,9 @@
 				AA0000000000000000000059 /* SiteMailMessage.swift in Sources */,
 				AA000000000000000000005B /* MailSite.swift in Sources */,
 				AA000000000000000000005D /* MailTemplates.swift in Sources */,
+				AA00000000000000000000E1 /* DebugLogger.swift in Sources */,
+				AA00000000000000000000E3 /* GameClock.swift in Sources */,
+				AA00000000000000000000E5 /* DebugPanelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

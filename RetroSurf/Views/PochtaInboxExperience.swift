@@ -5,9 +5,13 @@ struct PochtaInboxExperience: View {
     let onBack: () -> Void
     let onOpenSite: (String) -> Void
 
-    @EnvironmentObject private var mailbox: MailboxManager
+    @EnvironmentObject private var sites: SiteSession
 
-    @State private var selected: MailMessage?
+    @State private var selected: SiteMailMessage?
+
+    private var mailSite: MailSite? {
+        sites.registry.site(withID: "mail") as? MailSite
+    }
 
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -50,15 +54,15 @@ struct PochtaInboxExperience: View {
         VStack(spacing: 14) {
             header
 
-            if mailbox.messages.isEmpty {
+            if mailSite?.inboxMessages.isEmpty != false {
                 Text("Писем пока нет.")
                     .font(.custom("Times New Roman", size: 14))
                     .foregroundColor(.secondary)
                     .padding(.vertical, 40)
-            } else {
+            } else if let mailSite {
                 ScrollView {
                     VStack(spacing: 2) {
-                        ForEach(mailbox.messages) { mail in
+                        ForEach(mailSite.inboxMessages, id: \.id) { mail in
                             mailRow(mail)
                         }
                     }
@@ -84,10 +88,10 @@ struct PochtaInboxExperience: View {
         .padding(.top, 24)
     }
 
-    private func mailRow(_ mail: MailMessage) -> some View {
+    private func mailRow(_ mail: SiteMailMessage) -> some View {
         Button {
             selected = mail
-            mailbox.markRead(mail.id)
+            mailSite?.markRead(messageId: mail.id)
         } label: {
             HStack(spacing: 10) {
                 Text(mail.isRead ? " " : "●")
@@ -104,7 +108,7 @@ struct PochtaInboxExperience: View {
                         .foregroundColor(.secondary)
                 }
                 Spacer()
-                Text(Self.dateFormatter.string(from: mail.date))
+                Text(Self.dateFormatter.string(from: mail.timestamp))
                     .font(.custom("Times New Roman", size: 12))
                     .foregroundColor(.secondary)
             }
@@ -116,7 +120,7 @@ struct PochtaInboxExperience: View {
         .buttonStyle(.plain)
     }
 
-    private func detailView(_ mail: MailMessage) -> some View {
+    private func detailView(_ mail: SiteMailMessage) -> some View {
         VStack(spacing: 12) {
             header
                 .padding(.top, 24)
@@ -130,12 +134,12 @@ struct PochtaInboxExperience: View {
                         Text("От: \(mail.from)")
                             .font(.custom("Times New Roman", size: 13).weight(.bold))
                         Spacer()
-                        Text(Self.dateFormatter.string(from: mail.date))
+                        Text(Self.dateFormatter.string(from: mail.timestamp))
                             .font(.custom("Times New Roman", size: 12))
                             .foregroundColor(.secondary)
                     }
                     Divider()
-                    richBody(mail.body)
+                    Text(htmlToPlain(mail.bodyHTML))
                         .font(.custom("Times New Roman", size: 14))
                         .foregroundColor(Color(red: 0.15, green: 0.15, blue: 0.15))
                         .fixedSize(horizontal: false, vertical: true)
@@ -163,29 +167,12 @@ struct PochtaInboxExperience: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
-    private func richBody(_ body: String) -> Text {
-        var attributed = AttributedString()
-        var remaining = Substring(body)
-        while let range = remaining.range(of: #"\{([^{}]+)\}"#, options: .regularExpression) {
-            let before = String(remaining[..<range.lowerBound])
-            if !before.isEmpty {
-                attributed += AttributedString(before)
-            }
-            let match = String(remaining[range])
-            let marker = String(match.dropFirst().dropLast())
-            var linkPart = AttributedString(marker)
-            linkPart.foregroundColor = Color(red: 0, green: 0, blue: 0.6)
-            linkPart.underlineStyle = .single
-            if let url = URL(string: "retrosurf://\(marker)") {
-                linkPart.link = url
-            }
-            attributed += linkPart
-            remaining = remaining[range.upperBound...]
-        }
-        if !remaining.isEmpty {
-            attributed += AttributedString(String(remaining))
-        }
-        return Text(attributed)
+    private func htmlToPlain(_ html: String) -> String {
+        html
+            .replacingOccurrences(of: "<br>", with: "\n")
+            .replacingOccurrences(of: "<br/>", with: "\n")
+            .replacingOccurrences(of: "<br />", with: "\n")
+            .replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression)
     }
 
     private var beige: Color {

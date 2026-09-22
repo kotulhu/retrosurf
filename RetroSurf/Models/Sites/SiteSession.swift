@@ -58,4 +58,23 @@ final class SiteSession: ObservableObject {
             try site.restore(from: data)
         }
     }
+
+    /// Debug progress reset: returns every interactive site (pochta.su,
+    /// homepage.su…) to its unplayed state and writes fresh empty snapshots so
+    /// the old session state does not come back on the next launch or navigation.
+    func resetAllGameplay() {
+        for site in registry.allSites {
+            switch site {
+            case let mail as MailSite:
+                mail.state = MailState()
+            case let home as HomepageSite:
+                home.state = HomepageState.defaults
+            default:
+                site.resetGameplay()
+            }
+        }
+        let snapshots = snapshotAll()
+        UserDefaults.standard.set(snapshots, forKey: Self.snapshotsDefaultsKey)
+        UserDefaults.standard.synchronize()
+    }
 }

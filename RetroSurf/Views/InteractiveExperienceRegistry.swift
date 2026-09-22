@@ -8,7 +8,7 @@ enum InteractiveExperienceRegistry {
     static func view(
         for info: QuestExperienceInfo,
         quests: QuestManager,
-        mailbox: MailboxManager,
+        sites: SiteSession,
         onBack: @escaping () -> Void,
         onOpenSite: @escaping (String) -> Void
     ) -> some View {

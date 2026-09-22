@@ -112,6 +112,21 @@ final class GameProgress: ObservableObject {
         }
         defaults.synchronize()
     }
+
+    /// Wipes all game progress (flags, score, visits, tier) back to a fresh
+    /// state. Used by the debug progress reset; deliberately leaves the
+    /// persistent snapshot of registered sites untouched.
+    func resetProgress() {
+        flags.removeAll()
+        score = 0
+        visitedSiteIDs.removeAll()
+        currentTier = .v14_4
+        defaults.removeObject(forKey: Keys.flags)
+        defaults.removeObject(forKey: Keys.visitedSites)
+        defaults.removeObject(forKey: Keys.score)
+        defaults.removeObject(forKey: Keys.currentTier)
+        defaults.synchronize()
+    }
 }
 
 // MARK: - Part 2 · Achievement event layer

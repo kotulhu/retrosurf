@@ -16,6 +16,8 @@ enum SiteEffect: Sendable, Codable, Equatable {
     /// StaticSite so the page is served by the SAME render path as curated
     /// sites from this very second.
     case registerStaticSite(SiteDescriptor, String)
+    /// Opens the native file chooser for an interactive site's local image.
+    case selectLocalPhoto(String)
 }
 
 enum SiteResponse: Sendable {

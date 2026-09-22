@@ -41,9 +41,12 @@ struct QuestMessage: Codable, Sendable {
     let timestamp: Date
 }
 
-/// A site that can receive quest letters (MailSite). Delivering assigns the
-/// message an id and places it in the inbox.
+/// Any interactive site that can receive a scheduled message. Mail uses this
+/// today; chat sites will use the same capability when they are added.
 @MainActor
-protocol QuestLetterReceiver: AnyObject {
+protocol MessageCapable: AnyObject {
     func deliver(_ message: QuestMessage) -> Int
 }
+
+/// Compatibility name for existing quest delivery code.
+protocol QuestLetterReceiver: MessageCapable {}

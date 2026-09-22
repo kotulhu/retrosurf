@@ -1,3 +1,4 @@
+import AppKit
 import SwiftUI
 
 struct ContentView: View {
@@ -6,7 +7,6 @@ struct ContentView: View {
     @EnvironmentObject private var catalog: SiteCatalog
     @EnvironmentObject private var game: GameProgress
     @EnvironmentObject private var quests: QuestManager
-    @EnvironmentObject private var mailbox: MailboxManager
     @EnvironmentObject private var sites: SiteSession
     @StateObject private var engine = BrowserSimulator()
     @StateObject private var history = BrowserHistory()
@@ -18,6 +18,7 @@ struct ContentView: View {
     @State private var showLibrary = false
     @State private var showDashboard = false
     @State private var achievementVisible = false
+    @State private var achievementsHooked = false
     @State private var lastOpenID: String?
     @State private var activeQuest: QuestExperienceInfo?
     @State private var siteAlert: String?
@@ -43,7 +44,7 @@ struct ContentView: View {
                     InteractiveExperienceRegistry.view(
                         for: activeQuest,
                         quests: quests,
-                        mailbox: mailbox,
+                        sites: sites,
                         onBack: {
                             self.activeQuest = nil
                             presentAggregator()
@@ -69,6 +70,17 @@ struct ContentView: View {
         .background(settings.skin.theme.contentBackground)
         .onAppear {
             engine.connection = connection
+            presentAggregator()
+            if !achievementsHooked {
+                game.achievements.observe { _, delta in
+                    if delta > 0 {
+                        achievementVisible = true
+                    }
+                }
+                achievementsHooked = true
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .gameProgressDidReset)) { _ in
             presentAggregator()
         }
         .alert(alertTitle, isPresented: alertBinding) {
@@ -182,6 +194,9 @@ struct ContentView: View {
             showMissing(url.absoluteString)
             return
         }
+#if DEBUG
+        DebugLogger.shared.log("Navigation", "→ \(host)\(form.map { " form=\($0)" } ?? "")")
+#endif
         if sites.registry.site(forHost: host) != nil {
             let request: SiteRequest = form.map { .submit(cleanURL, $0) } ?? .open(cleanURL)
             do {
@@ -261,26 +276,88 @@ struct ContentView: View {
     }
 
     private func applyEffect(_ effect: SiteEffect) {
+#if DEBUG
+        DebugLogger.shared.log("Effect", describe(effect))
+#endif
         switch effect {
         case .setFlag(let name, let value):
             guard value else { return }
             game.setFlag(name)
-            if name == "mail.registered" {
-                quests.markCompleted(QuestManager.registrationQuestID)
-                if let lastOpenID {
-                    game.recordVisit(lastOpenID)
-                }
-            }
         case .addScore(let points):
             game.addScore(points)
+        case .advanceQuest(let questID, let siteID):
+            quests.markCompleted(questID)
+            if !siteID.isEmpty {
+                game.recordVisit(siteID)
+            }
         case .registerStaticSite(let descriptor, let html):
             persistStaticPage(html, host: descriptor.host)
             if sites.registry.site(forHost: descriptor.host) == nil {
                 sites.registry.register(StaticSite(host: descriptor.host, displayName: descriptor.displayName, html: html))
             }
-        case .addItem, .advanceQuest, .endGame:
+        case .selectLocalPhoto(let host):
+            chooseLocalPhoto(for: host)
+        case .addItem, .endGame:
             break
         }
+    }
+
+#if DEBUG
+    /// One-line rendering of a `SiteEffect` for the debug log.
+    private func describe(_ effect: SiteEffect) -> String {
+        switch effect {
+        case .setFlag(let name, let value):
+            return "setFlag(\(name), \(value))"
+        case .addScore(let points):
+            return "addScore(+\(points))"
+        case .registerStaticSite(let descriptor, _):
+            return "registerStaticSite(\(descriptor.host))"
+        case .selectLocalPhoto(let host):
+            return "selectLocalPhoto(\(host))"
+        case .addItem:
+            return "addItem"
+        case .advanceQuest(let questID, let siteID):
+            return "advanceQuest(\(questID), \(siteID))"
+        case .endGame:
+            return "endGame"
+        }
+    }
+#endif
+
+    private func chooseLocalPhoto(for host: String) {
+        guard host == HomepageSite.host,
+              let site = sites.registry.site(forHost: host) as? HomepageSite else { return }
+        let panel = NSOpenPanel()
+        panel.allowedContentTypes = [.image]
+        panel.allowsMultipleSelection = false
+        panel.canChooseDirectories = false
+        guard panel.runModal() == .OK, let sourceURL = panel.url else { return }
+        let fileSize = (try? sourceURL.resourceValues(forKeys: [.fileSizeKey]))?.fileSize ?? Int.max
+        if fileSize > 100 * 1024 {
+            siteAlert = "Файл больше 100 КБ — выберите картинку меньшего размера."
+            return
+        }
+        if let pixels = imagePixelSize(of: sourceURL), pixels.width > 640 || pixels.height > 480 {
+            siteAlert = "Картинка больше 640×480 — выберите фотографию меньшего размера."
+            return
+        }
+        guard site.storePhoto(from: sourceURL) else {
+            siteAlert = "Не удалось сохранить выбранную фотографию."
+            return
+        }
+        Task {
+            await dispatch(URL(string: "http://\(host)/editor")!)
+            persistSites()
+        }
+    }
+
+    private func imagePixelSize(of url: URL) -> (width: CGFloat, height: CGFloat)? {
+        guard let source = CGImageSourceCreateWithURL(url as CFURL, nil),
+              let props = CGImageSourceCopyPropertiesAtIndex(source, 0, nil) as? [CFString: Any],
+              let width = props[kCGImagePropertyPixelWidth] as? CGFloat,
+              let height = props[kCGImagePropertyPixelHeight] as? CGFloat else { return nil }
+        guard width > 0, height > 0 else { return nil }
+        return (width, height)
     }
 
     // MARK: - Reconnect / failure pages
@@ -306,9 +383,18 @@ struct ContentView: View {
     private func openSite(_ entry: SiteEntry, recordHistory: Bool = true) {
         let lock = SiteAccess.status(for: entry, progress: game, quests: quests)
         guard !lock.locked else {
+#if DEBUG
+            DebugLogger.shared.log(
+                "Navigation",
+                "blocked \(entry.displayDomain) (id: \(entry.id), requiredTier: \(entry.requiredTier), requiredQuestID: \(entry.requiredQuestID ?? "—")): \(lock.reason ?? "Доступ ограничен")"
+            )
+#endif
             showLocked(entry, reason: lock.reason ?? "Доступ ограничен")
             return
         }
+#if DEBUG
+        DebugLogger.shared.log("Navigation", "open \(entry.displayDomain) (id: \(entry.id))")
+#endif
         if recordHistory {
             history.navigate(to: HistoryEntry(siteID: entry.id, displayDomain: entry.displayDomain))
         }

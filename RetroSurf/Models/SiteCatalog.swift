@@ -255,6 +255,23 @@ final class SiteCatalog: ObservableObject {
         loadAll()
     }
 
+    /// Removes every game-created site directory (published static pages and
+    /// player-curated content) plus stored homepage photos. Bundled
+    /// Resources/sites are never touched. Reloads the catalog afterwards.
+    func resetUserCreatedContent() {
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: Self.curatedSitesURL.path) {
+            try? fileManager.removeItem(at: Self.curatedSitesURL)
+        }
+        let photos = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent("RetroSurf", isDirectory: true)
+            .appendingPathComponent("HomepagePhotos", isDirectory: true)
+        if fileManager.fileExists(atPath: photos.path) {
+            try? fileManager.removeItem(at: photos)
+        }
+        loadAll()
+    }
+
     private func scanDirectory(_ url: URL, isUserAdded: Bool) -> [SiteEntry] {
         let fileManager = FileManager.default
         guard let slugs = try? fileManager.contentsOfDirectory(atPath: url.path) else {

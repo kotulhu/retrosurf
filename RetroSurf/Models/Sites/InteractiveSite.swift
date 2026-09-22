@@ -7,6 +7,12 @@ protocol InteractiveSite: AnyObject {
     func handle(_ request: SiteRequest) async -> SiteResponse
     func snapshot() -> Data
     func restore(from data: Data) throws
+    /// Restore the site to a pristine, un-played state (debug progress reset).
+    func resetGameplay()
+}
+
+extension InteractiveSite {
+    func resetGameplay() {}
 }
 
 @MainActor
@@ -29,5 +35,9 @@ class BaseInteractiveSite<State: Codable & Sendable>: InteractiveSite {
 
     func restore(from data: Data) throws {
         state = try JSONDecoder().decode(State.self, from: data)
+    }
+
+    func resetGameplay() {
+        // Subclasses override to restore their initial playable state.
     }
 }

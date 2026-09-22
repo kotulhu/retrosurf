@@ -14,6 +14,9 @@ struct MailDraft: Sendable {
 final class MailSite: BaseInteractiveSite<MailState>, QuestLetterReceiver {
     static let host = "pochta.su"
 
+    /// Fired when a homepage feedback letter is delivered via pochta.su.
+    var onHomepageFeedbackReceived: (() -> Void)?
+
     init() {
         super.init(
             descriptor: SiteDescriptor(
@@ -24,6 +27,22 @@ final class MailSite: BaseInteractiveSite<MailState>, QuestLetterReceiver {
             ),
             initialState: MailState()
         )
+    }
+
+    override func resetGameplay() {
+        state = MailState()
+    }
+
+    /// Inbox messages for SwiftUI fallbacks and debug panels.
+    var inboxMessages: [SiteMailMessage] {
+        state.messages
+            .filter { $0.folder == .inbox }
+            .sorted { $0.timestamp > $1.timestamp }
+    }
+
+    func markRead(messageId: Int) {
+        guard let index = state.messages.firstIndex(where: { $0.id == messageId }) else { return }
+        state.messages[index].isRead = true
     }
 
     /// Inject a message from the game layer (quest letters, spam, notifications).
@@ -56,11 +75,7 @@ final class MailSite: BaseInteractiveSite<MailState>, QuestLetterReceiver {
     @discardableResult
     func deliver(_ message: QuestMessage) -> Int {
         if message.messageCategory == "feedback" && message.relatedSiteId == "homepage-su" {
-            let ud = UserDefaults.standard
-            let next = ud.integer(forKey: "homepageFeedbackCount") + 1
-            ud.set(next, forKey: "homepageFeedbackCount")
-            ud.set(next, forKey: "homepage.feedback.\(next)")
-            print("[MailSite] отзыв #\(next)/3 про страничку — инкремент homepageFeedbackCount")
+            onHomepageFeedbackReceived?()
         }
         return deliver(
             MailDraft(
@@ -248,7 +263,11 @@ final class MailSite: BaseInteractiveSite<MailState>, QuestLetterReceiver {
                 folder: .inbox
             )
         )
-        return .compound([.redirect(resolve("/inbox")), .effect(.setFlag("mail.registered", true))])
+        return .compound([
+            .redirect(resolve("/inbox")),
+            .effect(.setFlag("mail.registered", true)),
+            .effect(.advanceQuest(QuestManager.registrationQuestID, "pochta-su"))
+        ])
     }
 
     private func postLogin(_ form: [String: String]) -> SiteResponse {

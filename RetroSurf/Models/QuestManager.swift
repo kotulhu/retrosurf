@@ -21,6 +21,7 @@ final class QuestManager: ObservableObject {
     @Published private(set) var completedQuestIDs: Set<String> = []
 
     static let registrationQuestID = "quest_pochta"
+    static let homepageQuestID = "quest_homepage"
 
     static let questChain: [QuestStep] = [
         QuestStep(
@@ -61,14 +62,16 @@ final class QuestManager: ObservableObject {
         )
     ]
 
-    private let mailbox: MailboxManager
+    private let mailSite: MailSite
+    private let messageScheduler: MessageScheduler
 
     private enum Keys {
         static let completed = "QuestManager.completedQuestIDs"
     }
 
-    init(mailbox: MailboxManager) {
-        self.mailbox = mailbox
+    init(mailSite: MailSite, messageScheduler: MessageScheduler) {
+        self.mailSite = mailSite
+        self.messageScheduler = messageScheduler
         guard let data = UserDefaults.standard.data(forKey: Keys.completed),
               let decoded = try? JSONDecoder().decode([String].self, from: data) else {
             return
@@ -92,10 +95,19 @@ final class QuestManager: ObservableObject {
         guard !completedQuestIDs.contains(questID) else { return }
         completedQuestIDs.insert(questID)
         persist()
+#if DEBUG
+        DebugLogger.shared.log("Quest", "completed '\(questID)' (\(quest(id: questID)?.title ?? ""))")
+#endif
         deliverAnnouncement(forNextStepAfter: questID)
         if questID == Self.registrationQuestID {
             deliverAtmosphereMail()
         }
+    }
+
+    /// Clears all completed quests (used by the debug progress reset).
+    func resetCompleted() {
+        completedQuestIDs.removeAll()
+        persist()
     }
 
     func hasCompletedQuestFor(siteID: String) -> Bool {
@@ -113,45 +125,54 @@ final class QuestManager: ObservableObject {
               index + 1 < Self.questChain.count else { return }
         let step = Self.questChain[index + 1]
         guard !step.announcementSubject.isEmpty else { return }
-        mailbox.deliver(
-            MailMessage(
-                id: UUID().uuidString,
-                from: step.announcementFrom,
+        let sender = Sender(
+            archetypeId: "service",
+            name: SenderName(full: step.announcementFrom, firstName: step.announcementFrom, login: "subscribe"),
+            address: "subscribe@subscribe.ru",
+            kind: .service,
+            gender: .none
+        )
+        messageScheduler.schedule(
+            channel: .mail,
+            targetSiteId: "mail",
+            message: QuestMessage(
+                questID: "announcement.\(step.quest.id)",
+                sender: sender,
                 subject: step.announcementSubject,
-                body: step.announcementBody,
-                date: Date(),
-                isRead: false,
-                relatedSiteID: step.unlocksSiteID,
-                category: .questAnnouncement
+                bodyHTML: step.announcementBody,
+                tag: nil,
+                messageCategory: "questAnnouncement",
+                relatedSiteId: step.unlocksSiteID,
+                timestamp: Date()
             )
         )
     }
 
     private func deliverAtmosphereMail() {
-        let mails: [MailMessage] = [
-            MailMessage(
-                id: UUID().uuidString,
-                from: "Лотерея «Миллион»",
-                subject: "ВЫ ПОБЕДИТЕЛЬ!!! Заберите приз",
-                body: "Уважаемый пользователь! Поздравляем: именно ваш адрес выбран победителем розыгрыша! Чтобы получить приз, отправьте СМС со словом PRIZ на номер 5555. Только сегодня!",
-                date: Date(),
-                isRead: false,
-                relatedSiteID: nil,
-                category: .spam
+        let mails: [(from: String, subject: String, body: String)] = [
+            (
+                "Лотерея «Миллион»",
+                "ВЫ ПОБЕДИТЕЛЬ!!! Заберите приз",
+                "Уважаемый пользователь! Поздравляем: именно ваш адрес выбран победителем розыгрыша! Чтобы получить приз, отправьте СМС со словом PRIZ на номер 5555. Только сегодня!"
             ),
-            MailMessage(
-                id: UUID().uuidString,
-                from: "Новости Рунета",
-                subject: "Дайджест недели: почта, чаты и погода",
-                body: "В этом выпуске: как купить пиццу, не выходя из дома; обзор самых модных чатов; и почему все переходят на ADSL. Подробности на нашем сайте!",
-                date: Date(),
-                isRead: false,
-                relatedSiteID: nil,
-                category: .newsletter
+            (
+                "Новости Рунета",
+                "Дайджест недели: почта, чаты и погода",
+                "В этом выпуске: как купить пиццу, не выходя из дома; обзор самых модных чатов; и почему все переходят на ADSL. Подробности на нашем сайте!"
             )
         ]
         for mail in mails {
-            mailbox.deliver(mail)
+            let bodyHTML = "<p>\(MailTemplates.escapeHTML(mail.body))</p>"
+            mailSite.deliver(
+                MailDraft(
+                    from: mail.from,
+                    subject: mail.subject,
+                    bodyHTML: bodyHTML,
+                    tag: nil,
+                    timestamp: Date(),
+                    folder: .inbox
+                )
+            )
         }
     }
 

@@ -86,9 +86,16 @@ final class ConnectionManager: ObservableObject {
 
     /// Lowest live speed reached during this session.
     @Published private(set) var sessionLow: Double = SpeedProfile.dialUp.minBytesPerSec
+    private var heartbeatHandlers: [UUID: () -> Void] = [:]
 
     @available(*, deprecated, message: "Line speed is no longer constant. Use currentSpeed (live) or targetSpeed (session).")
     var speedBytesPerSecond: Double { currentSpeed }
+
+    /// Adds work to the existing connected-session heartbeat. This avoids
+    /// starting a separate timer for game systems such as message delivery.
+    func addHeartbeatHandler(_ handler: @escaping () -> Void) {
+        heartbeatHandlers[UUID()] = handler
+    }
 
     /// Estimated wall time to transfer `bytes` at the current live speed:
     /// baseLatency + bytes / currentSpeed.
@@ -182,7 +189,10 @@ final class ConnectionManager: ObservableObject {
     private var lastFakeError: FakeConnectionError?
 
 #if DEBUG
-    @Published var debugLog: [String] = []
+    /// Connection-phase transitions, proxied into the shared DebugLogger.
+    var debugLog: [String] {
+        DebugLogger.shared.entries.filter { $0.contains("[Connection]") }
+    }
 #endif
 
     private let audio = ModemHandshakeAudio()
@@ -314,7 +324,7 @@ final class ConnectionManager: ObservableObject {
         let from = Self.describe(state)
         state = newState
 #if DEBUG
-        logTransition("\(from) → \(Self.describe(newState))    [\(source)]")
+        DebugLogger.shared.log("Connection", "\(from) → \(Self.describe(newState))    [\(source)]")
 #endif
     }
 
@@ -338,14 +348,6 @@ final class ConnectionManager: ObservableObject {
         lastFakeError = picked
         return picked
     }
-
-#if DEBUG
-    private func logTransition(_ description: String) {
-        let timestamp = DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .medium)
-        debugLog.append("[\(timestamp)] \(description)")
-        if debugLog.count > 200 { debugLog.removeFirst() }
-    }
-#endif
 
     private func startIdleMonitor() {
         idleMonitorTask?.cancel()
@@ -470,6 +472,7 @@ final class ConnectionManager: ObservableObject {
         currentSpeed = Self.clamp(next, min: profile.minBytesPerSec, max: profile.maxBytesPerSec)
         sessionPeak = max(sessionPeak, currentSpeed)
         sessionLow = min(sessionLow, currentSpeed)
+        heartbeatHandlers.values.forEach { $0() }
     }
 
     deinit {
