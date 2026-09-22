@@ -12,6 +12,7 @@ struct RetroSurfApp: App {
     @StateObject private var questGenerator: QuestGenerator
     @StateObject private var scheduler: MessageScheduler
     @StateObject private var clock: GameClock
+    @StateObject private var ambientGenerator: AmbientMailGenerator
 
     init() {
         let connection = ConnectionManager()
@@ -19,12 +20,17 @@ struct RetroSurfApp: App {
         let registry = SiteRegistry()
         let mailSite = MailSite()
         let messageScheduler = MessageScheduler()
+        let ambientCatalog = AmbientCatalog.loadFromBundle()
+        let ambientGenerator = AmbientMailGenerator(
+            catalog: ambientCatalog,
+            mailSite: mailSite
+        )
         registry.register(mailSite)
         let homepageSite = HomepageSite(mailSite: mailSite, messageScheduler: messageScheduler)
         registry.register(homepageSite)
         let session = SiteSession(registry: registry)
         let senders = SenderCatalog.loadFromBundle()
-        let questManager = QuestManager(mailSite: mailSite, messageScheduler: messageScheduler)
+        let questManager = QuestManager(messageScheduler: messageScheduler, ambientGenerator: ambientGenerator)
         _quests = StateObject(wrappedValue: questManager)
         let generator = QuestGenerator(
             quests: QuestGenerator.loadQuestsFromBundle(),
@@ -54,6 +60,7 @@ struct RetroSurfApp: App {
         _questGenerator = StateObject(wrappedValue: generator)
         _scheduler = StateObject(wrappedValue: messageScheduler)
         _clock = StateObject(wrappedValue: gameClock)
+        _ambientGenerator = StateObject(wrappedValue: ambientGenerator)
     }
 
     var body: some Scene {
@@ -69,6 +76,8 @@ struct RetroSurfApp: App {
                 .environmentObject(questGenerator)
                 .environmentObject(scheduler)
                 .environmentObject(clock)
+                .environmentObject(ambientGenerator)
+                .onAppear { ambientGenerator.start() }
                 .navigationTitle("RetroSurf")
                 .frame(minWidth: 800, minHeight: 600)
         }
@@ -80,6 +89,9 @@ struct RetroSurfApp: App {
             CommandMenu("Debug") {
                 Button("Панель отладки…") { openWindow(id: "debug") }
                     .keyboardShortcut("D", modifiers: [.command, .shift])
+                Button("Прислать спам") {
+                    ambientGenerator.forceDeliver("spam_nigerian_cosmonaut")
+                }
             }
         }
 #endif

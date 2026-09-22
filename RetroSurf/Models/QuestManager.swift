@@ -62,16 +62,16 @@ final class QuestManager: ObservableObject {
         )
     ]
 
-    private let mailSite: MailSite
     private let messageScheduler: MessageScheduler
+    private let ambientGenerator: AmbientMailGenerator
 
     private enum Keys {
         static let completed = "QuestManager.completedQuestIDs"
     }
 
-    init(mailSite: MailSite, messageScheduler: MessageScheduler) {
-        self.mailSite = mailSite
+    init(messageScheduler: MessageScheduler, ambientGenerator: AmbientMailGenerator) {
         self.messageScheduler = messageScheduler
+        self.ambientGenerator = ambientGenerator
         guard let data = UserDefaults.standard.data(forKey: Keys.completed),
               let decoded = try? JSONDecoder().decode([String].self, from: data) else {
             return
@@ -148,32 +148,10 @@ final class QuestManager: ObservableObject {
         )
     }
 
+    /// Атмосферные письма теперь делает AmbientMailGenerator (шаблоны из
+    /// Resources/Mail/ambient.json). Сигнатура и вызовы не меняются.
     private func deliverAtmosphereMail() {
-        let mails: [(from: String, subject: String, body: String)] = [
-            (
-                "Лотерея «Миллион»",
-                "ВЫ ПОБЕДИТЕЛЬ!!! Заберите приз",
-                "Уважаемый пользователь! Поздравляем: именно ваш адрес выбран победителем розыгрыша! Чтобы получить приз, отправьте СМС со словом PRIZ на номер 5555. Только сегодня!"
-            ),
-            (
-                "Новости Рунета",
-                "Дайджест недели: почта, чаты и погода",
-                "В этом выпуске: как купить пиццу, не выходя из дома; обзор самых модных чатов; и почему все переходят на ADSL. Подробности на нашем сайте!"
-            )
-        ]
-        for mail in mails {
-            let bodyHTML = "<p>\(MailTemplates.escapeHTML(mail.body))</p>"
-            mailSite.deliver(
-                MailDraft(
-                    from: mail.from,
-                    subject: mail.subject,
-                    bodyHTML: bodyHTML,
-                    tag: nil,
-                    timestamp: Date(),
-                    folder: .inbox
-                )
-            )
-        }
+        ambientGenerator.forceRandom()
     }
 
     private func persist() {
