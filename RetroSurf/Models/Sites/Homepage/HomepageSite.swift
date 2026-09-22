@@ -51,7 +51,7 @@ final class HomepageSite: BaseInteractiveSite<HomepageState> {
 
     private func open(_ url: URL) async -> SiteResponse {
         if url.path.hasPrefix("/p/") {
-            return page(path: url.path, title: "Личная страничка", html: HomepageTemplates.stubPage(path: url.path))
+            return page(path: url.path, title: "Личная страничка", html: HomepageTemplates.personalPage(path: url.path))
         }
         switch url.path {
         case "/logout":
