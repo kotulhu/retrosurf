@@ -1,0 +1,13 @@
+{
+  "id": "demos",
+  "title": "Демки",
+  "description": "Демо-версии игр, трейлеры, intro.",
+  "files": [
+    { "id": "demo_quake2",  "name": "quake2_demo.exe",       "sizeBytes": 24000000, "description": "Quake II. Демо-версия. Первый уровень.", "hasVirus": false },
+    { "id": "demo_hl",      "name": "half_life_demo.exe",    "sizeBytes": 35000000, "description": "Half-Life. Демо. Train ride.", "hasVirus": false },
+    { "id": "demo_unreal",  "name": "unreal_demo.exe",       "sizeBytes": 42000000, "description": "Unreal. Демо. Первый уровень.", "hasVirus": false },
+    { "id": "demo_starcraft", "name": "starcraft_demo.exe",  "sizeBytes": 28000000, "description": "StarCraft. Демо. Терраны.", "hasVirus": false },
+    { "id": "demo_diablo",  "name": "diablo_demo.exe",       "sizeBytes": 18000000, "description": "Diablo. Демо. Первые подземелья.", "hasVirus": false },
+    { "id": "demo_bad",     "name": "all_demos_1999.exe",    "sizeBytes": 76000,   "description": "Все демки 1999 года! Скачай и играй.", "hasVirus": true }
+  ]
+}

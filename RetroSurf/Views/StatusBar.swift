@@ -10,7 +10,7 @@ struct StatusBar: View {
         let theme = settings.skin.theme
 
         HStack(spacing: 12) {
-            Text(engine.statusText)
+            Text(engine.downloadStatus ?? engine.statusText)
                 .font(.system(size: 12))
                 .foregroundColor(theme.statusForeground)
                 .lineLimit(1)

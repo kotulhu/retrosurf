@@ -7,7 +7,15 @@ enum MailPlaceholders {
     /// Заменяет известные плейсхолдеры {{...}} случайными значениями.
     /// Неизвестные плейсхолдеры остаются как есть.
     static func fill(_ template: String) -> String {
-        let pairs: [(String, String)] = [
+        fill(template, extra: [:])
+    }
+
+    /// Заменяет плейсхолдеры как `fill(_:)`, но парамерты `extra`
+    /// переопределяют или дополняют значения по умолчанию
+    /// (например, {{npc.name}} и {{npc.email}}). Неизвестные ключи
+    /// остаются в шаблоне как есть.
+    static func fill(_ template: String, extra: [String: String]) -> String {
+        var substitutions: [(key: String, value: String)] = [
             ("{{random.male}}", Self.firstNamesMale.randomElement() ?? ""),
             ("{{random.female}}", Self.firstNamesFemale.randomElement() ?? ""),
             ("{{random.last}}", Self.lastNames.randomElement() ?? ""),
@@ -20,8 +28,16 @@ enum MailPlaceholders {
             ("{{player.username}}", "пользователь"),
             ("{{date}}", Self.formattedDate())
         ]
+        for (key, value) in extra {
+            let placeholder = key.contains("{{") ? key : "{{\(key)}}"
+            if let index = substitutions.firstIndex(where: { $0.key == placeholder }) {
+                substitutions[index] = (placeholder, value)
+            } else {
+                substitutions.append((placeholder, value))
+            }
+        }
         var result = template
-        for (key, value) in pairs {
+        for (key, value) in substitutions {
             result = result.replacingOccurrences(of: key, with: value)
         }
         return result

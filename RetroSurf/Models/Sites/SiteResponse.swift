@@ -25,6 +25,19 @@ enum SiteResponse: Sendable {
     case redirect(URL)
     case alert(String)
     case effect(SiteEffect)
+    case download(SiteDownload)
     case compound([SiteResponse])
     case failure(String)
+}
+
+/// A downloadable file offered by an interactive site. The browser simulates
+/// the transfer against the live modem speed; no real filesystem write occurs.
+struct SiteDownload: Sendable, Hashable, Identifiable {
+    let id: String
+    let fileName: String          // e.g. "winamp_setup.exe"
+    let sizeBytes: Int
+    let sourceURL: URL            // where it came from
+    let hasVirus: Bool
+    let category: String          // "wallpaper" | "program" | "music"
+    let description: String
 }

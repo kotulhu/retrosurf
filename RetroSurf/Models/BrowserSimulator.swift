@@ -3,6 +3,9 @@ import SwiftUI
 @MainActor
 final class BrowserSimulator: ObservableObject {
     @Published private(set) var statusText = "Готово."
+    /// Download progress line, e.g. "Загрузка: 45% (123 КБ из 275 КБ)".
+    /// While non-nil the status bar shows it in place of `statusText`.
+    @Published var downloadStatus: String?
     @Published private(set) var progress: Double = 0
     @Published private(set) var isLoading = false
     @Published private(set) var connectionBlocked = false

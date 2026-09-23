@@ -5,6 +5,9 @@ final class HomepageSite: BaseInteractiveSite<HomepageState> {
 
     private let mailSite: MailSite
     private let messageScheduler: MessageScheduler
+    /// Runtime pages added per-session (e.g. the player's page at /p/you.html).
+    /// Not persisted; queried before the catalog's /p/N.html pages.
+    private var extraPages: [String: String] = [:]
 
     init(mailSite: MailSite, messageScheduler: MessageScheduler) {
         self.mailSite = mailSite
@@ -51,6 +54,9 @@ final class HomepageSite: BaseInteractiveSite<HomepageState> {
 
     private func open(_ url: URL) async -> SiteResponse {
         if url.path.hasPrefix("/p/") {
+            if let runtimeHTML = extraPages[url.path] {
+                return page(path: url.path, title: "Личная страничка", html: runtimeHTML)
+            }
             return page(path: url.path, title: "Личная страничка", html: HomepageTemplates.personalPage(path: url.path))
         }
         switch url.path {
@@ -286,5 +292,13 @@ final class HomepageSite: BaseInteractiveSite<HomepageState> {
 
     static func resolve(_ path: String) -> URL {
         URL(string: "http://\(host)\(path == "/" ? "" : path)") ?? URL(string: "http://\(host)/")!
+    }
+
+    /// Adds (or replaces) a runtime page served under the given path (/p/you.html).
+    func addPage(path: String, html: String) {
+        var normalized = path.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !normalized.hasPrefix("/") { normalized = "/" + normalized }
+        while normalized.hasSuffix("/"), normalized.count > 1 { normalized.removeLast() }
+        extraPages[normalized] = html
     }
 }

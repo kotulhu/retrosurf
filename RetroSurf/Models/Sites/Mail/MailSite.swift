@@ -40,6 +40,11 @@ final class MailSite: BaseInteractiveSite<MailState>, QuestLetterReceiver {
             .sorted { $0.timestamp > $1.timestamp }
     }
 
+    /// Имя текущего зарегистрированного пользователя, если он есть.
+    var currentUsername: String? {
+        state.account?.username
+    }
+
     func markRead(messageId: Int) {
         guard let index = state.messages.firstIndex(where: { $0.id == messageId }) else { return }
         state.messages[index].isRead = true

@@ -7,7 +7,7 @@ enum AggregatorPageBuilder {
 
     private static let portalURL = "retrosurf://orientir.ru"
 
-    static func homeHTML(catalog: SiteCatalog, progress: GameProgress, quests: QuestManager) -> String {
+    static func homeHTML(catalog: SiteCatalog, progress: GameProgress, quests: QuestManager, playerPage: PlayerPageState) -> String {
         let total = catalog.entries.count
         let visited = progress.visitedCount
         let completedBySite: [String: Bool] = Dictionary(uniqueKeysWithValues: catalog.entries.map { ($0.id, quests.hasCompletedQuestFor(siteID: $0.id)) })
@@ -56,6 +56,14 @@ enum AggregatorPageBuilder {
         <table width="720" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#ffffff" style="border:2px solid #0000cc; padding:8px;"><a href="http://pochta.su/"><b style="font-size:16px; color:#0000cc;">📧 Pochta.su — бесплатная электронная почта</b></a><br><small style="color:#444444;">зарегистрируйте ваш первый бесплатный ящик в Рунете</small></td></tr></table>
         <br>
         """)
+
+        if playerPage.isPublished, let url = playerPage.pageURL {
+            let owner = playerPage.username ?? "моя страничка"
+            h.append("""
+        <table width="720" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#fff4d8" style="border:2px solid #cc0000; padding:8px;"><a href="\(escape(url.absoluteString))"><b style="font-size:16px; color:#cc0000;">🏠 Моя личная страничка</b></a><br><small style="color:#444444;">\(escape(owner)) — загляните, я только что открылся!</small></td></tr></table>
+        <br>
+        """)
+        }
 
         h.append("<table class=\"navbar\" width=\"720\" cellspacing=\"4\" cellpadding=\"2\"><tr>")
         for category in SiteCategory.allCases {

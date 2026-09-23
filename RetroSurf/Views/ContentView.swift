@@ -8,6 +8,9 @@ struct ContentView: View {
     @EnvironmentObject private var game: GameProgress
     @EnvironmentObject private var quests: QuestManager
     @EnvironmentObject private var sites: SiteSession
+    @EnvironmentObject private var playerPage: PlayerPageState
+    @EnvironmentObject private var downloads: DownloadsStore
+    @EnvironmentObject private var saveDialog: RetroSaveDialogController
     @StateObject private var engine = BrowserSimulator()
     @StateObject private var history = BrowserHistory()
     @State private var address = AggregatorPageBuilder.portalDomain
@@ -17,6 +20,9 @@ struct ContentView: View {
     @State private var showCurator = false
     @State private var showLibrary = false
     @State private var showDashboard = false
+    @State private var showDownloads = false
+    @State private var downloadInProgress = false
+    @State private var downloadQueue: [SiteDownload] = []
     @State private var achievementVisible = false
     @State private var achievementsHooked = false
     @State private var lastOpenID: String?
@@ -36,7 +42,8 @@ struct ContentView: View {
                 canGoBack: history.canGoBack,
                 canGoForward: history.canGoForward,
                 onCurate: { showCurator = true },
-                onLibrary: { showLibrary = true }
+                onLibrary: { showLibrary = true },
+                onDownloads: { showDownloads = true }
             )
 
             Group {
@@ -83,6 +90,12 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for: .gameProgressDidReset)) { _ in
             presentAggregator()
         }
+        .onChange(of: playerPage.isPublished) { _ in
+            if address == AggregatorPageBuilder.portalDomain {
+                currentHTML = AggregatorPageBuilder.homeHTML(catalog: catalog, progress: game, quests: quests, playerPage: playerPage)
+                reloadToken += 1
+            }
+        }
         .alert(alertTitle, isPresented: alertBinding) {
             Button("OK") {
                 engine.acknowledgeBlocked()
@@ -99,6 +112,18 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showDashboard) {
             AchievementDashboardView(game: game)
+        }
+        .sheet(item: $saveDialog.pending) { download in
+            RetroSaveDialog(
+                download: download,
+                onSave: { url in saveDialog.accept(url: url) },
+                onCancel: { saveDialog.cancel() }
+            )
+        }
+        .sheet(isPresented: $showDownloads) {
+            DownloadsPanelView(store: downloads) { download in
+                handleDownload(download)
+            }
         }
         .overlay(alignment: .bottomTrailing) {
             if achievementVisible {
@@ -132,7 +157,7 @@ struct ContentView: View {
         activeQuest = nil
         lastOpenID = nil
         address = AggregatorPageBuilder.portalDomain
-        currentHTML = AggregatorPageBuilder.homeHTML(catalog: catalog, progress: game, quests: quests)
+        currentHTML = AggregatorPageBuilder.homeHTML(catalog: catalog, progress: game, quests: quests, playerPage: playerPage)
         currentBaseURL = nil
         reloadToken += 1
         persistSites()
@@ -251,6 +276,8 @@ struct ContentView: View {
             siteAlert = text
         case .effect(let effect):
             applyEffect(effect)
+        case .download(let download):
+            handleDownload(download)
         case .compound(let list):
             for item in list {
                 try await apply(item, depth: depth + 1)
@@ -273,6 +300,100 @@ struct ContentView: View {
         currentBaseURL = page.url
         address = normalized(page.url.absoluteString)
         reloadToken += 1
+    }
+
+    // MARK: - Downloads (modem-gated, simulated)
+
+    /// Queued behind any in-flight transfer: only one download runs at a time.
+    private func handleDownload(_ download: SiteDownload) {
+        if downloadInProgress {
+            downloadQueue.append(download)
+            return
+        }
+        presentSaveDialog(for: download)
+    }
+
+    private func presentSaveDialog(for download: SiteDownload) {
+        saveDialog.present(download) { _ in
+            self.beginDownload(download)
+        }
+    }
+
+    private func beginDownload(_ download: SiteDownload) {
+        guard !downloadInProgress else {
+            downloadQueue.append(download)
+            return
+        }
+        downloadInProgress = true
+        let record = downloads.start(download)
+        engine.downloadStatus = FileSizeFormatter.progress(0, download.sizeBytes)
+        Task {
+            await runDownload(download, recordID: record.id)
+        }
+    }
+
+    /// Time-sliced transfer that reads the modem's live speed every 250 ms and
+    /// lets ConnectionManager enforce disconnects — the same gate as page loads.
+    private func runDownload(_ download: SiteDownload, recordID: String) async {
+        let totalBytes = download.sizeBytes
+        var sentBytes = 0
+        let sliceInterval: TimeInterval = 0.25
+        var lastUpdateAt = Date.distantPast
+
+        defer { finishCurrentDownload() }
+
+        do {
+            while sentBytes < totalBytes {
+                try Task.checkCancellation()
+
+                let bytesPerSecond = connection.currentSpeed
+                let bytesThisSlice = Int(bytesPerSecond * sliceInterval)
+                let step = max(1, min(bytesThisSlice, totalBytes - sentBytes))
+                sentBytes += step
+
+                try await connection.simulateLoad(bytes: step)
+
+                let now = Date()
+                let shouldUpdateUI = now.timeIntervalSince(lastUpdateAt) >= 0.2
+                    || sentBytes >= totalBytes
+                if shouldUpdateUI {
+                    lastUpdateAt = now
+                    downloads.updateProgress(
+                        recordID,
+                        fraction: Double(sentBytes) / Double(totalBytes),
+                        bytesSent: sentBytes,
+                        bytesTotal: totalBytes
+                    )
+                    engine.downloadStatus = FileSizeFormatter.progress(sentBytes, totalBytes)
+                }
+            }
+            downloads.complete(recordID, virusDetected: download.hasVirus)
+            engine.downloadStatus = nil
+            if download.hasVirus {
+                NotificationCenter.default.post(
+                    name: .retroFlagSet,
+                    object: nil,
+                    userInfo: ["key": "virus.infected", "value": true]
+                )
+            }
+        } catch LoadInterruption.disconnected {
+            downloads.fail(recordID)
+            engine.downloadStatus = nil
+            siteAlert = "Соединение разорвано"
+        } catch is CancellationError {
+            downloads.fail(recordID)
+            engine.downloadStatus = nil
+        } catch {
+            downloads.fail(recordID)
+            engine.downloadStatus = nil
+        }
+    }
+
+    private func finishCurrentDownload() {
+        downloadInProgress = false
+        guard !downloadQueue.isEmpty else { return }
+        let next = downloadQueue.removeFirst()
+        presentSaveDialog(for: next)
     }
 
     private func applyEffect(_ effect: SiteEffect) {

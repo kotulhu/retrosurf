@@ -15,6 +15,7 @@ struct BrowserToolbar: View {
     let canGoForward: Bool
     let onCurate: () -> Void
     let onLibrary: () -> Void
+    let onDownloads: () -> Void
 
     var body: some View {
         let theme = settings.skin.theme
@@ -105,6 +106,17 @@ struct BrowserToolbar: View {
                         Image(systemName: "list.bullet")
                             .font(.system(size: 12, weight: .bold))
                         Text("Мои сайты…")
+                    }
+                    .font(.system(size: 12, weight: .bold))
+                    .foregroundColor(theme.buttonForeground)
+                }
+                .buttonStyle(BevelButtonStyle(theme: theme))
+
+                Button(action: onDownloads) {
+                    HStack(spacing: 5) {
+                        Image(systemName: "arrow.down.to.line")
+                            .font(.system(size: 12, weight: .bold))
+                        Text("Загрузки")
                     }
                     .font(.system(size: 12, weight: .bold))
                     .foregroundColor(theme.buttonForeground)
