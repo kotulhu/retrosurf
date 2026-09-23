@@ -2,10 +2,11 @@ import SwiftUI
 import AppKit
 
 /// «Загрузки» — the download history panel. 90s palette: grey face, silver
-/// headers, Verdana 11, thin 1px separators.
+/// headers, Verdana 11, thin 1px separators. Rows merge in-flight transfers
+/// (progress) with completed FileInstances from the downloads node.
 struct DownloadsPanelView: View {
     @ObservedObject var store: DownloadsStore
-    let onRedownload: (SiteDownload) -> Void
+    let onRedownload: (String) -> Void
     @Environment(\.dismiss) private var dismiss
 
     private static let dateFormatter: DateFormatter = {
@@ -25,6 +26,60 @@ struct DownloadsPanelView: View {
         }
         .frame(width: 620, height: 340)
         .background(Color(nsColor: NSColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1)))
+    }
+
+    private struct PanelRow: Identifiable {
+        enum Kind {
+            case inProgress(percent: Int)
+            case completed
+            case cancelled
+            case failed
+        }
+
+        let id: String
+        let fileName: String
+        let sizeBytes: Int
+        let date: Date
+        let kind: Kind
+        let hasVirus: Bool
+        let contentId: String?
+    }
+
+    /// In-flight records plus completed instances, newest first.
+    private var mergedRows: [PanelRow] {
+        let inProgress = store.inFlight.map { record in
+            let percent = record.sizeBytes > 0
+                ? Int((Double(record.bytesSent) / Double(record.sizeBytes)) * 100)
+                : 0
+            let kind: PanelRow.Kind
+            switch record.status {
+            case .inProgress: kind = .inProgress(percent: percent)
+            case .completed: kind = .completed
+            case .failed: kind = .failed
+            case .cancelled: kind = .cancelled
+            }
+            return PanelRow(
+                id: record.id,
+                fileName: record.fileName,
+                sizeBytes: record.sizeBytes,
+                date: record.startedAt,
+                kind: kind,
+                hasVirus: record.hasVirus,
+                contentId: nil
+            )
+        }
+        let completed = store.completedFiles.map { instance in
+            PanelRow(
+                id: instance.instanceId,
+                fileName: instance.content.name,
+                sizeBytes: instance.content.sizeBytes,
+                date: instance.content.downloadedAt,
+                kind: .completed,
+                hasVirus: instance.content.hasVirus,
+                contentId: instance.content.contentId
+            )
+        }
+        return (inProgress + completed).sorted { $0.date > $1.date }
     }
 
     private var titleBar: some View {
@@ -76,8 +131,8 @@ struct DownloadsPanelView: View {
 
     private var rowsList: some View {
         ScrollView {
-            LazyVStack(spacing: 0) {
-                if store.items.isEmpty {
+            VStack(spacing: 0) {
+                if mergedRows.isEmpty {
                     VStack {
                         Spacer()
                         Text("Скачанных файлов пока нет.")
@@ -87,8 +142,8 @@ struct DownloadsPanelView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
-                    ForEach(store.items) { item in
-                        row(for: item)
+                    ForEach(mergedRows) { row in
+                        rowView(for: row)
                         Divider().overlay(Color.black.opacity(0.15))
                     }
                 }
@@ -97,15 +152,15 @@ struct DownloadsPanelView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
-    private func row(for item: DownloadedFile) -> some View {
+    private func rowView(for row: PanelRow) -> some View {
         HStack(spacing: 8) {
             HStack(spacing: 5) {
-                if item.virusDetected {
+                if row.hasVirus {
                     Image(systemName: "exclamationmark.triangle.fill")
                         .font(.system(size: 11))
                         .foregroundColor(.red)
                 }
-                Text(item.fileName)
+                Text(row.fileName)
                     .font(.system(size: 11))
                     .foregroundColor(.black)
                     .lineLimit(1)
@@ -113,22 +168,22 @@ struct DownloadsPanelView: View {
             }
             .frame(width: 190, alignment: .leading)
 
-            Text(FileSizeFormatter.format(item.sizeBytes))
+            Text(FileSizeFormatter.format(row.sizeBytes))
                 .font(.system(size: 11))
                 .foregroundColor(.black)
                 .frame(width: 70, alignment: .trailing)
 
-            Text(statusText(for: item))
+            Text(statusText(for: row))
                 .font(.system(size: 11))
-                .foregroundColor(statusColor(for: item))
+                .foregroundColor(statusColor(for: row))
                 .frame(width: 120, alignment: .leading)
 
-            Text(Self.dateFormatter.string(from: item.startedAt))
+            Text(Self.dateFormatter.string(from: row.date))
                 .font(.system(size: 11))
                 .foregroundColor(.black)
                 .frame(width: 120, alignment: .leading)
 
-            actions(for: item)
+            actions(for: row)
                 .frame(width: 110, alignment: .leading)
         }
         .padding(.horizontal, 8)
@@ -136,8 +191,8 @@ struct DownloadsPanelView: View {
     }
 
     @ViewBuilder
-    private func actions(for item: DownloadedFile) -> some View {
-        switch item.status {
+    private func actions(for row: PanelRow) -> some View {
+        switch row.kind {
         case .completed:
             HStack(spacing: 8) {
                 Button("Открыть папку") {
@@ -145,7 +200,9 @@ struct DownloadsPanelView: View {
                 }
                 .buttonStyle(plainLinkStyle)
                 Button("Скачать снова") {
-                    onRedownload(item.source)
+                    if let contentId = row.contentId {
+                        onRedownload(contentId)
+                    }
                 }
                 .buttonStyle(plainLinkStyle)
             }
@@ -158,12 +215,9 @@ struct DownloadsPanelView: View {
         }
     }
 
-    private func statusText(for item: DownloadedFile) -> String {
-        switch item.status {
-        case .inProgress:
-            let percent = item.sizeBytes > 0
-                ? Int((Double(item.bytesSent) / Double(item.sizeBytes)) * 100)
-                : 0
+    private func statusText(for row: PanelRow) -> String {
+        switch row.kind {
+        case .inProgress(let percent):
             return "Загрузка \(min(percent, 100))%"
         case .completed:
             return "Завершено"
@@ -174,8 +228,8 @@ struct DownloadsPanelView: View {
         }
     }
 
-    private func statusColor(for item: DownloadedFile) -> Color {
-        switch item.status {
+    private func statusColor(for row: PanelRow) -> Color {
+        switch row.kind {
         case .inProgress: return .blue
         case .completed: return Color(red: 0, green: 0.5, blue: 0)
         case .cancelled: return .gray

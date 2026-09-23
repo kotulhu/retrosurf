@@ -15,7 +15,8 @@ enum GameProgressReset {
         scheduler: MessageScheduler,
         sites: SiteSession,
         catalog: SiteCatalog,
-        questGenerator: QuestGenerator
+        questGenerator: QuestGenerator,
+        fileQuestTracker: FileQuestTracker
     ) {
         game.resetProgress()
         quests.resetCompleted()
@@ -26,6 +27,7 @@ enum GameProgressReset {
         sites.registry.removeUserCreatedStaticSites()
         sites.resetAllGameplay()
         catalog.resetUserCreatedContent()
+        fileQuestTracker.reset()
 
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "homepageFeedbackCount")

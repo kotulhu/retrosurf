@@ -146,6 +146,8 @@ final class FilesSite: BaseInteractiveSite<FilesState> {
             return handleGet(url)
         case .invoke(let action, _):
             return .failure("404: \(action)")
+        case .composeAttach, .composeRemoveAttachment:
+            return .failure("404")
         }
     }
 
@@ -211,11 +213,18 @@ final class FilesSite: BaseInteractiveSite<FilesState> {
     }
 
     private func downloadResponse(_ fileID: String) -> SiteResponse {
-        guard let (category, file) = catalog.file(withId: fileID) else {
+        guard let download = self.download(forFileID: fileID) else {
             return .failure("404: /download/\(fileID)")
         }
         state.downloadCounts[fileID, default: 0] += 1
-        let download = SiteDownload(
+        return .download(download)
+    }
+
+    /// Rebuild the SiteDownload for a catalog file id — used by the
+    /// «Загрузки» panel for re-downloading a completed file.
+    func download(forFileID fileID: String) -> SiteDownload? {
+        guard let (category, file) = catalog.file(withId: fileID) else { return nil }
+        return SiteDownload(
             id: file.id,
             fileName: file.name,
             sizeBytes: file.sizeBytes,
@@ -224,7 +233,6 @@ final class FilesSite: BaseInteractiveSite<FilesState> {
             category: category.id,
             description: file.description
         )
-        return .download(download)
     }
 
     // MARK: - HTML shell

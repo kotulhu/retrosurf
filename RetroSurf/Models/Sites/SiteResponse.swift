@@ -28,6 +28,9 @@ enum SiteResponse: Sendable {
     case download(SiteDownload)
     case compound([SiteResponse])
     case failure(String)
+    /// Browser should show a native modal listing attachable file instances
+    /// for the current compose draft. (MailDomainUI picks from this list.)
+    case presentAttachmentPicker([FileInstance])
 }
 
 /// A downloadable file offered by an interactive site. The browser simulates

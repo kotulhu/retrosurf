@@ -16,6 +16,7 @@ struct DebugPanelView: View {
     @EnvironmentObject private var scheduler: MessageScheduler
     @EnvironmentObject private var questGenerator: QuestGenerator
     @EnvironmentObject private var clock: GameClock
+    @EnvironmentObject private var fileQuestTracker: FileQuestTracker
     @ObservedObject private var logger = DebugLogger.shared
 
     @State private var tab = 0
@@ -181,7 +182,7 @@ struct DebugPanelView: View {
             .padding(.top, 8)
             ScrollViewReader { proxy in
                 ScrollView {
-                    LazyVStack(alignment: .leading, spacing: 2) {
+                    VStack(alignment: .leading, spacing: 2) {
                         let filtered = filteredLog
                         if filtered.isEmpty {
                             Text("(пусто)")
@@ -246,7 +247,8 @@ struct DebugPanelView: View {
             scheduler: scheduler,
             sites: sites,
             catalog: catalog,
-            questGenerator: questGenerator
+            questGenerator: questGenerator,
+            fileQuestTracker: fileQuestTracker
         )
         DebugLogger.shared.log("Debug", "прогресс сброшен оператором")
     }

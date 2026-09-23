@@ -26,6 +26,7 @@ enum MailPlaceholders {
             ("{{random.company}}", Self.companies.randomElement() ?? ""),
             ("{{random.job}}", Self.absurdJobs.randomElement() ?? ""),
             ("{{player.username}}", "пользователь"),
+            ("{{missing.files}}", ""),
             ("{{date}}", Self.formattedDate())
         ]
         for (key, value) in extra {

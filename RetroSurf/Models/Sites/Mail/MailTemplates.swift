@@ -159,7 +159,7 @@ enum MailTemplates {
     }
 
     static func letterPage(message: SiteMailMessage, account: MailAccount) -> String {
-        let body = """
+        var body = """
         <h2>Письмо</h2>
         <table class="form" border="0" cellspacing="0" cellpadding="3">
         <tr><td><b>От:</b></td><td>\(escapeHTML(message.from))</td></tr>
@@ -169,23 +169,75 @@ enum MailTemplates {
         </table>
         <hr class="rule">
         \(message.bodyHTML)
+        """
+        if !message.attachments.isEmpty {
+            body += """
+            <hr class="rule">
+            <b>Вложения:</b><br>
+            \(message.attachments.map {
+                "\(escapeHTML($0.fileName)) (\(FileSizeFormatter.format($0.sizeBytes)))"
+            }.joined(separator: "<br>"))
+            """
+        }
+        body += """
         <hr class="rule">
-        <p><a href="\(baseURL)/compose">Ответить</a> &nbsp;&nbsp; <a href="\(baseURL)/inbox">← К списку</a></p>
+        <p><a href="\(baseURL)/message/\(message.id)/reply">Ответить</a> &nbsp;&nbsp; <a href="\(baseURL)/inbox">← К списку</a></p>
         """
         return shell(title: "Pochta.su — письмо", loggedIn: true, body: body)
     }
 
-    static func composePage(account: MailAccount) -> String {
+    /// Compose form filled from the draft. Attachments are listed server-side
+    /// from the persisted compose draft (state survives round-trips).
+    ///
+    /// Forms are never nested (HTML5 ignores inner `<form>` start tags inside
+    /// another form, which would make «Прикрепить» submit the compose form
+    /// itself): the fields live in `#cform`, the listing and the buttons sit
+    /// outside and join it via the `form=` attribute, the attach button
+    /// targeting `/compose/attach` via `formaction`. The listing's remove
+    /// controls are sibling forms of their own.
+    static func composePage(draft: ComposeDraft) -> String {
+        let attachButton = """
+        <button type="submit" form="cform" formaction="\(baseURL)/compose/attach">Прикрепить файл</button>
+        """
+        let attachmentsSection: String
+        if draft.attachments.isEmpty {
+            attachmentsSection = """
+            <p><b>Вложения:</b> Нет вложений. \(attachButton)</p>
+            """
+        } else {
+            let rows = draft.attachments.map { attachment in
+                let instanceId = escapeHTML(attachment.instanceId)
+                let fileName = escapeHTML(attachment.fileName)
+                let size = FileSizeFormatter.format(attachment.sizeBytes)
+                return """
+                <tr><td>\(fileName)</td><td>\(size)</td><td>
+                <form method="get" action="\(baseURL)/compose/removeAttachment" style="display:inline">
+                <input type="hidden" name="instanceId" value="\(instanceId)">
+                <button type="submit">Удалить</button>
+                </form>
+                </td></tr>
+                """
+            }.joined(separator: "\n")
+            attachmentsSection = """
+            <p><b>Вложения:</b></p>
+            <table class="inbox" cellspacing="0" cellpadding="0">
+            <tr><th>Файл</th><th>Размер</th><th></th></tr>
+            \(rows)
+            </table>
+            <p>\(attachButton)</p>
+            """
+        }
         let body = """
         <h2>Новое письмо</h2>
-        <form method="get" action="\(baseURL)/compose">
+        <form method="get" action="\(baseURL)/compose" id="cform">
         <table class="form" border="0" cellspacing="0" cellpadding="3">
-        <tr><td>Кому:</td><td><input type="text" name="to" size="40"></td></tr>
-        <tr><td>Тема:</td><td><input type="text" name="subject" size="40"></td></tr>
-        <tr><td valign="top">Текст:</td><td><textarea name="body" rows="10" cols="48"></textarea></td></tr>
-        <tr><td></td><td><input type="submit" value="Отправить"></td></tr>
+        <tr><td>Кому:</td><td><input type="text" name="to" value="\(escapeHTML(draft.to))" size="40"></td></tr>
+        <tr><td>Тема:</td><td><input type="text" name="subject" value="\(escapeHTML(draft.subject))" size="40"></td></tr>
+        <tr><td valign="top">Текст:</td><td><textarea name="body" rows="10" cols="48">\(escapeHTML(draft.body))</textarea></td></tr>
         </table>
         </form>
+        \(attachmentsSection)
+        <p><input type="submit" form="cform" value="Отправить"></p>
         """
         return shell(title: "Pochta.su — написать", loggedIn: true, body: body)
     }

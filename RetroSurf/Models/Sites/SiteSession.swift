@@ -36,6 +36,14 @@ final class SiteSession: ObservableObject {
                 return .failure("Host not found: \(host)")
             }
             return await site.handle(.invoke(action: strippedAction, payload: payload))
+
+        case .composeAttach, .composeRemoveAttachment:
+            // Compose-attachment requests are a mail concern; route to the
+            // mail host directly (the picker is MailSite's UI surface).
+            guard let site = registry.site(forHost: MailSite.host) else {
+                return .failure("Host not found: \(MailSite.host)")
+            }
+            return await site.handle(request)
         }
     }
 

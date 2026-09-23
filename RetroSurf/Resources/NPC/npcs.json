@@ -51,7 +51,7 @@
     {
       "id": "serega",
       "displayName": "Серёга Воронеж",
-      "email": "serega_vrn@pochta.su",
+      "email": "serega@pochta.su",
       "pageUrl": "http://homepage.su/p/serega.html",
       "gender": "male",
       "age": 24,
@@ -269,6 +269,18 @@
           ]
         }
       ]
+    },
+    {
+      "id": "curator",
+      "displayName": "Куратор",
+      "email": "curator@retro.su",
+      "pageUrl": "http://curator.su/",
+      "gender": "none",
+      "age": 0,
+      "personality": "techie",
+      "silenceDelayMinutes": 99999,
+      "silenceTemplates": [],
+      "replyTemplates": []
     }
   ]
 }

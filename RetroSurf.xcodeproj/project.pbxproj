@@ -79,6 +79,18 @@
 		AA00000000000000000000DD /* Browser/DownloadsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000DC /* Browser/DownloadsStore.swift */; };
 		AA00000000000000000000DF /* RetroSaveDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000DE /* RetroSaveDialog.swift */; };
 		AA0000000000000000000026 /* DownloadsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000025 /* DownloadsPanelView.swift */; };
+		AA0000000000000000000037 /* Quests/FileQuestTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000035 /* Quests/FileQuestTracker.swift */; };
+		AA0000000000000000000039 /* Quests/file_quests.json in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000038 /* Quests/file_quests.json */; };
+		AA00000000000000000000F0 /* AttachmentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000033 /* AttachmentPickerView.swift */; };
+		AA0000000000000000000122 /* Bus/GameBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000121 /* Bus/GameBus.swift */; };
+		AA0000000000000000000124 /* Files/FileContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000123 /* Files/FileContent.swift */; };
+		AA0000000000000000000126 /* Files/FileInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000125 /* Files/FileInstance.swift */; };
+		AA0000000000000000000128 /* Files/FileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000127 /* Files/FileStore.swift */; };
+		AA000000000000000000012A /* Quests/FlagStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000129 /* Quests/FlagStore.swift */; };
+		AA000000000000000000012C /* Files/LocalFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000012B /* Files/LocalFolder.swift */; };
+		AA000000000000000000012E /* Files/LocalFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000012D /* Files/LocalFileStore.swift */; };
+		AA0000000000000000000130 /* Files/PreinstalledFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000012F /* Files/PreinstalledFiles.swift */; };
+		AA0000000000000000000132 /* Files/preinstalled.json in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000131 /* Files/preinstalled.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +119,8 @@
 		AA000000000000000000002F /* CurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurationManager.swift; sourceTree = "<group>"; };
 		AA0000000000000000000031 /* CuratedLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuratedLibraryView.swift; sourceTree = "<group>"; };
 		AA0000000000000000000034 /* sites */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sites; sourceTree = "<group>"; };
+		AA0000000000000000000035 /* Quests/FileQuestTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests/FileQuestTracker.swift; sourceTree = "<group>"; };
+		AA0000000000000000000033 /* AttachmentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentPickerView.swift; sourceTree = "<group>"; };
 		AA000000000000000000003A /* QuestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestManager.swift; sourceTree = "<group>"; };
 		AA000000000000000000003C /* QuestExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestExperienceView.swift; sourceTree = "<group>"; };
 		AA000000000000000000003E /* BrowserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserHistory.swift; sourceTree = "<group>"; };
@@ -134,6 +148,7 @@
 		AA0000000000000000000064 /* Quests/QuestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests/QuestModels.swift; sourceTree = "<group>"; };
 		AA0000000000000000000066 /* Quests/QuestGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests/QuestGenerator.swift; sourceTree = "<group>"; };
 		AA0000000000000000000068 /* Quests/quests.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quests/quests.json; sourceTree = "<group>"; };
+		AA0000000000000000000038 /* Quests/file_quests.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quests/file_quests.json; sourceTree = "<group>"; };
 		AA000000000000000000006C /* Senders/senders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Senders/senders.json; sourceTree = "<group>"; };
 		AA00000000000000000000E8 /* Mail/MailPlaceholders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail/MailPlaceholders.swift; sourceTree = "<group>"; };
 		AA00000000000000000000EA /* Mail/AmbientCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail/AmbientCatalog.swift; sourceTree = "<group>"; };
@@ -155,6 +170,15 @@
 		AA00000000000000000000E2 /* GameClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameClock.swift; sourceTree = "<group>"; };
 		AA00000000000000000000E4 /* DebugPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanelView.swift; sourceTree = "<group>"; };
 		AA00000000000000000000B1 /* RetroSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000121 /* Bus/GameBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus/GameBus.swift; sourceTree = "<group>"; };
+		AA0000000000000000000123 /* Files/FileContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files/FileContent.swift; sourceTree = "<group>"; };
+		AA0000000000000000000125 /* Files/FileInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files/FileInstance.swift; sourceTree = "<group>"; };
+		AA0000000000000000000127 /* Files/FileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files/FileStore.swift; sourceTree = "<group>"; };
+		AA0000000000000000000129 /* Quests/FlagStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests/FlagStore.swift; sourceTree = "<group>"; };
+		AA000000000000000000012B /* Files/LocalFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files/LocalFolder.swift; sourceTree = "<group>"; };
+		AA000000000000000000012D /* Files/LocalFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files/LocalFileStore.swift; sourceTree = "<group>"; };
+		AA000000000000000000012F /* Files/PreinstalledFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files/PreinstalledFiles.swift; sourceTree = "<group>"; };
+		AA0000000000000000000131 /* Files/preinstalled.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Files/preinstalled.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +280,7 @@
 				AA0000000000000000000062 /* Senders/SenderCatalog.swift */,
 				AA0000000000000000000064 /* Quests/QuestModels.swift */,
 				AA0000000000000000000066 /* Quests/QuestGenerator.swift */,
+				AA0000000000000000000035 /* Quests/FileQuestTracker.swift */,
 				AA00000000000000000000E8 /* Mail/MailPlaceholders.swift */,
 				AA00000000000000000000EA /* Mail/AmbientCatalog.swift */,
 				AA00000000000000000000EC /* Mail/AmbientMailGenerator.swift */,
@@ -278,6 +303,14 @@
 				AA00000000000000000000D8 /* Sites/Files/FilesSite.swift */,
 				AA00000000000000000000DA /* Browser/FileSizeFormatter.swift */,
 				AA00000000000000000000DC /* Browser/DownloadsStore.swift */,
+				AA0000000000000000000121 /* Bus/GameBus.swift */,
+				AA0000000000000000000123 /* Files/FileContent.swift */,
+				AA0000000000000000000125 /* Files/FileInstance.swift */,
+				AA0000000000000000000127 /* Files/FileStore.swift */,
+				AA0000000000000000000129 /* Quests/FlagStore.swift */,
+				AA000000000000000000012B /* Files/LocalFolder.swift */,
+				AA000000000000000000012D /* Files/LocalFileStore.swift */,
+				AA000000000000000000012F /* Files/PreinstalledFiles.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,6 +335,7 @@
 				AA0000000000000000000044 /* InteractiveExperienceRegistry.swift */,
 				AA00000000000000000000DE /* RetroSaveDialog.swift */,
 				AA0000000000000000000025 /* DownloadsPanelView.swift */,
+				AA0000000000000000000033 /* AttachmentPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,9 +346,11 @@
 				AA0000000000000000000023 /* Sounds/modem-connect.mp3 */,
 				AA0000000000000000000034 /* sites */,
 				AA0000000000000000000068 /* Quests/quests.json */,
+				AA0000000000000000000038 /* Quests/file_quests.json */,
 				AA000000000000000000006C /* Senders/senders.json */,
 				AA00000000000000000000EE /* Mail/ambient.json */,
 				AA00000000000000000000C7 /* NPC/npcs.json */,
+				AA0000000000000000000131 /* Files/preinstalled.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -381,9 +417,11 @@
 				AA0000000000000000000024 /* Sounds/modem-connect.mp3 in Resources */,
 				AA0000000000000000000036 /* sites in Resources */,
 				AA0000000000000000000069 /* Quests/quests.json in Resources */,
+				AA0000000000000000000039 /* Quests/file_quests.json in Resources */,
 				AA000000000000000000006D /* Senders/senders.json in Resources */,
 				AA00000000000000000000EF /* Mail/ambient.json in Resources */,
 				AA00000000000000000000C8 /* NPC/npcs.json in Resources */,
+				AA0000000000000000000132 /* Files/preinstalled.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +449,7 @@
 				AA0000000000000000000063 /* Senders/SenderCatalog.swift in Sources */,
 				AA0000000000000000000065 /* Quests/QuestModels.swift in Sources */,
 				AA0000000000000000000067 /* Quests/QuestGenerator.swift in Sources */,
+				AA0000000000000000000037 /* Quests/FileQuestTracker.swift in Sources */,
 				AA000000000000000000001E /* ModemAudio.swift in Sources */,
 				AA000000000000000000001F /* ThrottledSchemeHandler.swift in Sources */,
 				AA0000000000000000000020 /* DialUpStatusView.swift in Sources */,
@@ -459,6 +498,15 @@
 				AA00000000000000000000DD /* Browser/DownloadsStore.swift in Sources */,
 				AA00000000000000000000DF /* RetroSaveDialog.swift in Sources */,
 				AA0000000000000000000026 /* DownloadsPanelView.swift in Sources */,
+				AA00000000000000000000F0 /* AttachmentPickerView.swift in Sources */,
+				AA0000000000000000000122 /* Bus/GameBus.swift in Sources */,
+				AA0000000000000000000124 /* Files/FileContent.swift in Sources */,
+				AA0000000000000000000126 /* Files/FileInstance.swift in Sources */,
+				AA0000000000000000000128 /* Files/FileStore.swift in Sources */,
+				AA000000000000000000012A /* Quests/FlagStore.swift in Sources */,
+				AA000000000000000000012C /* Files/LocalFolder.swift in Sources */,
+				AA000000000000000000012E /* Files/LocalFileStore.swift in Sources */,
+				AA0000000000000000000130 /* Files/PreinstalledFiles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

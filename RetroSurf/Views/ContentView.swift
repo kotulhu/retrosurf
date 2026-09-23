@@ -28,6 +28,8 @@ struct ContentView: View {
     @State private var lastOpenID: String?
     @State private var activeQuest: QuestExperienceInfo?
     @State private var siteAlert: String?
+    @State private var showAttachmentPicker = false
+    @State private var attachPickerFiles: [FileInstance] = []
 
     var body: some View {
         VStack(spacing: 0) {
@@ -121,9 +123,24 @@ struct ContentView: View {
             )
         }
         .sheet(isPresented: $showDownloads) {
-            DownloadsPanelView(store: downloads) { download in
-                handleDownload(download)
+            DownloadsPanelView(store: downloads) { contentId in
+                if let download = self.siteDownload(forFileID: contentId) {
+                    handleDownload(download)
+                }
             }
+        }
+        .sheet(isPresented: $showAttachmentPicker) {
+            AttachmentPickerView(
+                files: attachPickerFiles,
+                onConfirm: { selected in
+                    showAttachmentPicker = false
+                    applyAttachmentSelection(selected)
+                },
+                onCancel: {
+                    showAttachmentPicker = false
+                    loadComposeAfterPicker()
+                }
+            )
         }
         .overlay(alignment: .bottomTrailing) {
             if achievementVisible {
@@ -284,6 +301,8 @@ struct ContentView: View {
             }
         case .failure(let message):
             showFailure(message, retry: normalized(address))
+        case .presentAttachmentPicker(let files):
+            presentAttachmentPicker(files)
         }
     }
 
@@ -325,7 +344,9 @@ struct ContentView: View {
             return
         }
         downloadInProgress = true
-        let record = downloads.start(download)
+        let targetURL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)
+            .first?.appendingPathComponent(download.fileName) ?? download.sourceURL
+        let record = downloads.start(download, target: targetURL)
         engine.downloadStatus = FileSizeFormatter.progress(0, download.sizeBytes)
         Task {
             await runDownload(download, recordID: record.id)
@@ -367,7 +388,7 @@ struct ContentView: View {
                     engine.downloadStatus = FileSizeFormatter.progress(sentBytes, totalBytes)
                 }
             }
-            downloads.complete(recordID, virusDetected: download.hasVirus)
+            downloads.complete(recordID)
             engine.downloadStatus = nil
             if download.hasVirus {
                 NotificationCenter.default.post(
@@ -394,6 +415,57 @@ struct ContentView: View {
         guard !downloadQueue.isEmpty else { return }
         let next = downloadQueue.removeFirst()
         presentSaveDialog(for: next)
+    }
+
+    // MARK: - Compose attachments (browser-layer picker)
+
+    /// Rebuild a SiteDownload from a completed file's contentId so the
+    /// «Загрузки» panel can re-download it. Falls back silently when the file
+    /// is no longer in the files.su catalog.
+    private func siteDownload(forFileID fileID: String) -> SiteDownload? {
+        guard let filesSite = sites.registry.site(forHost: FilesSite.host) as? FilesSite else {
+            return nil
+        }
+        return filesSite.download(forFileID: fileID)
+    }
+
+    private func presentAttachmentPicker(_ files: [FileInstance]) {
+        attachPickerFiles = files
+        showAttachmentPicker = true
+    }
+
+    /// Confirm: append each picked file to the compose draft, one
+    /// /compose/addAttachment form per file, then land back on compose.
+    private func applyAttachmentSelection(_ selected: [FileInstance]) {
+        var queue = selected
+        func attachNext() {
+            guard let file = queue.first else {
+                loadComposeAfterPicker()
+                return
+            }
+            queue.removeFirst()
+            guard var components = URLComponents(string: "http://\(MailSite.host)/compose/addAttachment") else {
+                attachNext()
+                return
+            }
+            components.queryItems = [URLQueryItem(name: "instanceId", value: file.instanceId)]
+            guard let url = components.url else {
+                attachNext()
+                return
+            }
+            Task {
+                await dispatch(url)
+                attachNext()
+            }
+        }
+        attachNext()
+    }
+
+    private func loadComposeAfterPicker() {
+        guard let url = URL(string: "http://\(MailSite.host)/compose") else { return }
+        Task {
+            await dispatch(url)
+        }
     }
 
     private func applyEffect(_ effect: SiteEffect) {

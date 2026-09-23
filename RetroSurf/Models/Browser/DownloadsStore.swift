@@ -1,70 +1,141 @@
 import Foundation
 
-struct DownloadedFile: Identifiable, Sendable {
+/// A download-in-progress record. The transfer runs in the browser against
+/// the live modem speed; the store only tracks progress until `complete(_:)`
+/// turns the record into a `FileInstance` in the downloads folder.
+struct InFlightDownload: Identifiable, Sendable {
     enum Status: String, Sendable {
-        case inProgress, completed, cancelled, failed
+        case inProgress, completed, failed, cancelled
     }
 
     let id: String
+    /// Catalog id of the source file (SiteDownload.id), stable across re-downloads.
+    let contentId: String
     let fileName: String
     let sizeBytes: Int
     let sourceURL: URL
+    let hasVirus: Bool
+    /// Where the (simulated, never materialized) file would land.
+    let targetURL: URL
     let startedAt: Date
     var status: Status
     var bytesSent: Int
-    var virusDetected: Bool
-
-    /// Kept so a completed item can re-trigger the full download flow.
-    let source: SiteDownload
 }
 
-/// The simulated download journal. Holds only the record — the browser drives
-/// the actual transfer against the live modem speed.
+/// Thin view over the downloads folder (via LocalFileStore) plus the in-flight
+/// progress journal. `complete` is the only operation that mints a FileInstance
+/// — the browser never writes to disk.
 @MainActor
 final class DownloadsStore: ObservableObject {
-    @Published private(set) var items: [DownloadedFile] = []
+    /// The downloads folder node name in the FileStore ("local:Загрузки").
+    /// Legacy instances still live in the plain "downloads" node and are
+    /// read back as the same folder.
+    static let nodeName = LocalFolder.downloads.ownerNode
 
+    @Published private(set) var inFlight: [InFlightDownload] = []
+
+    private let fileStore: FileStore
+    private let localFileStore: LocalFileStore
+    private let bus: GameBus
+
+    init(fileStore: FileStore, localFileStore: LocalFileStore, bus: GameBus) {
+        self.fileStore = fileStore
+        self.localFileStore = localFileStore
+        self.bus = bus
+    }
+
+    // MARK: - In-flight downloads (progress tracking)
+
+    /// Registers a new transfer. No FileInstance is created yet — that happens
+    /// at `complete(_:)`.
     @discardableResult
-    func start(_ download: SiteDownload) -> DownloadedFile {
-        let record = DownloadedFile(
+    func start(_ download: SiteDownload, target: URL) -> InFlightDownload {
+        let record = InFlightDownload(
             id: UUID().uuidString,
+            contentId: download.id,
             fileName: download.fileName,
             sizeBytes: download.sizeBytes,
             sourceURL: download.sourceURL,
+            hasVirus: download.hasVirus,
+            targetURL: target,
             startedAt: Date(),
             status: .inProgress,
-            bytesSent: 0,
-            virusDetected: false,
-            source: download
+            bytesSent: 0
         )
-        items.append(record)
+        inFlight.append(record)
         return record
     }
 
     func updateProgress(_ id: String, fraction: Double, bytesSent: Int, bytesTotal: Int) {
-        guard let index = items.firstIndex(where: { $0.id == id }) else { return }
-        items[index].status = .inProgress
-        items[index].bytesSent = bytesSent
+        guard let index = inFlight.firstIndex(where: { $0.id == id }) else { return }
+        inFlight[index].status = .inProgress
+        inFlight[index].bytesSent = min(bytesSent, bytesTotal)
     }
 
-    func complete(_ id: String, virusDetected: Bool) {
-        guard let index = items.firstIndex(where: { $0.id == id }) else { return }
-        items[index].status = .completed
-        items[index].bytesSent = items[index].sizeBytes
-        items[index].virusDetected = virusDetected
+    /// Finishes the transfer: mints a FileInstance in the downloads folder,
+    /// drops the in-flight record and publishes `.fileDownloaded`.
+    @discardableResult
+    func complete(_ id: String) -> FileInstance? {
+        guard let index = inFlight.firstIndex(where: { $0.id == id }) else { return nil }
+        let record = inFlight.remove(at: index)
+        let content = FileContent(
+            contentId: record.contentId,
+            name: record.fileName,
+            sizeBytes: record.sizeBytes,
+            hasVirus: record.hasVirus,
+            virusKind: nil,
+            sourceURL: record.sourceURL,
+            downloadedAt: Date()
+        )
+        let instance = fileStore.create(content: content, ownerNode: Self.nodeName)
+        bus.publish(.fileDownloaded(
+            FileDownloadedEvent(
+                contentId: instance.content.contentId,
+                instanceId: instance.instanceId,
+                name: instance.content.name,
+                sizeBytes: instance.content.sizeBytes,
+                hasVirus: instance.content.hasVirus,
+                downloadedAt: instance.content.downloadedAt
+            )
+        ))
+        return instance
     }
 
+    /// Fails the transfer. The record is dropped (no history entry is kept).
     func fail(_ id: String) {
-        guard let index = items.firstIndex(where: { $0.id == id }) else { return }
-        items[index].status = .failed
+        inFlight.removeAll { $0.id == id }
     }
 
+    /// Cancels the transfer. The record is dropped.
     func cancel(_ id: String) {
-        guard let index = items.firstIndex(where: { $0.id == id }) else { return }
-        items[index].status = .cancelled
+        inFlight.removeAll { $0.id == id }
     }
 
+    // MARK: - Completed files (read from LocalFileStore)
+
+    /// Completed files in the downloads folder, newest first.
+    var completedFiles: [FileInstance] {
+        localFileStore.files(in: .downloads)
+    }
+
+    /// Files in the downloads folder that are safe to attach (no virus).
+    func attachableFiles() -> [FileInstance] {
+        localFileStore.files(in: .downloads).filter { !$0.content.hasVirus }
+    }
+
+    /// Look up in the downloads folder by contentId.
+    func completedFile(withContentId contentId: String) -> FileInstance? {
+        localFileStore.files(in: .downloads)
+            .first { $0.content.contentId == contentId }
+    }
+
+    /// Clears the download journal: every downloads-folder instance is removed
+    /// (publishing `.fileRemoved` per copy), in-flight transfers are dropped.
     func clearAll() {
-        items.removeAll()
+        let ids = localFileStore.files(in: .downloads).map(\.instanceId)
+        for id in ids {
+            _ = fileStore.remove(instanceId: id)
+        }
+        inFlight.removeAll()
     }
 }

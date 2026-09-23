@@ -49,6 +49,8 @@ final class HomepageSite: BaseInteractiveSite<HomepageState> {
             return await submit(url, form: form)
         case .invoke:
             return .failure("404")
+        case .composeAttach, .composeRemoveAttachment:
+            return .failure("404")
         }
     }
 

@@ -18,15 +18,29 @@ struct RetroSurfApp: App {
     private let playerPageInstaller: PlayerPageInstaller
     @StateObject private var downloads: DownloadsStore
     @StateObject private var saveDialog: RetroSaveDialogController
+    @StateObject private var fileQuestTracker: FileQuestTracker
+    private let mailSite: MailSite
+    private let fileStore: FileStore
+    private let localFileStore: LocalFileStore
 
     init() {
         let connection = ConnectionManager()
         let catalog = SiteCatalog()
         let registry = SiteRegistry()
-        let mailSite = MailSite()
+        let bus = GameBus()
+        let fileStore = FileStore(bus: bus)
+        // Pre-installed files land in "Мои документы" once; nothing is
+        // downloaded, no events are fired.
+        PreinstalledFilesInstaller.install(
+            catalog: PreinstalledFilesCatalog.loadFromBundle(),
+            fileStore: fileStore
+        )
+        let localFileStore = LocalFileStore(fileStore: fileStore, bus: bus)
+        let downloadsStore = DownloadsStore(fileStore: fileStore, localFileStore: localFileStore, bus: bus)
         let messageScheduler = MessageScheduler()
         let ambientCatalog = AmbientCatalog.loadFromBundle()
         let npcCatalog = NpcCatalog.loadFromBundle()
+        let mailSite = MailSite(fileStore: fileStore, localFileStore: localFileStore, bus: bus, npcCatalog: npcCatalog)
         let ambientGenerator = AmbientMailGenerator(
             catalog: ambientCatalog,
             mailSite: mailSite
@@ -51,6 +65,16 @@ struct RetroSurfApp: App {
         let senders = SenderCatalog.loadFromBundle()
         let questManager = QuestManager(messageScheduler: messageScheduler, ambientGenerator: ambientGenerator)
         _quests = StateObject(wrappedValue: questManager)
+        let game = GameProgress(catalog: catalog)
+        let flags = GameProgressFlagStore(game: game, bus: bus)
+        let fileQuestTracker = FileQuestTracker(
+            quests: FileQuestCatalog.loadFromBundle().quests,
+            mailSite: mailSite,
+            npcCatalog: npcCatalog,
+            flags: flags,
+            bus: bus,
+            fileStore: fileStore
+        )
         let generator = QuestGenerator(
             quests: QuestGenerator.loadQuestsFromBundle(),
             senders: senders,
@@ -59,6 +83,9 @@ struct RetroSurfApp: App {
         )
         connection.addHeartbeatHandler { [weak generator] in
             generator?.processDueDeliveries()
+        }
+        connection.addHeartbeatHandler { [weak fileQuestTracker] in
+            fileQuestTracker?.tickOnce()
         }
         mailSite.onHomepageFeedbackReceived = { [weak homepageSite] in
             guard let homepageSite, homepageSite.recordFeedback() else { return }
@@ -74,7 +101,7 @@ struct RetroSurfApp: App {
         _connection = StateObject(wrappedValue: connection)
         _dialUp = StateObject(wrappedValue: DialUpPanelController(connection: connection))
         _catalog = StateObject(wrappedValue: catalog)
-        _game = StateObject(wrappedValue: GameProgress(catalog: catalog))
+        _game = StateObject(wrappedValue: game)
         _sites = StateObject(wrappedValue: session)
         _questGenerator = StateObject(wrappedValue: generator)
         _scheduler = StateObject(wrappedValue: messageScheduler)
@@ -83,8 +110,12 @@ struct RetroSurfApp: App {
         _npcMessenger = StateObject(wrappedValue: npcMessenger)
         _playerPageState = StateObject(wrappedValue: playerPageState)
         self.playerPageInstaller = playerPageInstaller
-        _downloads = StateObject(wrappedValue: DownloadsStore())
+        _downloads = StateObject(wrappedValue: downloadsStore)
         _saveDialog = StateObject(wrappedValue: RetroSaveDialogController())
+        _fileQuestTracker = StateObject(wrappedValue: fileQuestTracker)
+        self.mailSite = mailSite
+        self.fileStore = fileStore
+        self.localFileStore = localFileStore
     }
 
     var body: some Scene {
@@ -105,10 +136,12 @@ struct RetroSurfApp: App {
                 .environmentObject(playerPageState)
                 .environmentObject(downloads)
                 .environmentObject(saveDialog)
+                .environmentObject(fileQuestTracker)
                 .onAppear {
                     ambientGenerator.start()
                     npcMessenger.start()
                     playerPageInstaller.start()
+                    fileQuestTracker.start()
                 }
                 .navigationTitle("RetroSurf")
                 .frame(minWidth: 800, minHeight: 600)
@@ -130,6 +163,18 @@ struct RetroSurfApp: App {
                 Button("Опубликовать страничку веб-мастера") {
                     playerPageInstaller.installNow()
                 }
+                Button("Квест: старт") {
+                    fileQuestTracker.forceStart("three_files")
+                }
+                Button("Скачать Земфиру") {
+                    fileQuestTracker.simulateDownload(contentId: "music_zemfira")
+                }
+                Button("Прикрепить и отправить Серёге") {
+                    fileQuestTracker.simulateSend(contentId: "music_zemfira", to: "serega@pochta.su")
+                }
+                Button("Показать локальные файлы") {
+                    printLocalFiles()
+                }
             }
         }
 #endif
@@ -144,10 +189,23 @@ struct RetroSurfApp: App {
                 .environmentObject(questGenerator)
                 .environmentObject(scheduler)
                 .environmentObject(clock)
+                .environmentObject(fileQuestTracker)
         }
         .defaultSize(width: 760, height: 560)
 #endif
     }
 
     @Environment(\.openWindow) private var openWindow
+
+    /// Debug helper: печатает все файлы в Store, сгруппированные по узлам.
+    private func printLocalFiles() {
+        let grouped = Dictionary(grouping: fileStore.instances, by: { $0.ownerNode })
+        for node in grouped.keys.sorted() {
+            let files = grouped[node] ?? []
+            print("[Debug] 📁 \(node) (\(files.count))")
+            for file in files {
+                print("[Debug]   - \(file.content.name) [\(file.content.contentId)] \(FileSizeFormatter.format(file.content.sizeBytes))")
+            }
+        }
+    }
 }

@@ -212,7 +212,7 @@ enum HomepageTemplates {
         Есть центр, Кольцовский сквер, водохранилище. Пиво холодное,
         люди простые. Приезжайте.</p>
 
-        <p>Почта: serega_vrn@pochta.su</p>
+        <p>Почта: serega@pochta.su</p>
         <hr>
         <center><font size="1" color="#999999">Посетителей: 000389</font></center>
         """,
