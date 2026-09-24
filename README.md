@@ -14,7 +14,7 @@ a last page nobody has ever reached.
 
 ## What it is
 
-A simulated late-90s browser. On the outside — some Netscape 3.0 era window.
+A simulated late-90s browser.
 On the inside — a living network: email, forums, file archives, dating sites,
 fan clubs, personal homepages of ordinary people.
 
@@ -102,7 +102,7 @@ RU
 
 ## Что это
 
-Симулятор браузера конца 90-х. Внешне — Netscape какой-нибудь версии 1.0,
+Симулятор браузера конца 90-х,
 внутри — живая сеть: почта, форумы, файловые архивы, знакомства, фан-клубы,
 домашние странички обычных людей.
 
