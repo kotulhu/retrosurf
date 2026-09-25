@@ -77,7 +77,7 @@ enum MailPlaceholders {
     ]
 
     static let domains: [String] = [
-        "mail.ru", "pochta.su", "chat.ru", "hotmail.com", "yahoo.com", "subscribe.su"
+        "mail.su", "pochta.su", "chat.su", "hotmail.com", "yahoo.com", "subscribe.su"
     ]
 
     static let amounts: [String] = [

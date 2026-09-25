@@ -1,0 +1,43 @@
+{
+  "categories" : [
+    {
+      "file" : "categories\/russian_rock.json",
+      "id" : "russian_rock"
+    },
+    {
+      "file" : "categories\/foreign_rock.json",
+      "id" : "foreign_rock"
+    },
+    {
+      "file" : "categories\/russian_pop.json",
+      "id" : "russian_pop"
+    },
+    {
+      "file" : "categories\/foreign_pop.json",
+      "id" : "foreign_pop"
+    },
+    {
+      "file" : "categories\/electronic.json",
+      "id" : "electronic"
+    },
+    {
+      "file" : "categories\/classical.json",
+      "id" : "classical"
+    },
+    {
+      "file" : "categories\/jazz_blues.json",
+      "id" : "jazz_blues"
+    },
+    {
+      "file" : "categories\/soundtracks.json",
+      "id" : "soundtracks"
+    }
+  ],
+  "site" : {
+    "footer" : "© Мелодия, 1999. Счётчик: 002187",
+    "navLabel" : "Жанры",
+    "tagline" : "Хорошая музыка, проверенная временем.",
+    "title" : "Мелодия — архив музыки",
+    "warning" : "Все mp3 — 128 kbps. Скачивайте, слушайте, делитесь."
+  }
+}

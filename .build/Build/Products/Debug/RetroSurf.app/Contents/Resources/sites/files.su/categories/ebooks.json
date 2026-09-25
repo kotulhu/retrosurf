@@ -1,0 +1,15 @@
+{
+  "id": "ebooks",
+  "title": "Книги",
+  "description": ".txt и .html — классика, фантастика, детективы.",
+  "files": [
+    { "id": "book_master",    "name": "master_i_margarita.txt",  "sizeBytes": 1240000, "description": "Булгаков — Мастер и Маргарита. Полный текст.", "hasVirus": false },
+    { "id": "book_tihiy_don", "name": "tihiy_don.txt",           "sizeBytes": 3400000, "description": "Шолохов — Тихий Дон. Все 4 тома.", "hasVirus": false },
+    { "id": "book_1984",      "name": "orwell_1984.txt",         "sizeBytes": 780000,  "description": "Оруэлл — 1984. Антиутопия.", "hasVirus": false },
+    { "id": "book_lotr",      "name": "tolkin_vlastelin_kolec.txt", "sizeBytes": 2800000, "description": "Толкин — Властелин колец. Трилогия.", "hasVirus": false },
+    { "id": "book_sherlock",  "name": "sherlock_holmes.txt",     "sizeBytes": 1600000, "description": "Конан Дойль — Шерлок Холмс. Все рассказы.", "hasVirus": false },
+    { "id": "book_idiot",     "name": "dostoevsky_idiot.txt",    "sizeBytes": 2100000, "description": "Достоевский — Идиот.", "hasVirus": false },
+    { "id": "book_pushkin",   "name": "pushkin_evgeny_onegin.txt", "sizeBytes": 420000, "description": "Пушкин — Евгений Онегин.", "hasVirus": false },
+    { "id": "book_bad",       "name": "10000_books.exe",         "sizeBytes": 78000,  "description": "10000 книг в одном файле! Вся мировая литература.", "hasVirus": true }
+  ]
+}

@@ -171,7 +171,8 @@ final class FileQuestTracker: ObservableObject {
                 advanceQuestStart(quest, now: now)
             }
         case .mailReceived, .fileAttached, .fileSent, .fileReceived, .fileRemoved,
-             .artifactEarned:
+             .artifactEarned, .loveMessageSent, .loveMessageDelivered,
+             .bytesTransferred, .bytesDownloaded:
             break
         }
     }
@@ -306,7 +307,7 @@ final class FileQuestTracker: ObservableObject {
         rewardGiven.insert(quest.id)
         flags.set(quest.reward.flag, to: true)
         if let artifact = quest.reward.artifact {
-            bus.publish(.artifactEarned(artifact))
+            bus.publish(.artifactEarned(ArtifactEarnedEvent(artifactId: artifact)))
         }
         if let reputation = quest.reward.reputation, reputation > 0 {
             print("[FileQuestTracker] reward \(quest.id): +\(reputation) reputation")

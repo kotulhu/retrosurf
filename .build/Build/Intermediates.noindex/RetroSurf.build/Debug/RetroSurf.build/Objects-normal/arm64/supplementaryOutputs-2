@@ -1,0 +1,30 @@
+"/Users/elgato/RetroSurf/RetroSurf/Views/SkinTheme.swift":
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.dia"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.d"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.swiftconstvalues"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.swiftdeps"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.o"
+"/Users/elgato/RetroSurf/RetroSurf/Views/BrandLogo.swift":
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.dia"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.o"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.d"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.swiftdeps"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.swiftconstvalues"
+"/Users/elgato/RetroSurf/RetroSurf/Views/BrowserToolbar.swift":
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.dia"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.d"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.o"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.swiftconstvalues"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.swiftdeps"
+"/Users/elgato/RetroSurf/RetroSurf/Views/AddressBar.swift":
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.d"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.swiftconstvalues"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.o"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.swiftdeps"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.dia"
+"/Users/elgato/RetroSurf/RetroSurf/Views/StatusBar.swift":
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.d"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.swiftconstvalues"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.dia"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.o"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.swiftdeps"

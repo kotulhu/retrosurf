@@ -1,0 +1,485 @@
+{
+  "" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSurf-master.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSurf-master.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSurf-master.dia",
+    "emit-module-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSurf-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSurf-master-emit-module.dia",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSurf-master.swiftdeps"
+  },
+  "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GeneratedAssetSymbols.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Debug/DebugLogger.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DebugLogger.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DebugLogger.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DebugLogger.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Debug/DebugPanelView.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DebugPanelView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DebugPanelView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DebugPanelView.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/AggregatorPageBuilder.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AggregatorPageBuilder.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AggregatorPageBuilder.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AggregatorPageBuilder.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/AppSettings.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AppSettings.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AppSettings.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AppSettings.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Browser/DownloadsStore.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DownloadsStore.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DownloadsStore.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DownloadsStore.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Browser/FileSizeFormatter.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileSizeFormatter.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileSizeFormatter.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileSizeFormatter.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/BrowserHistory.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrowserHistory.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrowserHistory.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrowserHistory.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/BrowserSimulator.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrowserSimulator.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrowserSimulator.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrowserSimulator.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Bus/GameBus.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameBus.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameBus.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameBus.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/ConnectionManager.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ConnectionManager.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ConnectionManager.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ConnectionManager.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/ConnectionSpeed.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ConnectionSpeed.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ConnectionSpeed.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ConnectionSpeed.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/CurationManager.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/CurationManager.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/CurationManager.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/CurationManager.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/FileContent.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileContent.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileContent.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileContent.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/FileInstance.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileInstance.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileInstance.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileInstance.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/FileStore.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileStore.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileStore.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileStore.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/LocalFileStore.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LocalFileStore.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LocalFileStore.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LocalFileStore.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/LocalFolder.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LocalFolder.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LocalFolder.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LocalFolder.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/PreinstalledFiles.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PreinstalledFiles.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PreinstalledFiles.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PreinstalledFiles.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/GameClock.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameClock.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameClock.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameClock.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/GameProgress.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameProgress.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameProgress.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameProgress.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/GameProgressReset.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameProgressReset.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameProgressReset.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/GameProgressReset.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Love/LoveQuestTracker.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveQuestTracker.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveQuestTracker.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveQuestTracker.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Love/LoveReplies.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveReplies.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveReplies.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveReplies.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Mail/AmbientCatalog.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AmbientCatalog.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AmbientCatalog.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AmbientCatalog.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Mail/AmbientMailGenerator.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AmbientMailGenerator.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AmbientMailGenerator.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AmbientMailGenerator.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Mail/MailPlaceholders.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailPlaceholders.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailPlaceholders.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailPlaceholders.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/ModemAudio.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ModemAudio.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ModemAudio.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ModemAudio.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/NPC/NpcMessenger.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/NpcMessenger.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/NpcMessenger.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/NpcMessenger.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/NPC/NpcProfile.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/NpcProfile.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/NpcProfile.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/NpcProfile.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Player/PlayerPageBuilder.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PlayerPageBuilder.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PlayerPageBuilder.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PlayerPageBuilder.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Player/PlayerPageInstaller.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PlayerPageInstaller.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PlayerPageInstaller.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PlayerPageInstaller.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Player/PlayerPageState.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PlayerPageState.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PlayerPageState.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PlayerPageState.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Progress/ProgressStore.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ProgressStore.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ProgressStore.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ProgressStore.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Progress/SessionStats.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SessionStats.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SessionStats.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SessionStats.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/QuestManager.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestManager.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestManager.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestManager.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Quests/FileQuestTracker.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileQuestTracker.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileQuestTracker.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FileQuestTracker.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Quests/FlagStore.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FlagStore.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FlagStore.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FlagStore.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Quests/QuestGenerator.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestGenerator.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestGenerator.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestGenerator.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Quests/QuestModels.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestModels.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestModels.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestModels.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Senders/Sender.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/Sender.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/Sender.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/Sender.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Senders/SenderCatalog.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SenderCatalog.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SenderCatalog.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SenderCatalog.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/SiteCatalog.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteCatalog.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteCatalog.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteCatalog.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/FanClub/FanClubContent.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubContent.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubContent.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubContent.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/FanClub/FanClubSite.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubSite.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/FanClub/FanClubState.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubState.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubState.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubState.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/FanClub/FanClubTemplates.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FanClubTemplates.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Files/FilesBulkLoader.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FilesBulkLoader.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FilesBulkLoader.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FilesBulkLoader.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Files/FilesSite.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FilesSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FilesSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FilesSite.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/FinalSiteInstaller.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FinalSiteInstaller.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FinalSiteInstaller.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/FinalSiteInstaller.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Homepage/HomepageSite.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/HomepageSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/HomepageSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/HomepageSite.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Homepage/HomepageState.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/HomepageState.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/HomepageState.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/HomepageState.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Homepage/HomepageTemplates.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/HomepageTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/HomepageTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/HomepageTemplates.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/InteractiveSite.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/InteractiveSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/InteractiveSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/InteractiveSite.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/LastPageSite.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LastPageSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LastPageSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LastPageSite.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Love/LoveContent.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveContent.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveContent.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveContent.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Love/LoveSite.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveSite.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Love/LoveState.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveState.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveState.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveState.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Love/LoveTemplates.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/LoveTemplates.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Mail/MailSite.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailSite.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Mail/MailState.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailState.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailState.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailState.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Mail/MailTemplates.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MailTemplates.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Mail/SiteMailMessage.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteMailMessage.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteMailMessage.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteMailMessage.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Melodia/MelodiaSite.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MelodiaSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MelodiaSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MelodiaSite.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Melodia/MelodiaTemplates.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MelodiaTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MelodiaTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/MelodiaTemplates.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SiteDescriptor.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteDescriptor.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteDescriptor.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteDescriptor.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SitePage.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SitePage.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SitePage.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SitePage.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SiteRegistry.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteRegistry.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteRegistry.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteRegistry.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SiteRequest.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteRequest.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteRequest.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteRequest.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SiteResponse.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteResponse.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteResponse.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteResponse.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SiteSession.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteSession.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteSession.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SiteSession.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/StaticSite.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/StaticSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/StaticSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/StaticSite.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/StaticSiteLoader.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/StaticSiteLoader.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/StaticSiteLoader.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/StaticSiteLoader.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Welcome/WelcomeSite.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WelcomeSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WelcomeSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WelcomeSite.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Welcome/WelcomeTemplates.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WelcomeTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WelcomeTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WelcomeTemplates.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/ThrottledSchemeHandler.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ThrottledSchemeHandler.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ThrottledSchemeHandler.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ThrottledSchemeHandler.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/RetroSurfApp.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSurfApp.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSurfApp.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSurfApp.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/AddressBar.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AddressBar.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AddressBar.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AddressBar.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/AttachmentPickerView.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AttachmentPickerView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AttachmentPickerView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/AttachmentPickerView.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/BrandLogo.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrandLogo.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrandLogo.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrandLogo.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/BrowserToolbar.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrowserToolbar.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrowserToolbar.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/BrowserToolbar.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/ContentView.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ContentView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ContentView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/ContentView.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/CuratedLibraryView.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/CuratedLibraryView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/CuratedLibraryView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/CuratedLibraryView.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/CuratorView.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/CuratorView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/CuratorView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/CuratorView.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/DialUpPanelController.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DialUpPanelController.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DialUpPanelController.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DialUpPanelController.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/DialUpStatusView.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DialUpStatusView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DialUpStatusView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DialUpStatusView.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/DownloadsPanelView.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DownloadsPanelView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DownloadsPanelView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/DownloadsPanelView.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/InteractiveExperienceRegistry.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/InteractiveExperienceRegistry.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/InteractiveExperienceRegistry.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/InteractiveExperienceRegistry.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/PochtaInboxExperience.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PochtaInboxExperience.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PochtaInboxExperience.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/PochtaInboxExperience.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/QuestExperienceView.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestExperienceView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestExperienceView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/QuestExperienceView.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/RetroSaveDialog.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSaveDialog.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSaveDialog.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/RetroSaveDialog.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/SkinTheme.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SkinTheme.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SkinTheme.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/SkinTheme.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/StatusBar.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/StatusBar.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/StatusBar.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/StatusBar.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/WebView.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WebView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WebView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WebView.o"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/WelcomePage.swift" : {
+    "index-unit-output-path" : "/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WelcomePage.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WelcomePage.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Release/RetroSurf.build/Objects-normal/x86_64/WelcomePage.o"
+  }
+}

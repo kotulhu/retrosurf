@@ -1,0 +1,24 @@
+"/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Love/LoveSite.swift":
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.swiftconstvalues"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.o"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.d"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.swiftdeps"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.dia"
+"/Users/elgato/RetroSurf/RetroSurf/Models/Love/LoveQuestTracker.swift":
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.d"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.dia"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.swiftdeps"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.swiftconstvalues"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.o"
+"/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Homepage/HomepageTemplates.swift":
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.swiftconstvalues"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.dia"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.swiftdeps"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.d"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.o"
+"/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Love/LoveTemplates.swift":
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.d"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.o"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.swiftconstvalues"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.swiftdeps"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.dia"

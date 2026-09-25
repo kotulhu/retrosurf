@@ -1,0 +1,152 @@
+{
+  "source": "/Users/elgato/RetroSurf/RetroSurf/RetroSurfApp.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Отладка",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 272
+        }
+      },
+      {
+        "comment": "",
+        "key": "RetroSurf",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 205
+        }
+      },
+      {
+        "comment": "",
+        "key": "Debug",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 213
+        }
+      },
+      {
+        "comment": "",
+        "key": "Панель отладки…",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 214
+        }
+      },
+      {
+        "comment": "",
+        "key": "Прислать спам",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 216
+        }
+      },
+      {
+        "comment": "",
+        "key": "Письмо от NPC",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 219
+        }
+      },
+      {
+        "comment": "",
+        "key": "Опубликовать страничку веб-мастера",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 222
+        }
+      },
+      {
+        "comment": "",
+        "key": "Квест: старт",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 225
+        }
+      },
+      {
+        "comment": "",
+        "key": "Скачать Земфиру",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 228
+        }
+      },
+      {
+        "comment": "",
+        "key": "Прикрепить и отправить Серёге",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 231
+        }
+      },
+      {
+        "comment": "",
+        "key": "Показать локальные файлы",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 234
+        }
+      },
+      {
+        "comment": "",
+        "key": "Открыть гостевую «Полнолуния»",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 237
+        }
+      },
+      {
+        "comment": "",
+        "key": "Love: старт",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 244
+        }
+      },
+      {
+        "comment": "",
+        "key": "Love: чат с Леной",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 247
+        }
+      },
+      {
+        "comment": "",
+        "key": "Вебмастер: выставить счёт",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 254
+        }
+      },
+      {
+        "comment": "",
+        "key": "Вебмастер: отправить квитанцию",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 257
+        }
+      },
+      {
+        "comment": "",
+        "key": "Вебмастер: завершить сразу",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 260
+        }
+      },
+      {
+        "comment": "",
+        "key": "Artifacts: выдать все",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 263
+        }
+      }
+    ]
+  },
+  "version": 1
+}

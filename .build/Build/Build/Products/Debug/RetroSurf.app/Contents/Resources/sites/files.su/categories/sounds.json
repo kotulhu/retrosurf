@@ -1,0 +1,13 @@
+{
+  "id": "sounds",
+  "title": "Звуки",
+  "description": "Звуки, эффекты, шутеры для озвучки сайта.",
+  "files": [
+    { "id": "snd_startup",   "name": "win98_startup.wav",     "sizeBytes": 38000,  "description": "Приветственный звук Windows 98.", "hasVirus": false },
+    { "id": "snd_modem",     "name": "dialup_handshake.wav",  "sizeBytes": 64000,  "description": "Звук модема при выходе в сеть.", "hasVirus": false },
+    { "id": "snd_icq",       "name": "icq_knocking.wav",      "sizeBytes": 12000,  "description": "Звонок в ICQ. Кто-то писает.", "hasVirus": false },
+    { "id": "snd_error",     "name": "win_error.wav",         "sizeBytes": 42000,  "description": "Критическая ошибка Windows.", "hasVirus": false },
+    { "id": "snd_shots",     "name": "shots_pack_50.zip",     "sizeBytes": 210000, "description": "50 выстрелов для озвучки сайта.", "hasVirus": false },
+    { "id": "snd_voices",    "name": "subtitle_voices.exe",   "sizeBytes": 90000,  "description": "Озвучка субтитров. Проигрывает сам.", "hasVirus": true }
+  ]
+}

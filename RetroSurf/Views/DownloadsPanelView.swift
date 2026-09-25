@@ -196,7 +196,7 @@ struct DownloadsPanelView: View {
         case .completed:
             HStack(spacing: 8) {
                 Button("Открыть папку") {
-                    // No-op for now: simulated downloads write nothing to disk.
+                    revealInFinder(fileName: row.fileName)
                 }
                 .buttonStyle(plainLinkStyle)
                 Button("Скачать снова") {
@@ -212,6 +212,17 @@ struct DownloadsPanelView: View {
                 .foregroundColor(Color.black.opacity(0.5))
         case .cancelled, .failed:
             Text("")
+        }
+    }
+
+    /// Reveals the real stub file in Finder when it exists, otherwise opens
+    /// the real ~/Downloads folder.
+    private func revealInFinder(fileName: String) {
+        let url = store.diskURL(for: fileName)
+        if FileManager.default.fileExists(atPath: url.path) {
+            NSWorkspace.shared.activateFileViewerSelecting([url])
+        } else {
+            NSWorkspace.shared.open(DownloadsStore.realDownloadsDirectoryURL)
         }
     }
 

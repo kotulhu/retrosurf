@@ -17,6 +17,9 @@ struct DebugPanelView: View {
     @EnvironmentObject private var questGenerator: QuestGenerator
     @EnvironmentObject private var clock: GameClock
     @EnvironmentObject private var fileQuestTracker: FileQuestTracker
+    @EnvironmentObject private var loveQuestTracker: LoveQuestTracker
+    @EnvironmentObject private var webmasterQuestTracker: WebmasterQuestTracker
+    @EnvironmentObject private var fileStore: FileStore
     @ObservedObject private var logger = DebugLogger.shared
 
     @State private var tab = 0
@@ -104,6 +107,14 @@ struct DebugPanelView: View {
                 } else {
                     stat("messages", "MailSite не зарегистрирован")
                 }
+            }
+            section("LoveQuestTracker (love.su)") {
+                stat("status", loveQuestTracker.status)
+                stat("flags", game.flags.filter { $0.hasPrefix("quest.love") || $0 == "artifact.love" }.sorted().joined(separator: ", "))
+            }
+            section("WebmasterQuestTracker (webmaster-serega.su)") {
+                stat("status", webmasterQuestTracker.status)
+                stat("flags", game.flags.filter { $0.hasPrefix("quest.webmaster") || $0 == "artifact.page" }.sorted().joined(separator: ", "))
             }
             section("GameClock") {
                 stat("inGameDate", GameClock.format(clock.inGameDate))
@@ -248,7 +259,10 @@ struct DebugPanelView: View {
             sites: sites,
             catalog: catalog,
             questGenerator: questGenerator,
-            fileQuestTracker: fileQuestTracker
+            fileQuestTracker: fileQuestTracker,
+            loveQuestTracker: loveQuestTracker,
+            webmasterQuestTracker: webmasterQuestTracker,
+            fileStore: fileStore
         )
         DebugLogger.shared.log("Debug", "прогресс сброшен оператором")
     }

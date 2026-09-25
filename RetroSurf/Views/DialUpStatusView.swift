@@ -14,7 +14,7 @@ struct DialUpStatusView: View {
         return formatter
     }()
 
-    private var theme: SkinTheme { AppSkin.netscape.theme }
+    private var theme: SkinTheme { AppSkin.cheesecake.theme }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {

@@ -1,0 +1,35 @@
+{
+  "description" : "Louis Armstrong, Ella Fitzgerald, Miles Davis, Billie Holiday.",
+  "files" : [
+    {
+      "description" : "Louis Armstrong — What a Wonderful World.",
+      "hasVirus" : false,
+      "id" : "mr_louis_armstrong_wonderful_world",
+      "name" : "louis_armstrong_wonderful_world.mp3",
+      "sizeBytes" : 4700000
+    },
+    {
+      "description" : "Ella Fitzgerald — Summertime.",
+      "hasVirus" : false,
+      "id" : "mr_ella_fitzgerald_summertime",
+      "name" : "ella_fitzgerald_summertime.mp3",
+      "sizeBytes" : 5100000
+    },
+    {
+      "description" : "Miles Davis — So What.",
+      "hasVirus" : false,
+      "id" : "mr_miles_davis_so_what",
+      "name" : "miles_davis_so_what.mp3",
+      "sizeBytes" : 6500000
+    },
+    {
+      "description" : "Billie Holiday — Strange Fruit.",
+      "hasVirus" : false,
+      "id" : "mr_billie_holiday_strange_fruit",
+      "name" : "billie_holiday_strange_fruit.mp3",
+      "sizeBytes" : 4900000
+    }
+  ],
+  "id" : "jazz_blues",
+  "title" : "Джаз и блюз"
+}

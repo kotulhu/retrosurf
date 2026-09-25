@@ -1,0 +1,35 @@
+{
+  "description" : "Из «Матрицы», «Титаника», «Леона» и «Криминального чтива».",
+  "files" : [
+    {
+      "description" : "Celine Dion — My Heart Will Go On («Титаник»).",
+      "hasVirus" : false,
+      "id" : "mr_titanic_my_heart_will_go_on",
+      "name" : "titanic_my_heart_will_go_on.mp3",
+      "sizeBytes" : 5100000
+    },
+    {
+      "description" : "Rob Dougan — Clubbed to Death («Матрица»).",
+      "hasVirus" : false,
+      "id" : "mr_matrix_clubbed_to_death",
+      "name" : "matrix_clubbed_to_death.mp3",
+      "sizeBytes" : 4800000
+    },
+    {
+      "description" : "Sting — Shape of My Heart («Леон»).",
+      "hasVirus" : false,
+      "id" : "mr_leon_shape_of_my_heart",
+      "name" : "leon_shape_of_my_heart.mp3",
+      "sizeBytes" : 4600000
+    },
+    {
+      "description" : "Dick Dale — Misirlou («Криминальное чтиво»).",
+      "hasVirus" : false,
+      "id" : "mr_pulp_fiction_miserlou",
+      "name" : "pulp_fiction_miserlou.mp3",
+      "sizeBytes" : 4300000
+    }
+  ],
+  "id" : "soundtracks",
+  "title" : "Саундтреки"
+}

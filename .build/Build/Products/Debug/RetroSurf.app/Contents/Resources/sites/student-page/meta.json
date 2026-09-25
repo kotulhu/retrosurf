@@ -1,0 +1,8 @@
+{
+  "displayDomain": "student-page.su",
+  "title": "Страничка Димы",
+  "shortDescription": "Личная страничка студента: обо мне, любимые группы, гостевая книга",
+  "category": "personalPage",
+  "keywords": ["личная страница", "студент", "обо мне", "музыка", "фото"],
+  "requiredTier": "v14_4"
+}

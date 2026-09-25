@@ -1,0 +1,24 @@
+"/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Homepage/HomepageSite.swift":
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.o"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.d"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.dia"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.swiftconstvalues"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.swiftdeps"
+"/Users/elgato/RetroSurf/RetroSurf/Models/Sites/StaticSite.swift":
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.dia"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.o"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.swiftconstvalues"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.d"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.swiftdeps"
+"/Users/elgato/RetroSurf/RetroSurf/Models/GameProgressReset.swift":
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.swiftdeps"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.dia"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.o"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.swiftconstvalues"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.d"
+"/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Homepage/HomepageState.swift":
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.d"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.swiftdeps"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.o"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.swiftconstvalues"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.dia"

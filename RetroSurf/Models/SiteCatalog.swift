@@ -286,6 +286,16 @@ final class SiteCatalog: ObservableObject {
                 continue
             }
             let meta = readMeta(at: slugURL)
+            // Data-only directories (e.g. "melodia.su" holding catalog.json +
+            // generated/ but no readable web page) are not sites — skip them
+            // so they don't leak into the directory as placeholder entries.
+            let hasMetaFile = FileManager.default
+                .fileExists(atPath: slugURL.appendingPathComponent("meta.json").path)
+            let hasPage = FileManager.default
+                .fileExists(atPath: slugURL.appendingPathComponent("page.html").path)
+            let hasIndex = FileManager.default
+                .fileExists(atPath: slugURL.appendingPathComponent("index.html").path)
+            guard hasMetaFile || hasPage || hasIndex else { continue }
             let source: SiteSource
             if let experienceID = meta?.interactiveExperienceID, !experienceID.isEmpty {
                 source = .interactive(experienceID: experienceID)

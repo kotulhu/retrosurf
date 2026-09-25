@@ -1,0 +1,49 @@
+{
+  "description" : "Michael Jackson, Madonna, Backstreet Boys, Britney Spears.",
+  "files" : [
+    {
+      "description" : "Michael Jackson — Billie Jean.",
+      "hasVirus" : false,
+      "id" : "mr_michael_jackson_billie_jean",
+      "name" : "michael_jackson_billie_jean.mp3",
+      "sizeBytes" : 4700000
+    },
+    {
+      "description" : "Michael Jackson — Beat It.",
+      "hasVirus" : false,
+      "id" : "mr_michael_jackson_beat_it",
+      "name" : "michael_jackson_beat_it.mp3",
+      "sizeBytes" : 4900000
+    },
+    {
+      "description" : "Madonna — Frozen.",
+      "hasVirus" : false,
+      "id" : "mr_madonna_frozen",
+      "name" : "madonna_frozen.mp3",
+      "sizeBytes" : 5200000
+    },
+    {
+      "description" : "Backstreet Boys — I Want It That Way.",
+      "hasVirus" : false,
+      "id" : "mr_backstreet_boys_i_want_it",
+      "name" : "backstreet_boys_i_want_it.mp3",
+      "sizeBytes" : 4200000
+    },
+    {
+      "description" : "Spice Girls — Wannabe.",
+      "hasVirus" : false,
+      "id" : "mr_spice_girls_wannabe",
+      "name" : "spice_girls_wannabe.mp3",
+      "sizeBytes" : 3800000
+    },
+    {
+      "description" : "Britney Spears — …Baby One More Time.",
+      "hasVirus" : false,
+      "id" : "mr_britney_spears_baby_one_more",
+      "name" : "britney_spears_baby_one_more.mp3",
+      "sizeBytes" : 4100000
+    }
+  ],
+  "id" : "foreign_pop",
+  "title" : "Зарубежная поп-музыка"
+}

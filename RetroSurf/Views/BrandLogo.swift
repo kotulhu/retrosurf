@@ -6,15 +6,15 @@ struct BrandLogo: View {
 
     var body: some View {
         switch skin {
-        case .netscape:
-            NetscapeLogo(isLoading: isLoading)
+        case .cheesecake:
+            CheesecakeLogo(isLoading: isLoading)
         case .internetExplorer:
             IELogo(isLoading: isLoading)
         }
     }
 }
 
-private struct NetscapeLogo: View {
+private struct CheesecakeLogo: View {
     var isLoading: Bool
 
     var body: some View {
@@ -34,7 +34,7 @@ private struct NetscapeLogo: View {
                     RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.white.opacity(0.85), lineWidth: 1)
                 )
-            Text("N")
+            Text("C")
                 .font(.custom("Times New Roman", size: 20))
                 .italic()
                 .bold()

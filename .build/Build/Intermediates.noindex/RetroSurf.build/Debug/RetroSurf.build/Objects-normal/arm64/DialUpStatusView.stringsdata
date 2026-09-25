@@ -1,0 +1,56 @@
+{
+  "source": "/Users/elgato/RetroSurf/RetroSurf/Views/DialUpStatusView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "RetroSurf ISP",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "Скрыть отладку",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 64
+        }
+      },
+      {
+        "comment": "",
+        "key": "Отладка…",
+        "location": {
+          "startingColumn": 68,
+          "startingLine": 64
+        }
+      },
+      {
+        "comment": "",
+        "key": "Разъединить",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "DEBUG · журнал переходов",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 91
+        }
+      },
+      {
+        "comment": "",
+        "key": "(пока нет переходов)",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 97
+        }
+      }
+    ]
+  },
+  "version": 1
+}

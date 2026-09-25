@@ -1,0 +1,24 @@
+{
+  "source": "/Users/elgato/RetroSurf/RetroSurf/Views/DialUpStatusView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "RetroSurf ISP",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "Разъединить",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 70
+        }
+      }
+    ]
+  },
+  "version": 1
+}

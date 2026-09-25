@@ -11,7 +11,6 @@
 		AA0000000000000000000012 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000002 /* AppSettings.swift */; };
 		AA0000000000000000000013 /* BrowserSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* BrowserSimulator.swift */; };
 		AA0000000000000000000014 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000004 /* ContentView.swift */; };
-		AA0000000000000000000015 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000005 /* WelcomePage.swift */; };
 		AA0000000000000000000016 /* SkinTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000006 /* SkinTheme.swift */; };
 		AA0000000000000000000017 /* BrandLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000007 /* BrandLogo.swift */; };
 		AA0000000000000000000018 /* BrowserToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000008 /* BrowserToolbar.swift */; };
@@ -25,6 +24,7 @@
 		AA0000000000000000000020 /* DialUpStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000010 /* DialUpStatusView.swift */; };
 		AA0000000000000000000022 /* DialUpPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000021 /* DialUpPanelController.swift */; };
 		AA0000000000000000000024 /* Sounds/modem-connect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000023 /* Sounds/modem-connect.mp3 */; };
+		AA0000000000000000000026 /* DownloadsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000025 /* DownloadsPanelView.swift */; };
 		AA0000000000000000000028 /* SiteCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000027 /* SiteCatalog.swift */; };
 		AA000000000000000000002A /* GameProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000029 /* GameProgress.swift */; };
 		AA000000000000000000002C /* AggregatorPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000002B /* AggregatorPageBuilder.swift */; };
@@ -32,14 +32,11 @@
 		AA0000000000000000000030 /* CurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000002F /* CurationManager.swift */; };
 		AA0000000000000000000032 /* CuratedLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000031 /* CuratedLibraryView.swift */; };
 		AA0000000000000000000036 /* sites in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000034 /* sites */; };
+		AA0000000000000000000037 /* Quests/FileQuestTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000035 /* Quests/FileQuestTracker.swift */; };
+		AA0000000000000000000039 /* Quests/file_quests.json in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000038 /* Quests/file_quests.json */; };
 		AA000000000000000000003B /* QuestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003A /* QuestManager.swift */; };
 		AA000000000000000000003D /* QuestExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003C /* QuestExperienceView.swift */; };
 		AA000000000000000000003F /* BrowserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000003E /* BrowserHistory.swift */; };
-		AA00000000000000000000F2 /* GameProgressReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F1 /* GameProgressReset.swift */; };
-		AA00000000000000000000F4 /* StaticSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F3 /* StaticSite.swift */; };
-		AA00000000000000000000F6 /* Homepage/HomepageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F5 /* Homepage/HomepageState.swift */; };
-		AA00000000000000000000F8 /* Homepage/HomepageSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F7 /* Homepage/HomepageSite.swift */; };
-		AA00000000000000000000FA /* Homepage/HomepageTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F9 /* Homepage/HomepageTemplates.swift */; };
 		AA0000000000000000000043 /* PochtaInboxExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000042 /* PochtaInboxExperience.swift */; };
 		AA0000000000000000000045 /* InteractiveExperienceRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000044 /* InteractiveExperienceRegistry.swift */; };
 		AA0000000000000000000047 /* SiteDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000046 /* SiteDescriptor.swift */; };
@@ -59,18 +56,11 @@
 		AA0000000000000000000065 /* Quests/QuestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000064 /* Quests/QuestModels.swift */; };
 		AA0000000000000000000067 /* Quests/QuestGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000066 /* Quests/QuestGenerator.swift */; };
 		AA0000000000000000000069 /* Quests/quests.json in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000068 /* Quests/quests.json */; };
-		AA00000000000000000000E1 /* DebugLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E0 /* DebugLogger.swift */; };
-		AA00000000000000000000E3 /* GameClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E2 /* GameClock.swift */; };
-		AA00000000000000000000E5 /* DebugPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E4 /* DebugPanelView.swift */; };
 		AA000000000000000000006D /* Senders/senders.json in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000006C /* Senders/senders.json */; };
-		AA00000000000000000000E9 /* Mail/MailPlaceholders.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E8 /* Mail/MailPlaceholders.swift */; };
-		AA00000000000000000000EB /* Mail/AmbientCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000EA /* Mail/AmbientCatalog.swift */; };
-		AA00000000000000000000ED /* Mail/AmbientMailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000EC /* Mail/AmbientMailGenerator.swift */; };
-		AA00000000000000000000EF /* Mail/ambient.json in Resources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000EE /* Mail/ambient.json */; };
 		AA00000000000000000000C4 /* NPC/NpcProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E7 /* NPC/NpcProfile.swift */; };
 		AA00000000000000000000C6 /* NPC/NpcMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000C5 /* NPC/NpcMessenger.swift */; };
 		AA00000000000000000000C8 /* NPC/npcs.json in Resources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000C7 /* NPC/npcs.json */; };
-		AA00000000000000000000D1 /* Sites/StaticSiteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000D0 /* Sites/StaticSiteLoader.swift */; };
+		AA00000000000000000000D1 /* StaticSiteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000D0 /* StaticSiteLoader.swift */; };
 		AA00000000000000000000D3 /* Player/PlayerPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000D2 /* Player/PlayerPageBuilder.swift */; };
 		AA00000000000000000000D5 /* Player/PlayerPageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000D4 /* Player/PlayerPageState.swift */; };
 		AA00000000000000000000D7 /* Player/PlayerPageInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000D6 /* Player/PlayerPageInstaller.swift */; };
@@ -78,10 +68,19 @@
 		AA00000000000000000000DB /* Browser/FileSizeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000DA /* Browser/FileSizeFormatter.swift */; };
 		AA00000000000000000000DD /* Browser/DownloadsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000DC /* Browser/DownloadsStore.swift */; };
 		AA00000000000000000000DF /* RetroSaveDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000DE /* RetroSaveDialog.swift */; };
-		AA0000000000000000000026 /* DownloadsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000025 /* DownloadsPanelView.swift */; };
-		AA0000000000000000000037 /* Quests/FileQuestTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000035 /* Quests/FileQuestTracker.swift */; };
-		AA0000000000000000000039 /* Quests/file_quests.json in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000038 /* Quests/file_quests.json */; };
+		AA00000000000000000000E1 /* DebugLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E0 /* DebugLogger.swift */; };
+		AA00000000000000000000E3 /* GameClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E2 /* GameClock.swift */; };
+		AA00000000000000000000E5 /* DebugPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E4 /* DebugPanelView.swift */; };
+		AA00000000000000000000E9 /* Mail/MailPlaceholders.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000E8 /* Mail/MailPlaceholders.swift */; };
+		AA00000000000000000000EB /* Mail/AmbientCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000EA /* Mail/AmbientCatalog.swift */; };
+		AA00000000000000000000ED /* Mail/AmbientMailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000EC /* Mail/AmbientMailGenerator.swift */; };
+		AA00000000000000000000EF /* Mail/ambient.json in Resources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000EE /* Mail/ambient.json */; };
 		AA00000000000000000000F0 /* AttachmentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000033 /* AttachmentPickerView.swift */; };
+		AA00000000000000000000F2 /* GameProgressReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F1 /* GameProgressReset.swift */; };
+		AA00000000000000000000F4 /* StaticSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F3 /* StaticSite.swift */; };
+		AA00000000000000000000F6 /* HomepageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F5 /* HomepageState.swift */; };
+		AA00000000000000000000F8 /* HomepageSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F7 /* HomepageSite.swift */; };
+		AA00000000000000000000FA /* HomepageTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000F9 /* HomepageTemplates.swift */; };
 		AA0000000000000000000122 /* Bus/GameBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000121 /* Bus/GameBus.swift */; };
 		AA0000000000000000000124 /* Files/FileContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000123 /* Files/FileContent.swift */; };
 		AA0000000000000000000126 /* Files/FileInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000125 /* Files/FileInstance.swift */; };
@@ -91,14 +90,34 @@
 		AA000000000000000000012E /* Files/LocalFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000012D /* Files/LocalFileStore.swift */; };
 		AA0000000000000000000130 /* Files/PreinstalledFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000012F /* Files/PreinstalledFiles.swift */; };
 		AA0000000000000000000132 /* Files/preinstalled.json in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000131 /* Files/preinstalled.json */; };
+		AA0000000000000000000134 /* FanClub/FanClubContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000133 /* FanClub/FanClubContent.swift */; };
+		AA0000000000000000000136 /* FanClub/FanClubState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000135 /* FanClub/FanClubState.swift */; };
+		AA0000000000000000000138 /* FanClub/FanClubSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000137 /* FanClub/FanClubSite.swift */; };
+		AA000000000000000000013A /* FanClub/FanClubTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000139 /* FanClub/FanClubTemplates.swift */; };
+		AA000000000000000000013C /* Sites/polnolunie-fanclub.su/content.json in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000013B /* Sites/polnolunie-fanclub.su/content.json */; };
+		AA000000000000000000013E /* Sites/Files/FilesBulkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000013D /* Sites/Files/FilesBulkLoader.swift */; };
+		AA0000000000000000000140 /* MelodiaSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000013F /* MelodiaSite.swift */; };
+		AA0000000000000000000142 /* MelodiaTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000141 /* MelodiaTemplates.swift */; };
+		AA0000000000000000000145 /* Love/LoveContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000144 /* Love/LoveContent.swift */; };
+		AA0000000000000000000147 /* Love/LoveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000146 /* Love/LoveState.swift */; };
+		AA0000000000000000000149 /* Love/LoveSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000148 /* Love/LoveSite.swift */; };
+		AA000000000000000000014B /* Love/LoveTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000014A /* Love/LoveTemplates.swift */; };
+		AA000000000000000000014D /* Love/LoveQuestTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000014C /* Love/LoveQuestTracker.swift */; };
+		AA000000000000000000014F /* Love/LoveReplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000014E /* Love/LoveReplies.swift */; };
+		AA0000000000000000000151 /* Love/love_replies.json in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000150 /* Love/love_replies.json */; };
+		AA0000000000000000000153 /* Progress/ProgressStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000152 /* Progress/ProgressStore.swift */; };
+		AA0000000000000000000155 /* Progress/SessionStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000154 /* Progress/SessionStats.swift */; };
+		AA000000000000000000015B /* LastPageSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000015A /* LastPageSite.swift */; };
+		AA000000000000000000015D /* FinalSiteInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000015C /* FinalSiteInstaller.swift */; };
+		AA000000000000000000015E /* Quests/WebmasterQuestTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000015F /* Quests/WebmasterQuestTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50CF6BFB306596E2005E6F6C /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		AA0000000000000000000001 /* RetroSurfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroSurfApp.swift; sourceTree = "<group>"; };
 		AA0000000000000000000002 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		AA0000000000000000000003 /* BrowserSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserSimulator.swift; sourceTree = "<group>"; };
 		AA0000000000000000000004 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AA0000000000000000000005 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		AA0000000000000000000006 /* SkinTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinTheme.swift; sourceTree = "<group>"; };
 		AA0000000000000000000007 /* BrandLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandLogo.swift; sourceTree = "<group>"; };
 		AA0000000000000000000008 /* BrowserToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserToolbar.swift; sourceTree = "<group>"; };
@@ -112,23 +131,20 @@
 		AA0000000000000000000010 /* DialUpStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialUpStatusView.swift; sourceTree = "<group>"; };
 		AA0000000000000000000021 /* DialUpPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialUpPanelController.swift; sourceTree = "<group>"; };
 		AA0000000000000000000023 /* Sounds/modem-connect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sounds/modem-connect.mp3"; sourceTree = "<group>"; };
+		AA0000000000000000000025 /* DownloadsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsPanelView.swift; sourceTree = "<group>"; };
 		AA0000000000000000000027 /* SiteCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCatalog.swift; sourceTree = "<group>"; };
 		AA0000000000000000000029 /* GameProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProgress.swift; sourceTree = "<group>"; };
 		AA000000000000000000002B /* AggregatorPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregatorPageBuilder.swift; sourceTree = "<group>"; };
 		AA000000000000000000002D /* CuratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuratorView.swift; sourceTree = "<group>"; };
 		AA000000000000000000002F /* CurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurationManager.swift; sourceTree = "<group>"; };
 		AA0000000000000000000031 /* CuratedLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuratedLibraryView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000033 /* AttachmentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentPickerView.swift; sourceTree = "<group>"; };
 		AA0000000000000000000034 /* sites */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sites; sourceTree = "<group>"; };
 		AA0000000000000000000035 /* Quests/FileQuestTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests/FileQuestTracker.swift; sourceTree = "<group>"; };
-		AA0000000000000000000033 /* AttachmentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentPickerView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000038 /* Quests/file_quests.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quests/file_quests.json; sourceTree = "<group>"; };
 		AA000000000000000000003A /* QuestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestManager.swift; sourceTree = "<group>"; };
 		AA000000000000000000003C /* QuestExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestExperienceView.swift; sourceTree = "<group>"; };
 		AA000000000000000000003E /* BrowserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserHistory.swift; sourceTree = "<group>"; };
-		AA00000000000000000000F1 /* GameProgressReset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProgressReset.swift; sourceTree = "<group>"; };
-		AA00000000000000000000F3 /* StaticSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticSite.swift; sourceTree = "<group>"; };
-		AA00000000000000000000F5 /* HomepageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageState.swift; sourceTree = "<group>"; };
-		AA00000000000000000000F7 /* HomepageSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageSite.swift; sourceTree = "<group>"; };
-		AA00000000000000000000F9 /* HomepageTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageTemplates.swift; sourceTree = "<group>"; };
 		AA0000000000000000000042 /* PochtaInboxExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PochtaInboxExperience.swift; sourceTree = "<group>"; };
 		AA0000000000000000000044 /* InteractiveExperienceRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveExperienceRegistry.swift; sourceTree = "<group>"; };
 		AA0000000000000000000046 /* SiteDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDescriptor.swift; sourceTree = "<group>"; };
@@ -148,28 +164,31 @@
 		AA0000000000000000000064 /* Quests/QuestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests/QuestModels.swift; sourceTree = "<group>"; };
 		AA0000000000000000000066 /* Quests/QuestGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests/QuestGenerator.swift; sourceTree = "<group>"; };
 		AA0000000000000000000068 /* Quests/quests.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quests/quests.json; sourceTree = "<group>"; };
-		AA0000000000000000000038 /* Quests/file_quests.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quests/file_quests.json; sourceTree = "<group>"; };
 		AA000000000000000000006C /* Senders/senders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Senders/senders.json; sourceTree = "<group>"; };
-		AA00000000000000000000E8 /* Mail/MailPlaceholders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail/MailPlaceholders.swift; sourceTree = "<group>"; };
-		AA00000000000000000000EA /* Mail/AmbientCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail/AmbientCatalog.swift; sourceTree = "<group>"; };
-		AA00000000000000000000EC /* Mail/AmbientMailGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail/AmbientMailGenerator.swift; sourceTree = "<group>"; };
-		AA00000000000000000000EE /* Mail/ambient.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mail/ambient.json; sourceTree = "<group>"; };
-		AA00000000000000000000E7 /* NPC/NpcProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPC/NpcProfile.swift; sourceTree = "<group>"; };
+		AA00000000000000000000B1 /* RetroSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA00000000000000000000C5 /* NPC/NpcMessenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPC/NpcMessenger.swift; sourceTree = "<group>"; };
 		AA00000000000000000000C7 /* NPC/npcs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NPC/npcs.json; sourceTree = "<group>"; };
 		AA00000000000000000000D0 /* StaticSiteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticSiteLoader.swift; sourceTree = "<group>"; };
+		AA00000000000000000000D2 /* Player/PlayerPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player/PlayerPageBuilder.swift; sourceTree = "<group>"; };
+		AA00000000000000000000D4 /* Player/PlayerPageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player/PlayerPageState.swift; sourceTree = "<group>"; };
+		AA00000000000000000000D6 /* Player/PlayerPageInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player/PlayerPageInstaller.swift; sourceTree = "<group>"; };
 		AA00000000000000000000D8 /* Sites/Files/FilesSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sites/Files/FilesSite.swift; sourceTree = "<group>"; };
 		AA00000000000000000000DA /* Browser/FileSizeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser/FileSizeFormatter.swift; sourceTree = "<group>"; };
 		AA00000000000000000000DC /* Browser/DownloadsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser/DownloadsStore.swift; sourceTree = "<group>"; };
 		AA00000000000000000000DE /* RetroSaveDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroSaveDialog.swift; sourceTree = "<group>"; };
-		AA0000000000000000000025 /* DownloadsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsPanelView.swift; sourceTree = "<group>"; };
-		AA00000000000000000000D2 /* Player/PlayerPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player/PlayerPageBuilder.swift; sourceTree = "<group>"; };
-		AA00000000000000000000D4 /* Player/PlayerPageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player/PlayerPageState.swift; sourceTree = "<group>"; };
-		AA00000000000000000000D6 /* Player/PlayerPageInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player/PlayerPageInstaller.swift; sourceTree = "<group>"; };
 		AA00000000000000000000E0 /* DebugLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogger.swift; sourceTree = "<group>"; };
 		AA00000000000000000000E2 /* GameClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameClock.swift; sourceTree = "<group>"; };
 		AA00000000000000000000E4 /* DebugPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanelView.swift; sourceTree = "<group>"; };
-		AA00000000000000000000B1 /* RetroSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA00000000000000000000E7 /* NPC/NpcProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPC/NpcProfile.swift; sourceTree = "<group>"; };
+		AA00000000000000000000E8 /* Mail/MailPlaceholders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail/MailPlaceholders.swift; sourceTree = "<group>"; };
+		AA00000000000000000000EA /* Mail/AmbientCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail/AmbientCatalog.swift; sourceTree = "<group>"; };
+		AA00000000000000000000EC /* Mail/AmbientMailGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail/AmbientMailGenerator.swift; sourceTree = "<group>"; };
+		AA00000000000000000000EE /* Mail/ambient.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mail/ambient.json; sourceTree = "<group>"; };
+		AA00000000000000000000F1 /* GameProgressReset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProgressReset.swift; sourceTree = "<group>"; };
+		AA00000000000000000000F3 /* StaticSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticSite.swift; sourceTree = "<group>"; };
+		AA00000000000000000000F5 /* HomepageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageState.swift; sourceTree = "<group>"; };
+		AA00000000000000000000F7 /* HomepageSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageSite.swift; sourceTree = "<group>"; };
+		AA00000000000000000000F9 /* HomepageTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageTemplates.swift; sourceTree = "<group>"; };
 		AA0000000000000000000121 /* Bus/GameBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus/GameBus.swift; sourceTree = "<group>"; };
 		AA0000000000000000000123 /* Files/FileContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files/FileContent.swift; sourceTree = "<group>"; };
 		AA0000000000000000000125 /* Files/FileInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files/FileInstance.swift; sourceTree = "<group>"; };
@@ -179,6 +198,26 @@
 		AA000000000000000000012D /* Files/LocalFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files/LocalFileStore.swift; sourceTree = "<group>"; };
 		AA000000000000000000012F /* Files/PreinstalledFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files/PreinstalledFiles.swift; sourceTree = "<group>"; };
 		AA0000000000000000000131 /* Files/preinstalled.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Files/preinstalled.json; sourceTree = "<group>"; };
+		AA0000000000000000000133 /* FanClub/FanClubContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanClub/FanClubContent.swift; sourceTree = "<group>"; };
+		AA0000000000000000000135 /* FanClub/FanClubState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanClub/FanClubState.swift; sourceTree = "<group>"; };
+		AA0000000000000000000137 /* FanClub/FanClubSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanClub/FanClubSite.swift; sourceTree = "<group>"; };
+		AA0000000000000000000139 /* FanClub/FanClubTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanClub/FanClubTemplates.swift; sourceTree = "<group>"; };
+		AA000000000000000000013B /* Sites/polnolunie-fanclub.su/content.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Sites/polnolunie-fanclub.su/content.json"; sourceTree = "<group>"; };
+		AA000000000000000000013D /* Sites/Files/FilesBulkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sites/Files/FilesBulkLoader.swift; sourceTree = "<group>"; };
+		AA000000000000000000013F /* MelodiaSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodiaSite.swift; sourceTree = "<group>"; };
+		AA0000000000000000000141 /* MelodiaTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodiaTemplates.swift; sourceTree = "<group>"; };
+		AA0000000000000000000144 /* Love/LoveContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Love/LoveContent.swift; sourceTree = "<group>"; };
+		AA0000000000000000000146 /* Love/LoveState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Love/LoveState.swift; sourceTree = "<group>"; };
+		AA0000000000000000000148 /* Love/LoveSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Love/LoveSite.swift; sourceTree = "<group>"; };
+		AA000000000000000000014A /* Love/LoveTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Love/LoveTemplates.swift; sourceTree = "<group>"; };
+		AA000000000000000000014C /* Love/LoveQuestTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Love/LoveQuestTracker.swift; sourceTree = "<group>"; };
+		AA000000000000000000014E /* Love/LoveReplies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Love/LoveReplies.swift; sourceTree = "<group>"; };
+		AA0000000000000000000150 /* Love/love_replies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Love/love_replies.json; sourceTree = "<group>"; };
+		AA0000000000000000000152 /* Progress/ProgressStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress/ProgressStore.swift; sourceTree = "<group>"; };
+		AA0000000000000000000154 /* Progress/SessionStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress/SessionStats.swift; sourceTree = "<group>"; };
+		AA000000000000000000015A /* LastPageSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPageSite.swift; sourceTree = "<group>"; };
+		AA000000000000000000015C /* FinalSiteInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalSiteInstaller.swift; sourceTree = "<group>"; };
+		AA000000000000000000015F /* Quests/WebmasterQuestTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests/WebmasterQuestTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,16 +231,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA00000000000000000000FB /* Homepage */ = {
-			isa = PBXGroup;
-			children = (
-				AA00000000000000000000F5 /* HomepageState.swift */,
-				AA00000000000000000000F7 /* HomepageSite.swift */,
-				AA00000000000000000000F9 /* HomepageTemplates.swift */,
-			);
-			path = Homepage;
-			sourceTree = "<group>";
-		};
 		AA0000000000000000000054 /* Sites */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +245,17 @@
 				AA0000000000000000000052 /* SiteSession.swift */,
 				AA00000000000000000000FB /* Homepage */,
 				AA0000000000000000000055 /* Mail */,
+				AA0000000000000000000137 /* FanClub/FanClubSite.swift */,
+				AA0000000000000000000135 /* FanClub/FanClubState.swift */,
+				AA0000000000000000000133 /* FanClub/FanClubContent.swift */,
+				AA0000000000000000000139 /* FanClub/FanClubTemplates.swift */,
+				AA0000000000000000000143 /* Melodia */,
+				AA0000000000000000000148 /* Love/LoveSite.swift */,
+				AA0000000000000000000146 /* Love/LoveState.swift */,
+				AA0000000000000000000144 /* Love/LoveContent.swift */,
+				AA000000000000000000014A /* Love/LoveTemplates.swift */,
+				AA000000000000000000015A /* LastPageSite.swift */,
+				AA000000000000000000015C /* FinalSiteInstaller.swift */,
 			);
 			path = Sites;
 			sourceTree = "<group>";
@@ -231,18 +271,10 @@
 			path = Mail;
 			sourceTree = "<group>";
 		};
-		AA00000000000000000000E6 /* Debug */ = {
-			isa = PBXGroup;
-			children = (
-				AA00000000000000000000E0 /* DebugLogger.swift */,
-				AA00000000000000000000E4 /* DebugPanelView.swift */,
-			);
-			path = Debug;
-			sourceTree = "<group>";
-		};
 		AA00000000000000000000A1 = {
 			isa = PBXGroup;
 			children = (
+				50CF6BFB306596E2005E6F6C /* readme.md */,
 				AA00000000000000000000A3 /* RetroSurf */,
 				AA00000000000000000000A2 /* Products */,
 			);
@@ -301,6 +333,7 @@
 				AA00000000000000000000D6 /* Player/PlayerPageInstaller.swift */,
 				AA0000000000000000000054 /* Sites */,
 				AA00000000000000000000D8 /* Sites/Files/FilesSite.swift */,
+				AA000000000000000000013D /* Sites/Files/FilesBulkLoader.swift */,
 				AA00000000000000000000DA /* Browser/FileSizeFormatter.swift */,
 				AA00000000000000000000DC /* Browser/DownloadsStore.swift */,
 				AA0000000000000000000121 /* Bus/GameBus.swift */,
@@ -311,6 +344,11 @@
 				AA000000000000000000012B /* Files/LocalFolder.swift */,
 				AA000000000000000000012D /* Files/LocalFileStore.swift */,
 				AA000000000000000000012F /* Files/PreinstalledFiles.swift */,
+				AA000000000000000000014C /* Love/LoveQuestTracker.swift */,
+				AA000000000000000000014E /* Love/LoveReplies.swift */,
+				AA000000000000000000015F /* Quests/WebmasterQuestTracker.swift */,
+				AA0000000000000000000152 /* Progress/ProgressStore.swift */,
+				AA0000000000000000000154 /* Progress/SessionStats.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,7 +357,6 @@
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000004 /* ContentView.swift */,
-				AA0000000000000000000005 /* WelcomePage.swift */,
 				AA0000000000000000000006 /* SkinTheme.swift */,
 				AA0000000000000000000007 /* BrandLogo.swift */,
 				AA0000000000000000000008 /* BrowserToolbar.swift */,
@@ -351,8 +388,38 @@
 				AA00000000000000000000EE /* Mail/ambient.json */,
 				AA00000000000000000000C7 /* NPC/npcs.json */,
 				AA0000000000000000000131 /* Files/preinstalled.json */,
+				AA000000000000000000013B /* Sites/polnolunie-fanclub.su/content.json */,
+				AA0000000000000000000150 /* Love/love_replies.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA00000000000000000000E6 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000000000000000000E0 /* DebugLogger.swift */,
+				AA00000000000000000000E4 /* DebugPanelView.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		AA00000000000000000000FB /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000000000000000000F5 /* HomepageState.swift */,
+				AA00000000000000000000F7 /* HomepageSite.swift */,
+				AA00000000000000000000F9 /* HomepageTemplates.swift */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000143 /* Melodia */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000013F /* MelodiaSite.swift */,
+				AA0000000000000000000141 /* MelodiaTemplates.swift */,
+			);
+			path = Melodia;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +489,8 @@
 				AA00000000000000000000EF /* Mail/ambient.json in Resources */,
 				AA00000000000000000000C8 /* NPC/npcs.json in Resources */,
 				AA0000000000000000000132 /* Files/preinstalled.json in Resources */,
+				AA000000000000000000013C /* Sites/polnolunie-fanclub.su/content.json in Resources */,
+				AA0000000000000000000151 /* Love/love_replies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +505,6 @@
 				AA0000000000000000000012 /* AppSettings.swift in Sources */,
 				AA0000000000000000000013 /* BrowserSimulator.swift in Sources */,
 				AA0000000000000000000014 /* ContentView.swift in Sources */,
-				AA0000000000000000000015 /* WelcomePage.swift in Sources */,
 				AA0000000000000000000016 /* SkinTheme.swift in Sources */,
 				AA0000000000000000000017 /* BrandLogo.swift in Sources */,
 				AA0000000000000000000018 /* BrowserToolbar.swift in Sources */,
@@ -465,9 +533,9 @@
 				AA000000000000000000003F /* BrowserHistory.swift in Sources */,
 				AA00000000000000000000F2 /* GameProgressReset.swift in Sources */,
 				AA00000000000000000000F4 /* StaticSite.swift in Sources */,
-				AA00000000000000000000F6 /* Homepage/HomepageState.swift in Sources */,
-				AA00000000000000000000F8 /* Homepage/HomepageSite.swift in Sources */,
-				AA00000000000000000000FA /* Homepage/HomepageTemplates.swift in Sources */,
+				AA00000000000000000000F6 /* HomepageState.swift in Sources */,
+				AA00000000000000000000F8 /* HomepageSite.swift in Sources */,
+				AA00000000000000000000FA /* HomepageTemplates.swift in Sources */,
 				AA0000000000000000000043 /* PochtaInboxExperience.swift in Sources */,
 				AA0000000000000000000045 /* InteractiveExperienceRegistry.swift in Sources */,
 				AA0000000000000000000047 /* SiteDescriptor.swift in Sources */,
@@ -489,7 +557,7 @@
 				AA00000000000000000000ED /* Mail/AmbientMailGenerator.swift in Sources */,
 				AA00000000000000000000C4 /* NPC/NpcProfile.swift in Sources */,
 				AA00000000000000000000C6 /* NPC/NpcMessenger.swift in Sources */,
-				AA00000000000000000000D1 /* Sites/StaticSiteLoader.swift in Sources */,
+				AA00000000000000000000D1 /* StaticSiteLoader.swift in Sources */,
 				AA00000000000000000000D3 /* Player/PlayerPageBuilder.swift in Sources */,
 				AA00000000000000000000D5 /* Player/PlayerPageState.swift in Sources */,
 				AA00000000000000000000D7 /* Player/PlayerPageInstaller.swift in Sources */,
@@ -507,6 +575,24 @@
 				AA000000000000000000012C /* Files/LocalFolder.swift in Sources */,
 				AA000000000000000000012E /* Files/LocalFileStore.swift in Sources */,
 				AA0000000000000000000130 /* Files/PreinstalledFiles.swift in Sources */,
+				AA0000000000000000000134 /* FanClub/FanClubContent.swift in Sources */,
+				AA0000000000000000000136 /* FanClub/FanClubState.swift in Sources */,
+				AA0000000000000000000138 /* FanClub/FanClubSite.swift in Sources */,
+				AA000000000000000000013A /* FanClub/FanClubTemplates.swift in Sources */,
+				AA000000000000000000013E /* Sites/Files/FilesBulkLoader.swift in Sources */,
+				AA0000000000000000000140 /* MelodiaSite.swift in Sources */,
+				AA0000000000000000000142 /* MelodiaTemplates.swift in Sources */,
+				AA0000000000000000000145 /* Love/LoveContent.swift in Sources */,
+				AA0000000000000000000147 /* Love/LoveState.swift in Sources */,
+				AA0000000000000000000149 /* Love/LoveSite.swift in Sources */,
+				AA000000000000000000014B /* Love/LoveTemplates.swift in Sources */,
+				AA000000000000000000014D /* Love/LoveQuestTracker.swift in Sources */,
+				AA000000000000000000014F /* Love/LoveReplies.swift in Sources */,
+				AA0000000000000000000153 /* Progress/ProgressStore.swift in Sources */,
+				AA0000000000000000000155 /* Progress/SessionStats.swift in Sources */,
+				AA000000000000000000015B /* LastPageSite.swift in Sources */,
+				AA000000000000000000015D /* FinalSiteInstaller.swift in Sources */,
+				AA000000000000000000015E /* Quests/WebmasterQuestTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

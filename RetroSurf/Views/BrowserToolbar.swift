@@ -163,7 +163,7 @@ struct ChromeTitleBar: View {
     }
 
     private func title(for theme: SkinTheme) -> String {
-        theme.chromeFlat ? "Netscape Navigator — RetroSurf" : "Internet Explorer — RetroSurf"
+        theme.chromeFlat ? "Cheesecake Navigator — RetroSurf" : "Internet Explorer — RetroSurf"
     }
 }
 
@@ -204,11 +204,11 @@ struct ChromeMenuBar: View {
                 ("Список закладок", { engine.notifyUnavailable("Закладки") })
             ])
             menu("Options", items: [
-                ("Скин: Netscape Navigator", { setSkin(.netscape) }),
+                ("Скин: Cheesecake Navigator", { setSkin(.cheesecake) }),
                 ("Скин: Internet Explorer", { setSkin(.internetExplorer) })
             ])
             menu("Directory", items: [
-                ("Ориентир.ру", { onHome() }),
+                ("Ориентир.су", { onHome() }),
                 ("Что нового?", { onHome() })
             ])
             menu("Window", items: [

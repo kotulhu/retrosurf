@@ -1,0 +1,128 @@
+{
+  "source": "/Users/elgato/RetroSurf/RetroSurf/RetroSurfApp.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Отладка",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 262
+        }
+      },
+      {
+        "comment": "",
+        "key": "RetroSurf",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 204
+        }
+      },
+      {
+        "comment": "",
+        "key": "Debug",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 212
+        }
+      },
+      {
+        "comment": "",
+        "key": "Панель отладки…",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 213
+        }
+      },
+      {
+        "comment": "",
+        "key": "Прислать спам",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 215
+        }
+      },
+      {
+        "comment": "",
+        "key": "Письмо от NPC",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 218
+        }
+      },
+      {
+        "comment": "",
+        "key": "Опубликовать страничку веб-мастера",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 221
+        }
+      },
+      {
+        "comment": "",
+        "key": "Квест: старт",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 224
+        }
+      },
+      {
+        "comment": "",
+        "key": "Скачать Земфиру",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 227
+        }
+      },
+      {
+        "comment": "",
+        "key": "Прикрепить и отправить Серёге",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 230
+        }
+      },
+      {
+        "comment": "",
+        "key": "Показать локальные файлы",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 233
+        }
+      },
+      {
+        "comment": "",
+        "key": "Открыть гостевую «Полнолуния»",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 236
+        }
+      },
+      {
+        "comment": "",
+        "key": "Love: старт",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 243
+        }
+      },
+      {
+        "comment": "",
+        "key": "Love: чат с Леной",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 246
+        }
+      },
+      {
+        "comment": "",
+        "key": "Artifacts: выдать все",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 253
+        }
+      }
+    ]
+  },
+  "version": 1
+}

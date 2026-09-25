@@ -1,0 +1,15 @@
+{
+  "id": "games",
+  "title": "Игры",
+  "description": "Doom, Quake, Heroes, Warcraft. Демки и полные версии.",
+  "files": [
+    { "id": "game_doom",     "name": "doom2_full.zip",          "sizeBytes": 8400000, "description": "Doom II. Полная версия. Классика.", "hasVirus": false },
+    { "id": "game_quake",    "name": "quake_shareware.zip",     "sizeBytes": 12400000, "description": "Quake. Shareware-версия.", "hasVirus": false },
+    { "id": "game_heroes2",  "name": "heroes2_gold.zip",        "sizeBytes": 15600000, "description": "Heroes of Might and Magic II Gold.", "hasVirus": false },
+    { "id": "game_warcraft2","name": "warcraft2_tides.zip",     "sizeBytes": 9800000, "description": "Warcraft II: Tides of Darkness.", "hasVirus": false },
+    { "id": "game_duke",     "name": "duke_nukem_3d.zip",       "sizeBytes": 11200000, "description": "Duke Nukem 3D. Come get some!", "hasVirus": false },
+    { "id": "game_prince",   "name": "prince_of_persia.zip",    "sizeBytes": 340000,  "description": "Prince of Persia. Старая, но вечная.", "hasVirus": false },
+    { "id": "game_tetris",   "name": "tetris_2.0.exe",          "sizeBytes": 120000,  "description": "Тетрис 2.0. Для DOS.", "hasVirus": false },
+    { "id": "game_bad",      "name": "1000_games_in_1.exe",     "sizeBytes": 89000,  "description": "1000 игр в одном файле! Скачай и играй!", "hasVirus": true }
+  ]
+}

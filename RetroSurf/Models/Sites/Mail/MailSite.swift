@@ -279,11 +279,18 @@ final class MailSite: BaseInteractiveSite<MailState>, QuestLetterReceiver {
 
     private func getCompose(url: URL) -> SiteResponse {
         guard isLoggedIn else { return redirect(to: "/login") }
-        if let replyToID = URLComponents(url: url, resolvingAgainstBaseURL: false)?
-            .queryItems?.first(where: { $0.name.caseInsensitiveCompare("replyTo") == .orderedSame })?.value,
+        let queryItems = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems ?? []
+        if let replyToID = queryItems.first(where: { $0.name.caseInsensitiveCompare("replyTo") == .orderedSame })?.value,
            let id = Int(replyToID),
            let message = state.messages.first(where: { $0.id == id }) {
             prefillReply(from: message)
+        } else if let to = queryItems.first(where: { $0.name.caseInsensitiveCompare("to") == .orderedSame })?.value,
+                  !to.trimmingCharacters(in: .whitespaces).isEmpty {
+            // Love.su «Написать письмо»: fresh draft to the given address.
+            state.composeDraft.to = to
+            state.composeDraft.subject = ""
+            state.composeDraft.body = ""
+            state.composeDraft.attachments = []
         }
         return composePage()
     }
@@ -539,6 +546,16 @@ final class MailSite: BaseInteractiveSite<MailState>, QuestLetterReceiver {
                 sentAt: Date()
             )
         ))
+        let transferBytes = attachments.map(\.sizeBytes).reduce(0, +)
+        if transferBytes > 0 {
+            bus.publish(.bytesTransferred(
+                BytesTransferredEvent(
+                    bytes: transferBytes,
+                    source: "mail",
+                    occurredAt: Date()
+                )
+            ))
+        }
 
         state.composeDraft = ComposeDraft()
         return redirect(to: "/sent")

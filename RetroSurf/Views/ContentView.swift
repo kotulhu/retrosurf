@@ -11,6 +11,7 @@ struct ContentView: View {
     @EnvironmentObject private var playerPage: PlayerPageState
     @EnvironmentObject private var downloads: DownloadsStore
     @EnvironmentObject private var saveDialog: RetroSaveDialogController
+    @EnvironmentObject private var progressStore: ProgressStore
     @StateObject private var engine = BrowserSimulator()
     @StateObject private var history = BrowserHistory()
     @State private var address = AggregatorPageBuilder.portalDomain
@@ -92,10 +93,19 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for: .gameProgressDidReset)) { _ in
             presentAggregator()
         }
+        .onReceive(NotificationCenter.default.publisher(for: .retroOpenURL)) { note in
+            if let url = note.userInfo?["url"] as? String {
+                navigate(raw: url)
+            }
+        }
         .onChange(of: playerPage.isPublished) { _ in
             if address == AggregatorPageBuilder.portalDomain {
-                currentHTML = AggregatorPageBuilder.homeHTML(catalog: catalog, progress: game, quests: quests, playerPage: playerPage)
-                reloadToken += 1
+                rebindAggregatorHTML()
+            }
+        }
+        .onChange(of: progressStore.artifacts) { _ in
+            if address == AggregatorPageBuilder.portalDomain {
+                rebindAggregatorHTML()
             }
         }
         .alert(alertTitle, isPresented: alertBinding) {
@@ -169,15 +179,28 @@ struct ContentView: View {
 
     // MARK: - Home
 
+    /// The catalog aggregator page (orientir.su) — the browser's start page.
+    /// Renders directly, without a modem gate. Re-rendered live whenever the
+    /// artifact set or the player's published page changes.
     private func presentAggregator() {
         engine.cancelLoad()
         activeQuest = nil
         lastOpenID = nil
         address = AggregatorPageBuilder.portalDomain
-        currentHTML = AggregatorPageBuilder.homeHTML(catalog: catalog, progress: game, quests: quests, playerPage: playerPage)
+        rebindAggregatorHTML()
+        persistSites()
+    }
+
+    private func rebindAggregatorHTML() {
+        currentHTML = AggregatorPageBuilder.homeHTML(
+            catalog: catalog,
+            progress: game,
+            quests: quests,
+            playerPage: playerPage,
+            progressStore: progressStore
+        )
         currentBaseURL = nil
         reloadToken += 1
-        persistSites()
     }
 
     // MARK: - Navigation entry points
@@ -610,7 +633,7 @@ struct ContentView: View {
             return
         }
 
-        // A registered interactive site takes precedence over the Ориентир.ру
+        // A registered interactive site takes precedence over the Ориентир.су
         // placeholder, even when the catalog marks the entry as not interactive
         // yet. This is what makes an unmarked "personal page" open as a real
         // living site instead of the "скоро появится содержимое" stub.
@@ -677,6 +700,10 @@ struct ContentView: View {
     }
 
     private func reloadCurrent() {
+        if address == AggregatorPageBuilder.portalDomain {
+            presentAggregator()
+            return
+        }
         guard requireConnection() else { return }
         if let id = lastOpenID, let entry = catalog.entry(id: id) {
             if sites.registry.site(forHost: entry.displayDomain) != nil {

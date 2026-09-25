@@ -1,0 +1,8 @@
+{
+  "displayDomain": "guestbook.su",
+  "title": "Общая гостевая книга",
+  "shortDescription": "Гостевая книга — оставь свою запись, посмотри чужие",
+  "category": "other",
+  "keywords": ["гостевая книга", "guestbook", "отзывы", "записи"],
+  "requiredTier": "v14_4"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "/Users/elgato/RetroSurf/RetroSurf/Views/AddressBar.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "retrosurf://…",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 14
+        }
+      },
+      {
+        "comment": "",
+        "key": "Go",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 26
+        }
+      }
+    ]
+  },
+  "version": 1
+}

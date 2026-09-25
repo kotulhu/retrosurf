@@ -1,0 +1,958 @@
+{
+  "" : {
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurf-master.dia",
+    "emit-module-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurf-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurf-master-emit-module.dia",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurf-master.swiftdeps"
+  },
+  "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Debug/DebugLogger.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugLogger.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugLogger.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugLogger.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugLogger.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugLogger.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugLogger.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugLogger.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugLogger~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Debug/DebugPanelView.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugPanelView.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugPanelView.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugPanelView.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugPanelView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugPanelView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugPanelView.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugPanelView.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DebugPanelView~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/AggregatorPageBuilder.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AggregatorPageBuilder.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AggregatorPageBuilder.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AggregatorPageBuilder.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AggregatorPageBuilder.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AggregatorPageBuilder.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AggregatorPageBuilder.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AggregatorPageBuilder.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AggregatorPageBuilder~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/AppSettings.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Browser/DownloadsStore.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsStore.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsStore.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsStore.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsStore.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsStore.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsStore.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsStore.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsStore~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Browser/FileSizeFormatter.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileSizeFormatter.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileSizeFormatter.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileSizeFormatter.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileSizeFormatter.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileSizeFormatter.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileSizeFormatter.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileSizeFormatter.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileSizeFormatter~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/BrowserHistory.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserHistory.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserHistory.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserHistory.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserHistory.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserHistory.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserHistory.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserHistory.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserHistory~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/BrowserSimulator.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Bus/GameBus.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameBus.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameBus.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameBus.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameBus.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameBus.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameBus.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameBus.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameBus~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/ConnectionManager.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionManager.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionManager.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionManager.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionManager.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionManager.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionManager.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionManager.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionManager~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/ConnectionSpeed.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionSpeed.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionSpeed.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionSpeed.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionSpeed.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionSpeed.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionSpeed.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionSpeed.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ConnectionSpeed~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/CurationManager.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CurationManager.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CurationManager.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CurationManager.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CurationManager.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CurationManager.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CurationManager.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CurationManager.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CurationManager~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/FileContent.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileContent.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileContent.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileContent.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileContent.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileContent.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileContent.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileContent.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileContent~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/FileInstance.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileInstance.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileInstance.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileInstance.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileInstance.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileInstance.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileInstance.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileInstance.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileInstance~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/FileStore.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileStore.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileStore.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileStore.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileStore.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileStore.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileStore.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileStore.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileStore~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/LocalFileStore.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFileStore.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFileStore.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFileStore.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFileStore.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFileStore.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFileStore.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFileStore.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFileStore~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/LocalFolder.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFolder.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFolder.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFolder.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFolder.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFolder.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFolder.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFolder.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LocalFolder~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Files/PreinstalledFiles.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PreinstalledFiles.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PreinstalledFiles.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PreinstalledFiles.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PreinstalledFiles.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PreinstalledFiles.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PreinstalledFiles.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PreinstalledFiles.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PreinstalledFiles~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/GameClock.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameClock.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameClock.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameClock.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameClock.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameClock.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameClock.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameClock.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameClock~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/GameProgress.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgress.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgress.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgress.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgress.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgress.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgress.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgress.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgress~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/GameProgressReset.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/GameProgressReset~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Love/LoveQuestTracker.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveQuestTracker~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Love/LoveReplies.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveReplies.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveReplies.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveReplies.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveReplies.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveReplies.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveReplies.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveReplies.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveReplies~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Mail/AmbientCatalog.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientCatalog.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientCatalog.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientCatalog.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientCatalog.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientCatalog.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientCatalog.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientCatalog.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientCatalog~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Mail/AmbientMailGenerator.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientMailGenerator.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientMailGenerator.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientMailGenerator.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientMailGenerator.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientMailGenerator.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientMailGenerator.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientMailGenerator.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AmbientMailGenerator~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Mail/MailPlaceholders.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailPlaceholders.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailPlaceholders.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailPlaceholders.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailPlaceholders.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailPlaceholders.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailPlaceholders.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailPlaceholders.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailPlaceholders~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/ModemAudio.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ModemAudio.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ModemAudio.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ModemAudio.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ModemAudio.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ModemAudio.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ModemAudio.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ModemAudio.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ModemAudio~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/NPC/NpcMessenger.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcMessenger.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcMessenger.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcMessenger.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcMessenger.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcMessenger.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcMessenger.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcMessenger.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcMessenger~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/NPC/NpcProfile.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcProfile.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcProfile.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcProfile.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcProfile.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcProfile.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcProfile.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcProfile.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/NpcProfile~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Player/PlayerPageBuilder.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageBuilder.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageBuilder.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageBuilder.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageBuilder.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageBuilder.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageBuilder.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageBuilder.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageBuilder~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Player/PlayerPageInstaller.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageInstaller.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageInstaller.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageInstaller.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageInstaller.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageInstaller.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageInstaller.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageInstaller.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageInstaller~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Player/PlayerPageState.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageState.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageState.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageState.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageState.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageState.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageState.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageState.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PlayerPageState~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Progress/ProgressStore.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ProgressStore.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ProgressStore.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ProgressStore.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ProgressStore.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ProgressStore.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ProgressStore.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ProgressStore.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ProgressStore~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Progress/SessionStats.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SessionStats.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SessionStats.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SessionStats.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SessionStats.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SessionStats.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SessionStats.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SessionStats.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SessionStats~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/QuestManager.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestManager.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestManager.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestManager.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestManager.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestManager.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestManager.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestManager.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestManager~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Quests/FileQuestTracker.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileQuestTracker.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileQuestTracker.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileQuestTracker.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileQuestTracker.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileQuestTracker.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileQuestTracker.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileQuestTracker.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FileQuestTracker~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Quests/FlagStore.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FlagStore.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FlagStore.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FlagStore.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FlagStore.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FlagStore.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FlagStore.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FlagStore.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FlagStore~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Quests/QuestGenerator.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestGenerator.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestGenerator.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestGenerator.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestGenerator.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestGenerator.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestGenerator.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestGenerator.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestGenerator~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Quests/QuestModels.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestModels.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestModels.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestModels.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestModels.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestModels.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestModels.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestModels.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestModels~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Senders/Sender.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/Sender.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/Sender.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/Sender.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/Sender.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/Sender.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/Sender.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/Sender.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/Sender~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Senders/SenderCatalog.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SenderCatalog.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SenderCatalog.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SenderCatalog.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SenderCatalog.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SenderCatalog.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SenderCatalog.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SenderCatalog.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SenderCatalog~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/SiteCatalog.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteCatalog.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteCatalog.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteCatalog.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteCatalog.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteCatalog.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteCatalog.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteCatalog.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteCatalog~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/FanClub/FanClubContent.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubContent.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubContent.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubContent.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubContent.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubContent.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubContent.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubContent.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubContent~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/FanClub/FanClubSite.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubSite.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubSite.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubSite.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubSite.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubSite.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubSite~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/FanClub/FanClubState.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubState.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubState.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubState.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubState.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubState.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubState.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubState.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubState~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/FanClub/FanClubTemplates.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubTemplates.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubTemplates.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubTemplates.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubTemplates.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubTemplates.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FanClubTemplates~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Files/FilesBulkLoader.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesBulkLoader.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesBulkLoader.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesBulkLoader.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesBulkLoader.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesBulkLoader.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesBulkLoader.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesBulkLoader.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesBulkLoader~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Files/FilesSite.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesSite.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesSite.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesSite.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesSite.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesSite.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FilesSite~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/FinalSiteInstaller.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FinalSiteInstaller.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FinalSiteInstaller.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FinalSiteInstaller.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FinalSiteInstaller.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FinalSiteInstaller.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FinalSiteInstaller.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FinalSiteInstaller.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/FinalSiteInstaller~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Homepage/HomepageSite.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageSite~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Homepage/HomepageState.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageState~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Homepage/HomepageTemplates.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/HomepageTemplates~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/InteractiveSite.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveSite.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveSite.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveSite.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveSite.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveSite.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveSite~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/LastPageSite.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LastPageSite.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LastPageSite.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LastPageSite.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LastPageSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LastPageSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LastPageSite.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LastPageSite.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LastPageSite~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Love/LoveContent.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveContent.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveContent.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveContent.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveContent.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveContent.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveContent.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveContent.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveContent~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Love/LoveSite.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveSite~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Love/LoveState.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveState.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveState.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveState.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveState.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveState.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveState.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveState.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveState~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Love/LoveTemplates.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/LoveTemplates~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Mail/MailSite.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailSite.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailSite.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailSite.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailSite.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailSite.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailSite~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Mail/MailState.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailState.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailState.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailState.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailState.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailState.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailState.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailState.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailState~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Mail/MailTemplates.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailTemplates.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailTemplates.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailTemplates.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailTemplates.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailTemplates.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MailTemplates~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Mail/SiteMailMessage.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteMailMessage.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteMailMessage.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteMailMessage.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteMailMessage.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteMailMessage.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteMailMessage.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteMailMessage.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteMailMessage~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Melodia/MelodiaSite.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaSite.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaSite.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaSite.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaSite.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaSite.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaSite~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Melodia/MelodiaTemplates.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaTemplates.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaTemplates.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaTemplates.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaTemplates.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaTemplates.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/MelodiaTemplates~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SiteDescriptor.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteDescriptor.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteDescriptor.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteDescriptor.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteDescriptor.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteDescriptor.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteDescriptor.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteDescriptor.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteDescriptor~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SitePage.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SitePage.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SitePage.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SitePage.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SitePage.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SitePage.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SitePage.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SitePage.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SitePage~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SiteRegistry.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRegistry.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRegistry.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRegistry.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRegistry.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRegistry.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRegistry.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRegistry.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRegistry~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SiteRequest.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRequest.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRequest.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRequest.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRequest.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRequest.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRequest.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRequest.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteRequest~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SiteResponse.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteResponse.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteResponse.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteResponse.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteResponse.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteResponse.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteResponse.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteResponse.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteResponse~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/SiteSession.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteSession.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteSession.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteSession.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteSession.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteSession.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteSession.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteSession.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SiteSession~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/StaticSite.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSite~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/StaticSiteLoader.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSiteLoader.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSiteLoader.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSiteLoader.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSiteLoader.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSiteLoader.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSiteLoader.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSiteLoader.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StaticSiteLoader~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Welcome/WelcomeSite.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeSite.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeSite.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeSite.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeSite.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeSite.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeSite.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeSite.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeSite~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/Sites/Welcome/WelcomeTemplates.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeTemplates.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeTemplates.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeTemplates.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeTemplates.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeTemplates.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeTemplates.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeTemplates.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomeTemplates~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Models/ThrottledSchemeHandler.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ThrottledSchemeHandler.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ThrottledSchemeHandler.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ThrottledSchemeHandler.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ThrottledSchemeHandler.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ThrottledSchemeHandler.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ThrottledSchemeHandler.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ThrottledSchemeHandler.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ThrottledSchemeHandler~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/RetroSurfApp.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/AddressBar.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AddressBar~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/AttachmentPickerView.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AttachmentPickerView.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AttachmentPickerView.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AttachmentPickerView.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AttachmentPickerView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AttachmentPickerView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AttachmentPickerView.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AttachmentPickerView.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AttachmentPickerView~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/BrandLogo.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrandLogo~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/BrowserToolbar.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserToolbar~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/ContentView.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/CuratedLibraryView.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratedLibraryView.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratedLibraryView.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratedLibraryView.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratedLibraryView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratedLibraryView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratedLibraryView.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratedLibraryView.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratedLibraryView~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/CuratorView.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratorView.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratorView.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratorView.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratorView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratorView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratorView.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratorView.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/CuratorView~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/DialUpPanelController.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpPanelController.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpPanelController.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpPanelController.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpPanelController.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpPanelController.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpPanelController.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpPanelController.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpPanelController~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/DialUpStatusView.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpStatusView.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpStatusView.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpStatusView.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpStatusView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpStatusView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpStatusView.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpStatusView.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DialUpStatusView~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/DownloadsPanelView.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsPanelView.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsPanelView.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsPanelView.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsPanelView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsPanelView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsPanelView.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsPanelView.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/DownloadsPanelView~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/InteractiveExperienceRegistry.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveExperienceRegistry.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveExperienceRegistry.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveExperienceRegistry.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveExperienceRegistry.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveExperienceRegistry.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveExperienceRegistry.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveExperienceRegistry.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/InteractiveExperienceRegistry~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/PochtaInboxExperience.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PochtaInboxExperience.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PochtaInboxExperience.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PochtaInboxExperience.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PochtaInboxExperience.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PochtaInboxExperience.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PochtaInboxExperience.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PochtaInboxExperience.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/PochtaInboxExperience~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/QuestExperienceView.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestExperienceView.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestExperienceView.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestExperienceView.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestExperienceView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestExperienceView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestExperienceView.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestExperienceView.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/QuestExperienceView~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/RetroSaveDialog.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSaveDialog.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSaveDialog.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSaveDialog.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSaveDialog.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSaveDialog.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSaveDialog.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSaveDialog.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSaveDialog~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/SkinTheme.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/SkinTheme~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/StatusBar.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/StatusBar~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/WebView.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WebView.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WebView.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WebView.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WebView.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WebView.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WebView.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WebView.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WebView~partial.swiftmodule"
+  },
+  "/Users/elgato/RetroSurf/RetroSurf/Views/WelcomePage.swift" : {
+    "const-values" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.swiftconstvalues",
+    "dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.d",
+    "diagnostics" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.dia",
+    "index-unit-output-path" : "/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.o",
+    "llvm-bc" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.bc",
+    "object" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.o",
+    "swift-dependencies" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.swiftdeps",
+    "swiftmodule" : "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage~partial.swiftmodule"
+  }
+}

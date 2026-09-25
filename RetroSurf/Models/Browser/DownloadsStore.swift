@@ -32,6 +32,21 @@ final class DownloadsStore: ObservableObject {
     /// read back as the same folder.
     static let nodeName = LocalFolder.downloads.ownerNode
 
+    /// The real macOS Downloads folder that mirrors «Мои документы/Загрузки»
+    /// on the file system. Stub files land here so finished downloads also
+    /// exist outside the game.
+    static var realDownloadsDirectoryURL: URL {
+        FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first
+            ?? FileManager.default.homeDirectoryForCurrentUser
+    }
+
+    private static let stubDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ru_RU")
+        formatter.dateFormat = "dd.MM.yyyy HH:mm"
+        return formatter
+    }()
+
     @Published private(set) var inFlight: [InFlightDownload] = []
 
     private let fileStore: FileStore
@@ -88,6 +103,7 @@ final class DownloadsStore: ObservableObject {
             downloadedAt: Date()
         )
         let instance = fileStore.create(content: content, ownerNode: Self.nodeName)
+        writeStubFile(record: record)
         bus.publish(.fileDownloaded(
             FileDownloadedEvent(
                 contentId: instance.content.contentId,
@@ -96,6 +112,13 @@ final class DownloadsStore: ObservableObject {
                 sizeBytes: instance.content.sizeBytes,
                 hasVirus: instance.content.hasVirus,
                 downloadedAt: instance.content.downloadedAt
+            )
+        ))
+        bus.publish(.bytesDownloaded(
+            BytesDownloadedEvent(
+                bytes: instance.content.sizeBytes,
+                contentId: instance.content.contentId,
+                occurredAt: instance.content.downloadedAt
             )
         ))
         return instance
@@ -109,6 +132,56 @@ final class DownloadsStore: ObservableObject {
     /// Cancels the transfer. The record is dropped.
     func cancel(_ id: String) {
         inFlight.removeAll { $0.id == id }
+    }
+
+    // MARK: - Real file system (stub files)
+
+    /// The real URL on disk where the stub for a given file name lives.
+    /// Catalog names may contain characters invalid in macOS filenames —
+    /// those are replaced so `diskURL` never throws.
+    func diskURL(for fileName: String) -> URL {
+        let safe = fileName
+            .replacingOccurrences(of: "/", with: "_")
+            .replacingOccurrences(of: ":", with: "_")
+            .replacingOccurrences(of: "\0", with: "_")
+        return Self.realDownloadsDirectoryURL.appendingPathComponent(safe)
+    }
+
+    /// Writes a small text stub so the finished download also exists on the
+    /// real file system («маленькая текстовая заглушка»). Stub size in the
+    /// game is the download's real size, but the disk copy is intentionally
+    /// a placeholder — the catalog file itself never materializes.
+    private func writeStubFile(record: InFlightDownload) {
+        var name = record.fileName
+        if name.isEmpty { name = String(record.id.prefix(8)) }
+        let url = diskURL(for: name)
+        guard !FileManager.default.fileExists(atPath: url.path) else { return }
+        let text = """
+        RetroSurf — симуляция загрузки
+        Файл: \(record.fileName)
+        Размер: \(record.sizeBytes) байт
+        Источник: \(record.sourceURL.absoluteString)
+        Скачано: \(Self.stubDateFormatter.string(from: record.startedAt))
+        """
+        try? text.write(to: url, atomically: true, encoding: .utf8)
+    }
+
+    /// Re-creates missing stub files for already completed downloads. Used
+    /// after the FileStore graph is restored so downloads that predate a
+    /// relaunch still have their real filesystem counterpart.
+    func ensureStubFiles() {
+        for file in completedFiles {
+            let url = diskURL(for: file.content.name)
+            guard !FileManager.default.fileExists(atPath: url.path) else { continue }
+            let text = """
+            RetroSurf — симуляция загрузки
+            Файл: \(file.content.name)
+            Размер: \(file.content.sizeBytes) байт
+            Источник: \(file.content.sourceURL.absoluteString)
+            Скачано: \(Self.stubDateFormatter.string(from: file.content.downloadedAt))
+            """
+            try? text.write(to: url, atomically: true, encoding: .utf8)
+        }
     }
 
     // MARK: - Completed files (read from LocalFileStore)

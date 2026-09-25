@@ -1,0 +1,12 @@
+{
+  "id": "patches",
+  "title": "Патчи",
+  "description": "Патчи и обновления к играм и программам.",
+  "files": [
+    { "id": "patch_doom2",   "name": "doom2_patch_v19.zip",     "sizeBytes": 1400000,  "description": "Doom II. Патч 1.9 — исправляет уровни.", "hasVirus": false },
+    { "id": "patch_quake3",  "name": "quake3_point_release.zip", "sizeBytes": 4800000,  "description": "Quake III Arena. Point Release — баланс карт.", "hasVirus": false },
+    { "id": "patch_war2",    "name": "warcraft2_patch_133.zip",  "sizeBytes": 960000,   "description": "Warcraft II. Патч 1.33 — сетевые карты.", "hasVirus": false },
+    { "id": "patch_office",  "name": "office97_sr2.exe",         "sizeBytes": 3800000,  "description": "Microsoft Office 97. Service Release 2.", "hasVirus": false },
+    { "id": "patch_winamp",  "name": "winamp_255_crack.exe",     "sizeBytes": 52000,    "description": "Крек для Winamp. Бесконечное прослушивание!", "hasVirus": true }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "displayDomain": "files.su",
+  "title": "Files.su — файловый архив",
+  "shortDescription": "Лучшие файлы Рунета. Скачивайте на здоровье!",
+  "category": "portal",
+  "keywords": ["файлы", "софт", "mp3", "обои", "скачать"],
+  "requiredTier": "v14_4"
+}

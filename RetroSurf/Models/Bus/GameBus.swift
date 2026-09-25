@@ -16,7 +16,18 @@ final class GameBus: ObservableObject {
         case mailReceived(MailReceivedEvent)
         case flagChanged(FlagChangedEvent)
         /// Emitted when a quest reward grants a named artifact.
-        case artifactEarned(String)
+        case artifactEarned(ArtifactEarnedEvent)
+        /// Emitted when the browser sends bytes up the line (mail uploads,
+        /// forum posts). Drives the session stats.
+        case bytesTransferred(BytesTransferredEvent)
+        /// Emitted when a file download completes. Drives the session stats.
+        case bytesDownloaded(BytesDownloadedEvent)
+        /// Emitted when the player writes a message inside love.su's internal
+        /// messenger. Absolutely NOT a pochta mail event — NPC chat replies
+        /// listen to this, never to `.mailSent`.
+        case loveMessageSent(LoveMessageSentEvent)
+        /// Emitted when scheduled NPC chat replies become visible in the thread.
+        case loveMessageDelivered([String])
     }
 
     private var subscribers: [UUID: (Event) -> Void] = [:]
@@ -63,8 +74,16 @@ final class GameBus: ObservableObject {
             print("[GameBus] mailReceived #\(e.messageId) от \(e.from) «\(e.subject)»")
         case .flagChanged(let e):
             print("[GameBus] flagChanged \(e.key) = \(e.value)")
-        case .artifactEarned(let id):
-            print("[GameBus] artifactEarned \(id)")
+        case .artifactEarned(let e):
+            print("[GameBus] artifactEarned \(e.artifactId)")
+        case .bytesTransferred(let e):
+            print("[GameBus] bytesTransferred \(e.bytes) [\(e.source)]")
+        case .bytesDownloaded(let e):
+            print("[GameBus] bytesDownloaded \(e.bytes) (\(e.contentId))")
+        case .loveMessageSent(let e):
+            print("[GameBus] loveMessageSent → \(e.profileID) «\(e.body.prefix(40))» вложения: \(e.attachmentContentIds)")
+        case .loveMessageDelivered(let tags):
+            print("[GameBus] loveMessageDelivered tg: \(tags.joined(separator: ","))")
         }
     }
 }
@@ -126,4 +145,32 @@ struct MailReceivedEvent: Sendable {
 struct FlagChangedEvent: Sendable {
     let key: String
     let value: Bool
+}
+
+/// A quest reward that grants one of the named artifacts.
+struct ArtifactEarnedEvent: Sendable {
+    let artifactId: String
+}
+
+/// Bytes sent up the line (uploads, posts) — drives session stats.
+struct BytesTransferredEvent: Sendable {
+    let bytes: Int
+    /// Where the traffic happened: "mail" | "forum" | "file".
+    let source: String
+    let occurredAt: Date
+}
+
+/// Bytes received from completed downloads — drives session stats.
+struct BytesDownloadedEvent: Sendable {
+    let bytes: Int
+    let contentId: String
+    let occurredAt: Date
+}
+
+struct LoveMessageSentEvent: Sendable {
+    let messageId: Int
+    let profileID: String
+    let body: String
+    let attachmentContentIds: [String]
+    let sentAt: Date
 }

@@ -46,7 +46,7 @@ struct SkinTheme {
 extension AppSkin {
     var theme: SkinTheme {
         switch self {
-        case .netscape:
+        case .cheesecake:
             return SkinTheme(
                 toolbarTop: Color(rgb: 0xC0C0C0),
                 toolbarBottom: Color(rgb: 0xC0C0C0),

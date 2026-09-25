@@ -1,0 +1,42 @@
+{
+  "description" : "Бах, Вивальди, Чайковский, Рахманинов. Записи крупнее — симфонии длинные.",
+  "files" : [
+    {
+      "description" : "Бах — Токката и фуга ре минор.",
+      "hasVirus" : false,
+      "id" : "mr_bach_toccata_fugue",
+      "name" : "bach_toccata_fugue.mp3",
+      "sizeBytes" : 5200000
+    },
+    {
+      "description" : "Вивальди — Времена года, Весна.",
+      "hasVirus" : false,
+      "id" : "mr_vivaldi_four_seasons_spring",
+      "name" : "vivaldi_four_seasons_spring.mp3",
+      "sizeBytes" : 5800000
+    },
+    {
+      "description" : "Вивальди — Времена года, Зима.",
+      "hasVirus" : false,
+      "id" : "mr_vivaldi_four_seasons_winter",
+      "name" : "vivaldi_four_seasons_winter.mp3",
+      "sizeBytes" : 5600000
+    },
+    {
+      "description" : "Чайковский — Лебединое озеро.",
+      "hasVirus" : false,
+      "id" : "mr_tchaikovsky_swan_lake",
+      "name" : "tchaikovsky_swan_lake.mp3",
+      "sizeBytes" : 6200000
+    },
+    {
+      "description" : "Рахманинов — Вокализ.",
+      "hasVirus" : false,
+      "id" : "mr_rachmaninov_vocalise",
+      "name" : "rachmaninov_vocalise.mp3",
+      "sizeBytes" : 5100000
+    }
+  ],
+  "id" : "classical",
+  "title" : "Классика"
+}

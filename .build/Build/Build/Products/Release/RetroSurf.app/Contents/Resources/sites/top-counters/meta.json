@@ -1,0 +1,8 @@
+{
+  "displayDomain": "top-rating.su",
+  "title": "Топ-100 лучших сайтов Рунета",
+  "shortDescription": "Рейтинг-каталог сайтов со счётчиками посещений в духе Rambler Top100",
+  "category": "portal",
+  "keywords": ["рейтинг", "топ 100", "счётчик", "каталог"],
+  "requiredTier": "v56"
+}

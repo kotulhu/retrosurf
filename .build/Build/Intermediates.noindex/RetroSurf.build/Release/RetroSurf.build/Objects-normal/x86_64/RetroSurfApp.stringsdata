@@ -1,0 +1,16 @@
+{
+  "source": "/Users/elgato/RetroSurf/RetroSurf/RetroSurfApp.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "RetroSurf",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 204
+        }
+      }
+    ]
+  },
+  "version": 1
+}

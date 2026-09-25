@@ -1,0 +1,8 @@
+{
+  "displayDomain": "babushkin-recept.su",
+  "title": "Рецепты моей бабушки",
+  "shortDescription": "Кулинарная домашняя страничка с проверенными рецептами",
+  "category": "other",
+  "keywords": ["рецепты", "кулинария", "бабушка", "готовим"],
+  "requiredTier": "v56"
+}

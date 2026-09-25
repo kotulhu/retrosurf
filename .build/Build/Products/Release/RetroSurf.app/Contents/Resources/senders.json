@@ -1,0 +1,76 @@
+{
+  "archetypes": [
+    {
+      "id": "curator",
+      "displayName": "Куратор сети",
+      "kind": "human",
+      "gender": "none",
+      "namePool": [
+        { "full": "Куратор", "firstName": "Куратор", "login": "curator" }
+      ],
+      "domainPool": ["retro.su"],
+      "allowedSites": ["mail", "dating"]
+    },
+    {
+      "id": "friend",
+      "displayName": "Старый друг",
+      "kind": "human",
+      "gender": "male",
+      "namePool": [
+        { "full": "Сергей Петров", "firstName": "Сергей", "login": "spetrov" },
+        { "full": "Дмитрий Орлов", "firstName": "Дмитрий", "login": "dorlov" },
+        { "full": "Андрей Волков", "firstName": "Андрей", "login": "avolkov" }
+      ],
+      "domainPool": ["pochta.su", "chat.ru", "mail.ru"],
+      "allowedSites": ["mail", "chat"]
+    },
+    {
+      "id": "family",
+      "displayName": "Семья",
+      "kind": "human",
+      "gender": "female",
+      "namePool": [
+        { "full": "Мама", "firstName": "Мама", "login": "mama" },
+        { "full": "Тётя Люда", "firstName": "Тётя Люда", "login": "luda" }
+      ],
+      "domainPool": ["pochta.su"],
+      "allowedSites": ["mail"]
+    },
+    {
+      "id": "love_interest",
+      "displayName": "Знакомство",
+      "kind": "human",
+      "gender": "female",
+      "namePool": [
+        { "full": "Елена Соколова", "firstName": "Елена", "login": "esokolova" },
+        { "full": "Анна Крылова", "firstName": "Анна", "login": "akrylova" },
+        { "full": "Мария Лебедева", "firstName": "Мария", "login": "mlebedeva" },
+        { "full": "Ольга Ветрова", "firstName": "Ольга", "login": "ovetrova" }
+      ],
+      "domainPool": ["love.mail.ru", "pochta.su"],
+      "allowedSites": ["dating"]
+    },
+    {
+      "id": "robot",
+      "displayName": "Робот",
+      "kind": "robot",
+      "gender": "none",
+      "namePool": [
+        { "full": "Робот", "firstName": "Робот", "login": "noreply" }
+      ],
+      "domainPool": ["pochta.su", "retro.su"],
+      "allowedSites": ["mail"]
+    },
+    {
+      "id": "service",
+      "displayName": "Служба поддержки",
+      "kind": "service",
+      "gender": "none",
+      "namePool": [
+        { "full": "Служба поддержки", "firstName": "Поддержка", "login": "support" }
+      ],
+      "domainPool": ["pochta.su"],
+      "allowedSites": ["mail"]
+    }
+  ]
+}

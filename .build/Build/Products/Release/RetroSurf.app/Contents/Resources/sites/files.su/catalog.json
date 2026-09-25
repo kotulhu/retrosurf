@@ -1,0 +1,31 @@
+{
+  "site": {
+    "title": "Files.su — файловый архив",
+    "tagline": "Лучшие файлы Рунета. Скачивайте на здоровье!",
+    "warning": "Внимание: скачивайте файлы только с проверенных источников!",
+    "footer": "© Files.su, 1999. Счётчик: 001337",
+    "navLabel": "Разделы"
+  },
+  "categories": [
+    { "id": "wallpapers",   "file": "categories/wallpapers.json" },
+    { "id": "screensavers", "file": "categories/screensavers.json" },
+    { "id": "icons",        "file": "categories/icons.json" },
+    { "id": "cursors",      "file": "categories/cursors.json" },
+    { "id": "fonts",        "file": "categories/fonts.json" },
+    { "id": "programs",     "file": "categories/programs.json" },
+    { "id": "games",        "file": "categories/games.json" },
+    { "id": "demos",        "file": "categories/demos.json" },
+    { "id": "music",        "file": "categories/music.json" },
+    { "id": "midi",         "file": "categories/midi.json" },
+    { "id": "ringtones",    "file": "categories/ringtones.json" },
+    { "id": "drivers",      "file": "categories/drivers.json" },
+    { "id": "antivirus",    "file": "categories/antivirus.json" },
+    { "id": "ebooks",       "file": "categories/ebooks.json" },
+    { "id": "pictures",     "file": "categories/pictures.json" },
+    { "id": "animations",   "file": "categories/animations.json" },
+    { "id": "docs",         "file": "categories/docs.json" },
+    { "id": "patches",      "file": "categories/patches.json" },
+    { "id": "emulators",    "file": "categories/emulators.json" },
+    { "id": "sounds",       "file": "categories/sounds.json" }
+  ]
+}

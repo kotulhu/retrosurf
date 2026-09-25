@@ -46,19 +46,19 @@ final class QuestManager: ObservableObject {
             unlocksSiteID: "homepage-su",
             announcementSubject: "Заведи свою домашнюю страничку!",
             announcementBody: "Привет! Теперь, когда у тебя есть почта, самое время сделать свою собственную страничку в интернете. Переходи на {homepage-su} и попробуй!",
-            announcementFrom: "Subscribe.ru"
+            announcementFrom: "Subscribe.su"
         ),
         QuestStep(
             quest: Quest(
-                id: "quest_znakomstva",
+                id: "quest_love",
                 title: "Зарегистрируйся на сайте знакомств",
                 description: "Создай анкету и найди собеседника на сайте знакомств",
-                targetSiteID: "znakomstva-su"
+                targetSiteID: "love.su"
             ),
-            unlocksSiteID: "znakomstva-su",
+            unlocksSiteID: "love.su",
             announcementSubject: "Не хочешь познакомиться с кем-нибудь?",
-            announcementBody: "Заскучал? На {znakomstva-su} тебя уже ждут!",
-            announcementFrom: "Subscribe.ru"
+            announcementBody: "Заскучал? На {love.su} тебя уже ждут!",
+            announcementFrom: "Subscribe.su"
         )
     ]
 
@@ -128,7 +128,7 @@ final class QuestManager: ObservableObject {
         let sender = Sender(
             archetypeId: "service",
             name: SenderName(full: step.announcementFrom, firstName: step.announcementFrom, login: "subscribe"),
-            address: "subscribe@subscribe.ru",
+            address: "subscribe@subscribe.su",
             kind: .service,
             gender: .none
         )

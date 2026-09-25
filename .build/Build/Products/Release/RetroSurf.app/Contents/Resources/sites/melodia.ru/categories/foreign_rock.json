@@ -1,0 +1,56 @@
+{
+  "description" : "Metallica, Scorpions, Nirvana, Queen, Led Zeppelin.",
+  "files" : [
+    {
+      "description" : "Metallica — Enter Sandman.",
+      "hasVirus" : false,
+      "id" : "mr_metallica_enter_sandman",
+      "name" : "metallica_enter_sandman.mp3",
+      "sizeBytes" : 5100000
+    },
+    {
+      "description" : "Metallica — Nothing Else Matters.",
+      "hasVirus" : false,
+      "id" : "mr_metallica_nothing_else_matters",
+      "name" : "metallica_nothing_else_matters.mp3",
+      "sizeBytes" : 5300000
+    },
+    {
+      "description" : "Scorpions — Wind of Change.",
+      "hasVirus" : false,
+      "id" : "mr_scorpions_wind_of_change",
+      "name" : "scorpions_wind_of_change.mp3",
+      "sizeBytes" : 4900000
+    },
+    {
+      "description" : "Nirvana — Smells Like Teen Spirit.",
+      "hasVirus" : false,
+      "id" : "mr_nirvana_smells_like_teen_spirit",
+      "name" : "nirvana_smells_like_teen_spirit.mp3",
+      "sizeBytes" : 4200000
+    },
+    {
+      "description" : "Queen — Bohemian Rhapsody.",
+      "hasVirus" : false,
+      "id" : "mr_queen_bohemian_rhapsody",
+      "name" : "queen_bohemian_rhapsody.mp3",
+      "sizeBytes" : 5400000
+    },
+    {
+      "description" : "Led Zeppelin — Stairway to Heaven.",
+      "hasVirus" : false,
+      "id" : "mr_led_zeppelin_stairway",
+      "name" : "led_zeppelin_stairway.mp3",
+      "sizeBytes" : 5500000
+    },
+    {
+      "description" : "Pink Floyd — Another Brick in the Wall.",
+      "hasVirus" : false,
+      "id" : "mr_pink_floyd_another_brick",
+      "name" : "pink_floyd_another_brick.mp3",
+      "sizeBytes" : 5400000
+    }
+  ],
+  "id" : "foreign_rock",
+  "title" : "Зарубежный рок"
+}

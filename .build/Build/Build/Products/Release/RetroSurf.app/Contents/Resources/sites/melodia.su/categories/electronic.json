@@ -1,0 +1,42 @@
+{
+  "description" : "The Prodigy, Massive Attack, Enigma, Aphex Twin.",
+  "files" : [
+    {
+      "description" : "The Prodigy — Firestarter.",
+      "hasVirus" : false,
+      "id" : "mr_prodigy_firestarter",
+      "name" : "prodigy_firestarter.mp3",
+      "sizeBytes" : 4300000
+    },
+    {
+      "description" : "The Prodigy — Breathe.",
+      "hasVirus" : false,
+      "id" : "mr_prodigy_breathe",
+      "name" : "prodigy_breathe.mp3",
+      "sizeBytes" : 4400000
+    },
+    {
+      "description" : "Massive Attack — Teardrop.",
+      "hasVirus" : false,
+      "id" : "mr_massive_attack_teardrop",
+      "name" : "massive_attack_teardrop.mp3",
+      "sizeBytes" : 4800000
+    },
+    {
+      "description" : "Enigma — Return to Innocence.",
+      "hasVirus" : false,
+      "id" : "mr_enigma_return_to_innocence",
+      "name" : "enigma_return_to_innocence.mp3",
+      "sizeBytes" : 4600000
+    },
+    {
+      "description" : "Aphex Twin — Windowlicker.",
+      "hasVirus" : false,
+      "id" : "mr_aphex_twin_windowlicker",
+      "name" : "aphex_twin_windowlicker.mp3",
+      "sizeBytes" : 5000000
+    }
+  ],
+  "id" : "electronic",
+  "title" : "Электроника"
+}

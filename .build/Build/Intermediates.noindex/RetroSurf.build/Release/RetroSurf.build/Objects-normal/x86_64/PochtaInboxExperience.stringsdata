@@ -1,0 +1,72 @@
+{
+  "source": "/Users/elgato/RetroSurf/RetroSurf/Views/PochtaInboxExperience.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Почта.SU",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 44
+        }
+      },
+      {
+        "comment": "",
+        "key": "Ваш почтовый ящик",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 47
+        }
+      },
+      {
+        "comment": "",
+        "key": "Писем пока нет.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "Вернуться",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 77
+        }
+      },
+      {
+        "comment": "",
+        "key": " ",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 97
+        }
+      },
+      {
+        "comment": "",
+        "key": "●",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 97
+        }
+      },
+      {
+        "comment": "",
+        "key": "Назад к письмам",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 155
+        }
+      },
+      {
+        "comment": "",
+        "key": "От: %@",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 134
+        }
+      }
+    ]
+  },
+  "version": 1
+}

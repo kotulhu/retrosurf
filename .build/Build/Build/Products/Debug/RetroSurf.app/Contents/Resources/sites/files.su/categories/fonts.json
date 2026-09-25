@@ -1,0 +1,14 @@
+{
+  "id": "fonts",
+  "title": "Шрифты",
+  "description": "TrueType .ttf — рукописные, готические, кириллица.",
+  "files": [
+    { "id": "font_handwriting", "name": "handwriting.ttf",     "sizeBytes": 84000,  "description": "Рукописный шрифт. Как от руки.", "hasVirus": false },
+    { "id": "font_gothic",      "name": "gothic_blackletter.ttf", "sizeBytes": 112000, "description": "Готический. Для грамот и дипломов.", "hasVirus": false },
+    { "id": "font_cyrillic",    "name": "cyrillic_old.ttf",    "sizeBytes": 96000,  "description": "Старославянский. Для церковных текстов.", "hasVirus": false },
+    { "id": "font_lcd",         "name": "lcd_digital.ttf",     "sizeBytes": 42000,  "description": "ЖК-дисплей. Цифры как на калькуляторе.", "hasVirus": false },
+    { "id": "font_comic",       "name": "comic_cyr.ttf",       "sizeBytes": 68000,  "description": "Комикс. Для весёлых текстов.", "hasVirus": false },
+    { "id": "font_stencil",     "name": "stencil.ttf",         "sizeBytes": 54000,  "description": "Трафаретный. Для военных надписей.", "hasVirus": false },
+    { "id": "font_bad",         "name": "10000_fonts_pack.exe", "sizeBytes": 78000, "description": "10000 шрифтов одним файлом!", "hasVirus": true }
+  ]
+}

@@ -49,13 +49,15 @@ struct FilesCatalog: Codable, Sendable {
         let file: String
     }
 
-    static func loadFromBundle() -> FilesCatalog {
+    /// Loads a split archive from the bundle. `basePath` selects the site's
+    /// data directory relative to the resources root (default: files.su). The
+    /// generic "sites" fallback keeps older flat `sites/catalog.json` working.
+    static func loadFromBundle(named name: String = "catalog",
+                               basePath: String = "sites/files.su") -> FilesCatalog {
         for candidate in [
-            Bundle.main.url(forResource: "catalog", withExtension: "json",
-                            subdirectory: "sites/files.su"),
-            Bundle.main.url(forResource: "catalog", withExtension: "json",
-                            subdirectory: "sites"),
-            Bundle.main.resourceURL?.appendingPathComponent("sites/files.su/catalog.json"),
+            Bundle.main.url(forResource: name, withExtension: "json", subdirectory: basePath),
+            Bundle.main.url(forResource: name, withExtension: "json", subdirectory: "sites"),
+            Bundle.main.resourceURL?.appendingPathComponent("\(basePath)/\(name).json"),
         ] {
             guard let candidate else { continue }
             let catalog = load(catalogAt: candidate)

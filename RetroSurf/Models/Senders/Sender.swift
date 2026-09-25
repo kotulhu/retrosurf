@@ -29,7 +29,7 @@ struct SenderArchetype: Codable, Sendable, Identifiable {
     let kind: SenderKind
     let gender: SenderGender
     let namePool: [SenderName]        // concrete names to pick from
-    let domainPool: [String]          // e.g. ["pochta.su", "mail.ru", "chat.ru"]
+    let domainPool: [String]          // e.g. ["pochta.su", "mail.su", "chat.su"]
     let allowedSites: [String]        // descriptor.id values where this archetype may appear
 }
 

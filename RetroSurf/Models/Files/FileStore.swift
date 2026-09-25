@@ -4,14 +4,25 @@ import Foundation
 /// copied between named nodes by the mailbox/quest systems; the filesystem is
 /// never touched. Events are only published by the operations that DELETE a
 /// copy (.fileRemoved) — creation is the caller's responsibility.
+///
+/// The graph survives app relaunches: every mutation is archived to
+/// UserDefaults and restored in `init`. That is what keeps finished downloads
+/// in the «Мои документы/Загрузки» folder independent of the app restarting.
 @MainActor
 final class FileStore: ObservableObject {
     @Published private(set) var instances: [FileInstance] = []
+
+    /// UserDefaults key holding the archived instance graph across launches.
+    static let instancesDefaultsKey = "FileStore.instances"
 
     private let bus: GameBus
 
     init(bus: GameBus) {
         self.bus = bus
+        if let data = UserDefaults.standard.data(forKey: Self.instancesDefaultsKey),
+           let restored = try? JSONDecoder().decode([FileInstance].self, from: data) {
+            instances = restored
+        }
     }
 
     /// Creates a new instance in `ownerNode`. The instanceId is
@@ -28,6 +39,7 @@ final class FileStore: ObservableObject {
             ownerNode: ownerNode
         )
         instances.append(instance)
+        save()
         return instance
     }
 
@@ -51,6 +63,7 @@ final class FileStore: ObservableObject {
             return false
         }
         let removed = instances.remove(at: index)
+        save()
         bus.publish(.fileRemoved(
             FileRemovedEvent(
                 contentId: removed.content.contentId,
@@ -71,5 +84,18 @@ final class FileStore: ObservableObject {
         }
         let source = instances.remove(at: index)
         return create(content: source.content, ownerNode: newOwner)
+    }
+
+    /// Wipes the whole graph (all local folders, mailbox, drafts). Used by a
+    /// full gameplay reset so downloads do not outlive a fresh start.
+    func clearAll() {
+        instances = []
+        UserDefaults.standard.removeObject(forKey: Self.instancesDefaultsKey)
+    }
+
+    private func save() {
+        if let data = try? JSONEncoder().encode(instances) {
+            UserDefaults.standard.set(data, forKey: Self.instancesDefaultsKey)
+        }
     }
 }

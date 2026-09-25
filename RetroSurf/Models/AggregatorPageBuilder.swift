@@ -2,12 +2,12 @@ import Foundation
 
 @MainActor
 enum AggregatorPageBuilder {
-    static let portalName = "Ориентир.ру"
-    static let portalDomain = "orientir.ru"
+    static let portalName = "Ориентир.су"
+    static let portalDomain = "orientir.su"
 
-    private static let portalURL = "retrosurf://orientir.ru"
+    private static let portalURL = "retrosurf://orientir.su"
 
-    static func homeHTML(catalog: SiteCatalog, progress: GameProgress, quests: QuestManager, playerPage: PlayerPageState) -> String {
+    static func homeHTML(catalog: SiteCatalog, progress: GameProgress, quests: QuestManager, playerPage: PlayerPageState, progressStore: ProgressStore) -> String {
         let total = catalog.entries.count
         let visited = progress.visitedCount
         let completedBySite: [String: Bool] = Dictionary(uniqueKeysWithValues: catalog.entries.map { ($0.id, quests.hasCompletedQuestFor(siteID: $0.id)) })
@@ -47,11 +47,11 @@ enum AggregatorPageBuilder {
         </head>
         <body>
         <center>
-        <span class="logo">Ориентир<sub>.ру</sub></span>
+        <span class="logo">Ориентир<sub>.су</sub></span>
         <br>
         <span class="tagline">Каталог сайтов российского Интернета — стартовая страница вебмастера с 1999 года</span>
         <br><br>
-        <marquee scrollamount="5" width="720" style="font-size:12px; color:#8b1a1a;">оптимизировано для 800×600 · работает в Netscape 3.0 и MSIE 4.0 · файл грузится 3 минуты на скорости 14.4 kbps · вебмастерам: бесплатная раскрутка</marquee>
+        <marquee scrollamount="5" width="720" style="font-size:12px; color:#8b1a1a;">оптимизировано для 800×600 · работает в Cheesecake 3.0 и MSIE 4.0 · файл грузится 3 минуты на скорости 14.4 kbps · вебмастерам: бесплатная раскрутка</marquee>
         <br>
         <table width="720" cellpadding="0" cellspacing="0"><tr><td align="center" bgcolor="#ffffff" style="border:2px solid #0000cc; padding:8px;"><a href="http://pochta.su/"><b style="font-size:16px; color:#0000cc;">📧 Pochta.su — бесплатная электронная почта</b></a><br><small style="color:#444444;">зарегистрируйте ваш первый бесплатный ящик в Рунете</small></td></tr></table>
         <br>
@@ -131,6 +131,7 @@ enum AggregatorPageBuilder {
 
         h.append("<hr width=\"720\" color=\"#8b1a1a\">")
         h.append("<small class=\"founder\">(c) 1999 \(portalName) · вебмастеру: webmaster@\(portalDomain) · без JavaScript — только таблицы</small>")
+        h.append(ProgressBlockTemplates.block(progress: progressStore))
         h.append("</center></body></html>")
 
         return h.joined(separator: "\n")
@@ -155,8 +156,8 @@ enum AggregatorPageBuilder {
         <table border="1" cellpadding="10" width="560" bgcolor="#fff8e7">
         <tr><td align="center"><b>www.\(escape(entry.displayDomain))</b></td></tr>
         <tr><td align="center">\(escape(entry.shortDescription))</td></tr>
-        <tr><td align="center"><small>Здесь скоро появится настоящее содержимое сайта.</small><br><small>Раздел «\(escape(entry.category.title))» каталога «Ориентир.ру» · загрузка: \(escape(entry.requiredTier.fullLabel))</small></td></tr>
-        <tr><td align="center"><a href="\(portalURL)">← Вернуться на Ориентир.ру</a></td></tr>
+        <tr><td align="center"><small>Здесь скоро появится настоящее содержимое сайта.</small><br><small>Раздел «\(escape(entry.category.title))» каталога «Ориентир.су» · загрузка: \(escape(entry.requiredTier.fullLabel))</small></td></tr>
+        <tr><td align="center"><a href="\(portalURL)">← Вернуться на Ориентир.су</a></td></tr>
         </table>
         <small>(пока без содержимого — идёт загрузка по модему…)</small>
         </center>
@@ -181,9 +182,9 @@ enum AggregatorPageBuilder {
         <h1 style="color:#8b1a1a;">🔒 Доступ ограничен</h1>
         <p>Сайт <b>\(escape(entry.title))</b> (\(escape(entry.displayDomain))) пока недоступен.</p>
         <p style="color:#b05000; font-weight:bold;">\(escape(reason))</p>
-        <p><a href="\(portalURL)">← Вернуться на Ориентир.ру</a></p>
+        <p><a href="\(portalURL)">← Вернуться на Ориентир.су</a></p>
         <hr width="400" color="#8b1a1a">
-        <small>(c) 1999 Ориентир.ру</small>
+        <small>(c) 1999 Ориентир.су</small>
         </center>
         </body>
         </html>
@@ -205,10 +206,10 @@ enum AggregatorPageBuilder {
         <body>
         <center>
         <h1 style="color:#660000;">Ошибка 404</h1>
-        <p>Сайт <b>\(escape(shown))</b> не найден в каталоге «Ориентир.ру».</p>
+        <p>Сайт <b>\(escape(shown))</b> не найден в каталоге «Ориентир.су».</p>
         <p>Проверьте адрес или вернитесь на <a href="\(portalURL)">стартовую страницу</a>.</p>
         <hr width="400" color="#660000">
-        <small>(c) 1999 Ориентир.ру</small>
+        <small>(c) 1999 Ориентир.су</small>
         </center>
         </body>
         </html>
@@ -270,6 +271,59 @@ enum AggregatorPageBuilder {
         </center>
         </body>
         </html>
+        """
+    }
+
+    private static func escape(_ text: String) -> String {
+        var s = text
+        for (from, to) in [
+            ("&", "&amp;"), ("<", "&lt;"), (">", "&gt;"), ("\"", "&quot;"), ("'", "&#39;")
+        ] {
+            s = s.replacingOccurrences(of: from, with: to)
+        }
+        return s
+    }
+}
+
+/// The shared progress block shown at the bottom of the catalog home page.
+/// Always visible, even with zero points.
+@MainActor
+enum ProgressBlockTemplates {
+    static func block(progress: ProgressStore) -> String {
+        let earnedCount = progress.artifacts.count
+        let total = ProgressStore.artifactSlots.count
+        let percent = progress.percent
+
+        var slotsHTML: [String] = []
+        for slot in ProgressStore.artifactSlots {
+            let earned = progress.has(slot.artifactId)
+            let marker = earned ? "✔" : "○"
+            let color = earned ? "#1a6600" : "#888888"
+            slotsHTML.append(
+                "<span style=\"color:\(color);\"><b>\(marker) \(escape(slot.title))</b> <small>\(escape(slot.subtitle))</small></span>"
+            )
+        }
+
+        let finalLink: String
+        if progress.isFinalUnlocked {
+            finalLink = "<b><a href=\"retrosurf://lastpage.su\" style=\"color:#0a8a0a; font-size:16px;\">🕸 Последняя страница интернета открыта!</a></b>"
+        } else {
+            finalLink = "<span style=\"color:#888888;\"><small>Соберите \(ProgressStore.thresholdPoints / ProgressStore.pointsPerArtifact) из \(total) артефактов, чтобы открыть последнюю страницу…</small></span>"
+        }
+
+        return """
+        <table width="720" cellpadding="2" cellspacing="2" bgcolor="#ffffff" style="border:2px solid #663399;">
+        <tr><th colspan="2" align="left" bgcolor="#d6c8f0" style="padding:4px 9px; font-size:15px; color:#4a2d8a;">🗃 Мои артефакты</th></tr>
+        <tr><td colspan="2" align="left" style="padding:6px 9px; font-size:13px;">
+        \(slotsHTML.joined(separator: " · "))
+        </td></tr>
+        <tr><td align="left" style="padding:6px 9px;"><small>Прогресс: <b>\(progress.points)</b> из \(ProgressStore.thresholdPoints) очков (\(earnedCount) из \(total) артефактов)</small></td>
+        <td align="right" style="padding:6px 9px;" width="150"><small>\(finalLink)</small></td></tr>
+        <tr><td colspan="2" style="padding:6px 9px;">
+        <table width="100%" bgcolor="#dddddd" cellpadding="0" cellspacing="0"><tr><td width="\(percent)%" bgcolor="#6a9a45" height="14"></td><td></td></tr></table>
+        <small style="font-size:11px;">\(percent) %</small>
+        </td></tr>
+        </table>
         """
     }
 

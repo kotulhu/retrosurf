@@ -1,0 +1,30 @@
+"/Users/elgato/RetroSurf/RetroSurf/Views/ContentView.swift":
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.swiftconstvalues"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.o"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.swiftdeps"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.dia"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/ContentView.d"
+"/Users/elgato/RetroSurf/RetroSurf/Models/AppSettings.swift":
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.swiftconstvalues"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.d"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.o"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.swiftdeps"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/AppSettings.dia"
+"/Users/elgato/RetroSurf/RetroSurf/Models/BrowserSimulator.swift":
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.o"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.d"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.swiftdeps"
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.dia"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/BrowserSimulator.swiftconstvalues"
+"/Users/elgato/RetroSurf/RetroSurf/RetroSurfApp.swift":
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.dia"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.swiftdeps"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.d"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.swiftconstvalues"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/RetroSurfApp.o"
+"/Users/elgato/RetroSurf/RetroSurf/Views/WelcomePage.swift":
+  diagnostics: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.dia"
+  dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.d"
+  swift-dependencies: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.swiftdeps"
+  const-values: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.swiftconstvalues"
+  object: "/Users/elgato/RetroSurf/.build/Build/Intermediates.noindex/RetroSurf.build/Debug/RetroSurf.build/Objects-normal/arm64/WelcomePage.o"
