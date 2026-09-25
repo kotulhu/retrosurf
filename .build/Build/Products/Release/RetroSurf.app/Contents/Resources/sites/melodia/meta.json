@@ -1,8 +1,0 @@
-{
-  "displayDomain": "melodia.ru",
-  "title": "Мелодия",
-  "shortDescription": "Архив хорошей музыки, треки по модему",
-  "category": "music",
-  "keywords": ["музыка", "mp3"],
-  "requiredTier": 2
-}
