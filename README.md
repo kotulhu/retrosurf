@@ -83,14 +83,6 @@ Three artifacts, three quests, seven sites, ten thousand files.
 Next: content expansion, a fast quest-embedding system,
 then an engineering-grade Windows port.
 
----
-
-## Build
-
-```bash
-git clone https://github.com/<your-name>/retrosurf.git
-cd retrosurf
-open RetroSurf.xcodeproj
 
 RU
 ---
@@ -167,12 +159,3 @@ RU
 
 Что дальше — расширение контента, система быстрого встраивания квестов,
 затем инженерный порт на Windows.
-
----
-
-## Сборка
-
-```bash
-git clone https://github.com/<your-name>/retrosurf.git
-cd retrosurf
-open RetroSurf.xcodeproj
